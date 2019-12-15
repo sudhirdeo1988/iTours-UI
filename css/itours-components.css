@@ -962,13 +962,6 @@ ul.search-tabs li.active a {
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
-.onlyForMobile{display: none !important;}
-.onlyForDesktop{display: block !important;}
-@media (max-width: 768px){
-  .onlyForMobile{display: block !important;}
-  .onlyForDesktop{display: none !important;}
-  .M-m20-btm{margin-bottom: 20px;}
-}
 
 .c-link,
 .c-link > * {
@@ -1011,6 +1004,14 @@ ul.search-tabs li.active a {
 .txt-bold{font-weight: 700;}
 .txt-light{font-weight: 300;}
 
+.onlyForMobile{display: none !important;}
+.onlyForDesktop{display: block !important;}
+@media (max-width: 768px){
+  .onlyForMobile{display: block !important;}
+  .onlyForDesktop{display: none !important;}
+  .M-m20-btm{margin-bottom: 20px;}
+  .M-p50-btm{padding-bottom: 50px !important;}
+}
 
 .dividerSection{
   display: table;
