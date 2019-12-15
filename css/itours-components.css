@@ -576,7 +576,7 @@ ul.search-tabs li.active a {
   background: #fff;
   margin-bottom: 30px;
 }
-
+.c-cardType-01 figure{min-height: 120px;}
 .c-cardType-01 img {
   width: 100%;
   height: auto;
@@ -962,6 +962,14 @@ ul.search-tabs li.active a {
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
+.onlyForMobile{display: none !important;}
+.onlyForDesktop{display: block !important;}
+@media (max-width: 768px){
+  .onlyForMobile{display: block !important;}
+  .onlyForDesktop{display: none !important;}
+  .M-m20-btm{margin-bottom: 20px;}
+}
+
 .c-link,
 .c-link > * {
   border: 0;
