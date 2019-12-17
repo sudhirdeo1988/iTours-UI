@@ -959,6 +959,60 @@ ul.search-tabs li.active a {
   .c-addBanner .dividerSection,
   .c-addBanner .dividerSection .divider{display: block; text-align: center;}
 }
+
+
+/* ----------------------------------------------
+    Component :: Shopping Cart
+------------------------------------------------- */
+.c-shoppingCart{
+  display: block;
+  float: right;
+}
+.c-shoppingCart .cartBtn{
+  border: 0;
+  display: block;
+  padding: 15px;
+  position: relative;
+  line-height: normal;
+  height: auto;
+  outline: none;
+  background: #01b7f2;
+  margin: 7px 0 0;
+  transition: all ease 0.3s;
+}
+.c-shoppingCart .cartBtn .fa{
+  display: block;
+  font-size: 25px;
+  color: #fff;
+  line-height: 24px;
+}
+.c-shoppingCart .cartBtn .notify{
+  background: red;
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  top: 11px;
+  right: 4px;
+  text-align: center;
+  padding: 4px 3px;
+  line-height: 10.5px;
+  font-size: 9px;
+  color: #fff;
+  border-radius: 30px;
+}
+.dropdown-menu{
+  border-color: #01b7f2;
+  padding: 10px;
+  margin: 0;
+  left: auto;
+  right: 0;
+  width: 250px;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+@media (max-width: 768px){
+  .c-shoppingCart{display: none;}
+}
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
