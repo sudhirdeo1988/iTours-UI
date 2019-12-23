@@ -1,0 +1,194 @@
+@import './utilities.scss';
+
+$primary-color: #FA8815;
+
+/* -------------------------------------
+	Login Page Container
+------------------------------------- */
+.c-loginContainer {
+	background-color: #999;
+	background-image: url(../images/travel-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+  height: 100%;
+	width: 100%;
+
+		.login_modal {
+			background-color: rgba(255,255,255,0.95);
+			display: flex;
+			width: 300px;
+			padding: 0 50px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+
+				.login_form {
+					position: relative;
+					width: 100%;
+
+						.login_heading {
+							color: #000;
+							display: block;
+							font-size: 30px;
+							text-align: center;
+							line-height: 36px;
+							margin-bottom: 10px;
+							text-transform: uppercase;
+							letter-spacing: 1px;
+						}
+						.login_subheading {
+							color: $primary-color;
+							display: block;
+							font-size: 12px;
+							font-weight: lighter;
+							text-align: center;
+							line-height: 17px;
+							margin-bottom: 20px;
+							letter-spacing: 0.5px;
+						}
+				}
+		}
+}
+
+
+.formField {
+  display: block;
+	margin-bottom: 15px;
+
+		label {
+			color: #333;
+			display: block;
+			font-size: 12px;
+			margin-bottom: 5px;
+		}
+		.input-txtbox {
+			border: 0;
+			color: #333;
+			display: block;
+			font-family: $font-primary;
+			font-size: 16px;
+			padding: 5px 0;
+			line-height: 20px;
+			width: 100%;
+			background-color: transparent;
+			border-bottom: 1.4px solid $gray-dark;
+			height: 26px;
+			outline: none;
+			letter-spacing: 0.5px;
+			transition: all ease 0.3s;
+
+				&::placeholder {
+					font-size: 13px;
+					color: $gray-dark;
+				}
+				&:not(:empty),
+				&:active,
+				&:focus{
+					border-bottom-color: $primary-color;
+					color: #9c9c9c;
+				}
+		}
+
+		&.st-error{
+			.input-txtbox{
+				border-bottom-color: $color-error;
+			}
+			.error-msg{
+				color: $color-error;
+				position: relative;
+				display: block;
+				font-size: 11px;
+				line-height: 14px;
+				margin: 4px 0 0;
+				padding-left: 18px;
+
+					&::before{
+						position: absolute;
+						top: 0;
+						left: 0;
+						content: '\61';
+						color: $color-error;
+						font-family: "itours";
+						font-size: 13px;
+					}
+			}
+		}
+}
+
+
+.btnContainer {
+	display: block;
+	text-align: center;
+	position: relative;
+	margin: 25px 0;
+
+		&.type-link{
+			display: block;
+			position: relative;
+			margin: 5px 0;
+			line-height: 16px;
+		}
+}
+.btn-submit{
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	padding: 8px 25px;
+	background-color: $primary-color;
+	font-size: 13px;
+	text-align: center;
+	line-height: 20px;
+	height: 36px;
+	border: 0;
+	outline: none;
+	width: 100%;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	border-radius: 30px;
+}
+.btn-link{
+	color: $primary-color;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0;
+	background-color:transparent;
+	font-size: 12px;
+	line-height: 16px;
+	border: 0;
+	outline: none;
+}
+.beforeText{
+	color: #888;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 16px;
+	margin-right: 5px;
+}
+
+/* -------------------------------------
+	Login Page :: Media Queries
+------------------------------------- */
+@media (max-width: 768px) {
+  .c-loginContainer{
+		align-items: center;
+		justify-content: center;
+		display: flex;
+
+			.login_modal {
+				position: relative;
+				padding: 0 30px;
+				border-radius: 0;
+
+				.login_form {
+					float: none;
+					width: 100%;
+				}
+			}
+	}
+}
+
+

@@ -8,12 +8,94 @@ font-family: 'Lato', sans-serif;
 */
 
 /* ----------------------------------------------
+    Component :: Star Rating
+------------------------------------------------- */
+
+.c-starRating {
+  display: inline-block;
+  position: relative;
+  font-family: "Glyphicons Halflings";
+  font-size: 14px;
+  text-align: left;
+  cursor: default;
+  white-space: nowrap;
+  line-height: 1.2em;
+  color: #dbdbdb;
+}
+.c-starRating:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  content: "\e006\e006\e006\e006\e006";
+  z-index: 0;
+}
+.c-starRating .stars {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  padding-left: 1px;
+}
+.c-starRating .stars:before {
+  content: "\e006\e006\e006\e006\e006";
+  color: #fdb714;
+}
+
+.c-staticText {
+  color: #9e9e9e;
+  display: block;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 20px;
+}
+.c-staticText.sm {
+  font-size: 10px;
+  line-height: 12px;
+}
+.c-starRating.r-0 .stars {
+  width: 0;
+}
+.c-starRating.r-0p5 .stars {
+  width: 10%;
+}
+.c-starRating.r-1 .stars {
+  width: 20%;
+}
+.c-starRating.r-1p5 .stars {
+  width: 30%;
+}
+.c-starRating.r-2 .stars {
+  width: 40%;
+}
+.c-starRating.r-2p5 .stars {
+  width: 50%;
+}
+.c-starRating.r-3 .stars {
+  width: 60%;
+}
+.c-starRating.r-3p5 .stars {
+  width: 70%;
+}
+.c-starRating.r-4 .stars {
+  width: 80%;
+}
+.c-starRating.r-4p5 .stars {
+  width: 90%;
+}
+.c-starRating.r-5 .stars {
+  width: 100%;
+}
+
+/* ----------------------------------------------
     Component :: Buttons
 ------------------------------------------------- */
-.c-button{
+.c-button {
   background-color: #fdb714;
   display: inline-block;
   padding: 5px 20px;
+  height: auto;
+  line-height: normal;
   text-align: center;
   text-decoration: none !important;
   text-transform: uppercase;
@@ -24,12 +106,12 @@ font-family: 'Lato', sans-serif;
   letter-spacing: 0.5s;
   transition: all ease 0.3s;
 }
-.c-button.sm{
+.c-button.sm {
   font-size: 11px;
   padding: 3px 20px;
   line-height: 12px;
 }
-.c-button.lg{
+.c-button.lg {
   display: block;
   width: 100%;
 }
@@ -54,11 +136,17 @@ font-family: 'Lato', sans-serif;
   line-height: 30px;
   margin: 0 0 25px;
 }
-.c-heading.col-white{color: #fff;}
+.c-heading.col-white {
+  color: #fff;
+}
 
 /* ----------------------------------------------
     Component :: Containers
 ------------------------------------------------- */
+.c-containerDark {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
 .c-pageWrapper {
   position: relative;
   overflow: visible;
@@ -73,6 +161,27 @@ section.dataContainer:after {
   display: table;
   content: "";
   clear: both;
+}
+
+.dividerSection {
+  display: table;
+  width: 100%;
+}
+.dividerSection .divider {
+  display: table-cell;
+  vertical-align: top;
+  line-height: normal;
+}
+.dividerSection.type-1 .divider.s1 {
+  width: 70%;
+  text-align: left;
+}
+.dividerSection.type-1 .divider.s2 {
+  width: 30%;
+  text-align: right;
+}
+.dividerSection.vAlign-mid .divider {
+  vertical-align: middle;
 }
 
 /* ----------------------------------------------
@@ -576,7 +685,9 @@ ul.search-tabs li.active a {
   background: #fff;
   margin-bottom: 30px;
 }
-.c-cardType-01 figure{min-height: 120px;}
+.c-cardType-01 figure {
+  min-height: 120px;
+}
 .c-cardType-01 img {
   width: 100%;
   height: auto;
@@ -606,7 +717,7 @@ ul.search-tabs li.active a {
   display: block;
   margin-top: 5px;
 }
-.c-cardType-01 .cardDetails .priceTag{
+.c-cardType-01 .cardDetails .priceTag {
   color: #7db921;
   font-size: 18px;
   line-height: 22px;
@@ -614,21 +725,23 @@ ul.search-tabs li.active a {
   font-family: "Saira Condensed", sans-serif;
   font-weight: lighter;
 }
-.c-cardType-01 .cardDetails .priceTag small{
+.c-cardType-01 .cardDetails .priceTag small {
   display: block;
   color: #838383;
   font-size: 11px;
   line-height: 14px;
   text-transform: uppercase;
 }
-.c-cardType-01 .cardDetails .c-link:hover .cardTitle{color: #01b7f2;}
+.c-cardType-01 .cardDetails .c-link:hover .cardTitle {
+  color: #01b7f2;
+}
 
-.c-cardType-01 .cardDetails .vSection{
+.c-cardType-01 .cardDetails .vSection {
   border-top: 1px solid #f5f5f5;
   padding: 7px 0;
   margin: 0;
 }
-.c-cardType-01 .discount{
+.c-cardType-01 .discount {
   color: #fff;
   background: url(../images/discount-ribin.png) no-repeat;
   line-height: 80px;
@@ -951,24 +1064,29 @@ ul.search-tabs li.active a {
   margin: 0;
 }
 
-
-
-.c-addBanner{position: relative; padding: 0;}
-@media (max-width: 768px){
-  .c-addBanner{padding: 50px 0;}
-  .c-addBanner .dividerSection,
-  .c-addBanner .dividerSection .divider{display: block; text-align: center;}
+.c-addBanner {
+  position: relative;
+  padding: 0;
 }
-
+@media (max-width: 768px) {
+  .c-addBanner {
+    padding: 50px 0;
+  }
+  .c-addBanner .dividerSection,
+  .c-addBanner .dividerSection .divider {
+    display: block;
+    text-align: center;
+  }
+}
 
 /* ----------------------------------------------
     Component :: Shopping Cart
 ------------------------------------------------- */
-.c-shoppingCart{
+.c-shoppingCart {
   display: block;
   float: right;
 }
-.c-shoppingCart .cartBtn{
+.c-shoppingCart .cartBtn {
   border: 0;
   display: block;
   padding: 15px;
@@ -980,13 +1098,13 @@ ul.search-tabs li.active a {
   margin: 7px 0 0;
   transition: all ease 0.3s;
 }
-.c-shoppingCart .cartBtn .fa{
+.c-shoppingCart .cartBtn .fa {
   display: block;
   font-size: 25px;
   color: #fff;
   line-height: 24px;
 }
-.c-shoppingCart .cartBtn .notify{
+.c-shoppingCart .cartBtn .notify {
   background: red;
   position: absolute;
   height: 17px;
@@ -1000,7 +1118,7 @@ ul.search-tabs li.active a {
   color: #fff;
   border-radius: 30px;
 }
-.dropdown-menu{
+.dropdown-menu {
   border-color: #01b7f2;
   padding: 10px;
   margin: 0;
@@ -1010,8 +1128,263 @@ ul.search-tabs li.active a {
   box-sizing: border-box;
   border-radius: 0;
 }
-@media (max-width: 768px){
-  .c-shoppingCart{display: none;}
+@media (max-width: 768px) {
+  .c-shoppingCart {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------
+    Component :: Hotel List card
+------------------------------------------------- */
+.c-cardList {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+}
+.c-cardListTable {
+  background-color: #fff;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  padding: 0;
+  box-shadow: 0 0 4px #e6e6e6;
+  -moz-box-shadow: 0 0 4px #e6e6e6;
+  -webkit-box-shadow: 0 0 4px #e6e6e6;
+}
+.c-cardListTable .cardList-image {
+  display: table-cell;
+  vertical-align: top;
+  width: 270px;
+}
+.c-cardListTable .cardList-image img {
+  display: block;
+  width: 270px;
+}
+.c-cardListTable .cardList-info {
+  display: table-cell;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.cardList-info .dividerSection {
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.cardList-info .dividerSection .divider.s1 {
+  padding-right: 10px;
+}
+.cardList-info .dividerSection .divider.s2 {
+  text-align: center;
+  padding: 0 0 0 10px;
+  border-left: 1px solid #f5f5f5;
+}
+.cardList-info .cardTitle {
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 3px;
+  color: #2d3e52;
+  font-weight: 600;
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 0.5px;
+}
+.cardList-info .cardInfoLine {
+  position: relative;
+  display: block;
+  font-size: 11px;
+  color: #838383;
+  text-transform: uppercase;
+  padding-left: 15px;
+  font-family: "Saira Condensed", sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.cardList-info .cardInfoLine::before {
+  color: #fdb714;
+  font-size: 16px;
+  line-height: 17px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "soap-icons";
+  content: "\e85d";
+}
+.cardList-info .cardInfoLine.guests::before {content: '\e8b7';}
+.cardList-info .priceTag {
+  color: #7db921;
+  font-size: 18px;
+  line-height: 22px;
+  display: block;
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: lighter;
+}
+.cardList-info .priceTag small {
+  display: block;
+  color: #adadad;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.cardList-info .hotelInfo {
+  display: block;
+  color: #adadad;
+  font-size: 13px;
+  line-height: 18px;
+}
+.cardList-info .dividerSection.infoSection {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.c-aminityList {
+  display: block;
+  position: relative;
+}
+.c-aminityList ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow: hidden;
+}
+.c-aminityList ul li {
+  border: 1px solid #eee;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  box-sizing: border-box;
+  margin-right: 7px;
+  vertical-align: top;
+  text-align: center;
+  padding: 2px 0;
+  position: relative;
+  cursor: pointer;
+  border-radius: 40px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+}
+.c-aminityList ul li .icon {
+  display: inline-block;
+  color: #cccccc;
+  font-size: 20px;
+  line-height: 23px;
+  vertical-align: middle;
+  transition: color ease 0.3s;
+}
+.c-aminityList ul li:hover .icon {
+  color: #01b7f2;
+}
+.cardList-info .c-starRating {
+  margin: 10px 0 0;
+}
+.cardList-info .c-starRating .rating {
+  color: #adadad;
+  text-align: center;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 2px 0;
+  margin: 0;
+  line-height: 12px;
+}
+
+.cardList-accordian{
+  border: 0;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  box-shadow: 0 1px 4px #e6e6e6;
+  -moz-box-shadow: 0 1px 4px #e6e6e6;
+  -webkit-box-shadow: 0 1px 4px #e6e6e6;
+}
+
+@media (max-width: 600px) {
+  .c-cardListTable .cardList-image{vertical-align: middle;}
+  .c-cardListTable .cardList-image,
+  .c-cardListTable .cardList-image img{width: 170px;}
+  .cardList-info .dividerSection.infoSection .divider.s1{display: none;}
+  .cardList-info .cardTitle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-cardListTable {
+    display: block;
+  }
+  .c-cardListTable .cardList-image,
+  .c-cardListTable .cardList-image img {
+    display: block;
+    width: 100%;
+  }
+  .cardList-info .dividerSection .divider.s1 {
+    padding-right: 10px;
+  }
+  .cardList-info .dividerSection .divider.s2 {
+    padding-right: 0;
+  }
+  .cardList-info .dividerSection.infoSection {
+    display: block;
+  }
+  .cardList-info .dividerSection.infoSection .divider.s1 {
+    padding: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .cardList-info .dividerSection.infoSection .divider.s2 {
+    border: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+.c-cardListTable.type-2 .cardList-image,
+.c-cardListTable.type-2 .cardList-image img{
+  width: 150px;
+}
+.c-cardListTable.type-2 .cardList-info{padding: 10px;}
+.c-cardListTable.type-2 .cardList-info .cardTitle{
+  font-size: 14px;
+  line-height: 18px;
+  color: #999;
+}
+
+/* ----------------------------------------------
+    Component :: Tabs
+------------------------------------------------- */
+.c-compTabs{
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+.c-compTabs .nav-tabs{display: block; margin: 0; padding: 0; border-color: #f5f5f5;}
+.c-compTabs .nav-tabs .nav-item{margin-bottom: 0;}
+.c-compTabs .nav-tabs .nav-item .nav-link{
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background-color: #eee;
+  display: block;
+  color: #999;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Saira Condensed", sans-serif;
+  padding: 5px 15px;
+  line-height: 15px;
+  border-radius: 0;
+}
+.c-compTabs .nav-tabs .nav-item .nav-link.active{
+  background-color: #01b7f2;
+  color: #fff;
 }
 /* ----------------------------------------------
     Component :: Utilities
@@ -1044,82 +1417,63 @@ ul.search-tabs li.active a {
 .pad0-btm {
   padding-bottom: 0 !important;
 }
-.p20-top{padding-top: 20px;}
-.m0{margin: 0 !important;}
-.m20-top{margin-top: 20px;}
-.m10-btm{margin-bottom: 10px;}
-.overflow-hidden {overflow: hidden;}
+.p20-top {
+  padding-top: 20px;
+}
+.m0 {
+  margin: 0 !important;
+}
+.m20-top {
+  margin-top: 20px;
+}
+.m10-btm {
+  margin-bottom: 10px;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
 .full-width {
   width: 100% !important;
 }
-.text-right{text-align: right;}
-.t-uppercase{text-transform: uppercase;}
-.noFloat{float: none !important;}
-.txt-bold{font-weight: 700;}
-.txt-light{font-weight: 300;}
-
-.onlyForMobile{display: none !important;}
-.onlyForDesktop{display: block !important;}
-@media (max-width: 768px){
-  .onlyForMobile{display: block !important;}
-  .onlyForDesktop{display: none !important;}
-  .M-m20-btm{margin-bottom: 20px;}
-  .M-p50-btm{padding-bottom: 50px !important;}
-}
-
-.dividerSection{
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-}
-.dividerSection .divider{display: table-cell; vertical-align: top; line-height: normal;}
-.dividerSection.type-1 .divider.s1{
-  width: 70%;
-  text-align: left;
-}
-.dividerSection.type-1 .divider.s2{
-  width: 30%;
+.text-right {
   text-align: right;
 }
-.dividerSection.vAlign-mid .divider{vertical-align: middle;}
-
-.c-starRating {
-  display: inline-block;
-  position: relative;
-  font-family: 'Glyphicons Halflings';
-  font-size: 14px;
-  text-align: left;
-  cursor: default;
-  white-space: nowrap;
-  line-height: 1.2em;
-  color: #dbdbdb;
+.t-uppercase {
+  text-transform: uppercase;
 }
-.c-starRating:before {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 1px;
-  content: "\e006\e006\e006\e006\e006";
-  z-index: 0;
+.noFloat {
+  float: none !important;
 }
-.c-starRating .five-stars{
-  display: block;
-  overflow: hidden;
-  position: relative;
-  background: #fff;
-  padding-left: 1px;
+.txt-bold {
+  font-weight: 700;
 }
-.c-starRating .five-stars:before {
-  content: "\e006\e006\e006\e006\e006";
-  color: #fdb714;
+.txt-light {
+  font-weight: 300;
 }
-
-.c-staticText{
-  color: #9e9e9e;
-  display: block;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 20px;
+.fade {
+  transition: opacity .15s linear;
 }
-.c-staticText.sm{font-size: 10px; line-height: 12px;}
-
+.show {
+  opacity: 1;
+  display: block!important;
+}
+.onlyForMobile {
+  display: none !important;
+}
+.onlyForDesktop {
+  display: block !important;
+}
+@media (max-width: 768px) {
+  .onlyForMobile {
+    display: block !important;
+  }
+  .onlyForDesktop {
+    display: none !important;
+  }
+  .M-m20-btm {
+    margin-bottom: 20px;
+  }
+  .M-p50-btm {
+    padding-bottom: 50px !important;
+  }
+}

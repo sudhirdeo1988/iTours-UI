@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Poiret+One|Titillium+Web:200,300,400,600,700,900");
+/*
+font-family: 'Poiret One', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+*/
+@font-face {
+  font-family: "itours";
+  src: url("../fonts/itours.eot");
+  src: url("../fonts/itours.eot?#iefix") format("embedded-opentype"), url("../fonts/itours.woff") format("woff"), url("../fonts/itours.ttf") format("truetype"), url("../fonts/itours.svg#itours") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "itours" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=itours-]:before,
+[class*=" itours-"]:before {
+  font-family: "itours" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.itours-exclamation:before {
+  content: "a";
+}
+
+.itours-delete:before {
+  content: "b";
+}
+
+.itours-verified:before {
+  content: "c";
+}
+
+/* -------------------------------------
+	Theme default CSS
+------------------------------------- */
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  vertical-align: baseline;
+  color: #646464;
+  margin: 0;
+  padding: 0;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* -------------------------------------
+	Variables Setting
+------------------------------------- */
+
+/*# sourceMappingURL=utilities.css.map */

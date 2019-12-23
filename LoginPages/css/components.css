@@ -1,0 +1,603 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:400,700&display=swap");
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+/* -------------------------------------
+	Theme default CSS
+------------------------------------- */
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  vertical-align: baseline;
+  color: #646464;
+}
+
+/* -------------------------------------------------
+				iTours :: Font Icons
+	---------------------------------------------------- */
+@font-face {
+  font-family: "itours";
+  src: url("../fonts/itours.eot");
+  src: url("../fonts/itours.eot?#iefix") format("embedded-opentype"), url("../fonts/itours.woff") format("woff"), url("../fonts/itours.ttf") format("truetype"), url("../fonts/itours.svg#itours") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "itours" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=itours-]:before,
+[class*=" itours-"]:before {
+  font-family: "itours" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.itours-exclamation-circle:before {
+  content: "a";
+}
+
+.itours-delete:before {
+  content: "b";
+}
+
+.itours-verified:before {
+  content: "c";
+}
+
+.itours-angle-down:before {
+  content: "d";
+}
+
+.itours-angle-left:before {
+  content: "e";
+}
+
+.itours-angle-right:before {
+  content: "f";
+}
+
+.itours-angle-up:before {
+  content: "g";
+}
+
+.itours-caret-up:before {
+  content: "h";
+}
+
+.itours-caret-right:before {
+  content: "i";
+}
+
+.itours-caret-left:before {
+  content: "j";
+}
+
+.itours-caret-down:before {
+  content: "k";
+}
+
+.itours-call-phone:before {
+  content: "l";
+}
+
+.itours-user:before {
+  content: "m";
+}
+
+/* -------------------------------------------------
+				Utilities and setting variables
+	---------------------------------------------------- */
+.clear {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right, .c-mainHeader .navMenu ul {
+  float: right;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.nofloat {
+  float: none;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative, .c-mainHeader, .c-topHeader .custome-dropdown .btn, .c-topHeader .myProfile .icon, .c-topHeader .myProfile, .c-topHeader .contactInfo, .c-topHeader {
+  position: relative;
+}
+
+.noborder, .c-topHeader .custome-dropdown .btn, .c-topHeader .myProfile {
+  border: 0 none;
+}
+
+.hide {
+  display: none;
+}
+
+.novis {
+  visibility: hidden;
+}
+
+.block, .c-mainHeader .navMenu ul li .link, .c-mainHeader .headerLogo a img, .c-mainHeader .headerLogo a, .c-mainHeader, .c-topHeader .custome-dropdown .dropdown-menu ul li .dropdown-item, .c-topHeader .custome-dropdown .dropdown-menu ul li, .c-topHeader .contactInfo, .c-topHeader {
+  display: block;
+}
+
+.inlineblock, .c-topHeader .custome-dropdown .btn, .c-topHeader .custome-dropdown, .c-topHeader .myProfile .icon, .c-topHeader .myProfile {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.display-table {
+  display: table;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left, .c-topHeader .custome-dropdown .dropdown-menu ul li .dropdown-item {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.bold {
+  font-family: "Biotif-bold", "Segoe UI", sans-serif;
+}
+
+.text-uppercase, .c-mainHeader .navMenu ul li .link, .c-topHeader .custome-dropdown .btn, .c-topHeader .myProfile {
+  text-transform: uppercase;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.border-box, .c-topHeader .custome-dropdown .btn, .c-topHeader .myProfile {
+  box-sizing: border-box;
+}
+
+.font-8 {
+  font-size: 8px;
+}
+
+.font-10, .c-topHeader .custome-dropdown .btn {
+  font-size: 10px;
+}
+
+.font-12, .c-mainHeader .navMenu ul li .link, .c-topHeader .myProfile, .c-topHeader .contactInfo {
+  font-size: 12px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-22 {
+  font-size: 22px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.valign-middle, .c-topHeader .myProfile .icon {
+  vertical-align: middle;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.nopad, .c-topHeader .custome-dropdown .dropdown-menu ul, .c-topHeader .custome-dropdown .dropdown-menu, body,
+html {
+  padding: 0;
+}
+
+.pad5 {
+  padding: 5px;
+}
+
+.pad10 {
+  padding: 10px;
+}
+
+.pad15 {
+  padding: 15px;
+}
+
+.pad20 {
+  padding: 20px;
+}
+
+.pad0-top {
+  padding-top: 0;
+}
+
+.pad5-top {
+  padding-top: 5px;
+}
+
+.pad10-top {
+  padding-top: 10px;
+}
+
+.pad15-top {
+  padding-top: 15px;
+}
+
+.pad20-top {
+  padding-top: 20px;
+}
+
+.pad0-right {
+  padding-right: 0;
+}
+
+.pad5-right {
+  padding-right: 5px;
+}
+
+.pad10-right {
+  padding-right: 10px;
+}
+
+.pad15-right {
+  padding-right: 15px;
+}
+
+.pad20-right {
+  padding-right: 20px;
+}
+
+.pad0-bottom {
+  padding-bottom: 0;
+}
+
+.pad5-bottom {
+  padding-bottom: 5px;
+}
+
+.pad10-bottom {
+  padding-bottom: 10px;
+}
+
+.pad15-bottom {
+  padding-bottom: 15px;
+}
+
+.pad20-bottom {
+  padding-bottom: 20px;
+}
+
+.pad0-left {
+  padding-left: 0;
+}
+
+.pad5-left {
+  padding-left: 5px;
+}
+
+.pad10-left {
+  padding-left: 10px;
+}
+
+.pad15-left {
+  padding-left: 15px;
+}
+
+.pad20-left {
+  padding-left: 20px;
+}
+
+.nomargin, .c-topHeader .custome-dropdown .dropdown-menu ul, body,
+html {
+  margin: 0;
+}
+
+.margin5 {
+  margin: 5px;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.margin15 {
+  margin: 15px;
+}
+
+.margin20 {
+  margin: 20px;
+}
+
+.margin0-top {
+  margin-top: 0;
+}
+
+.margin5-top {
+  margin-top: 5px;
+}
+
+.margin10-top {
+  margin-top: 10px;
+}
+
+.margin15-top {
+  margin-top: 15px;
+}
+
+.margin20-top {
+  margin-top: 20px;
+}
+
+.margin0-right {
+  margin-right: 0;
+}
+
+.margin5-right {
+  margin-right: 5px;
+}
+
+.margin10-right {
+  margin-right: 10px;
+}
+
+.margin15-right {
+  margin-right: 15px;
+}
+
+.margin20-right {
+  margin-right: 20px;
+}
+
+.margin0-bottom {
+  margin-bottom: 0;
+}
+
+.margin5-bottom {
+  margin-bottom: 5px;
+}
+
+.margin10-bottom {
+  margin-bottom: 10px;
+}
+
+.margin15-bottom {
+  margin-bottom: 15px;
+}
+
+.margin20-bottom {
+  margin-bottom: 20px;
+}
+
+.margin0-left {
+  margin-left: 0;
+}
+
+.margin5-left {
+  margin-left: 5px;
+}
+
+.margin10-left {
+  margin-left: 10px;
+}
+
+.margin15-left {
+  margin-left: 15px;
+}
+
+.margin20-left {
+  margin-left: 20px;
+}
+
+.textWhite {
+  color: #ffffff;
+}
+
+.bgWhite {
+  background-color: #ffffff;
+}
+
+/* -----------------------------------
+  Component :: Top header
+----------------------------------- */
+.c-topHeader {
+  background-color: #01b7f2;
+  height: 25px;
+}
+.c-topHeader .contactInfo {
+  color: #ffffff;
+  padding: 5.5px 0 5.5px 20px;
+  box-sizing: border-box;
+  line-height: 14px;
+}
+.c-topHeader .contactInfo::before {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 14px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  line-height: 14px;
+  font-family: "itours";
+  content: "l";
+}
+.c-topHeader .myProfile {
+  background-color: #fdb714;
+  color: #ffffff;
+  padding: 5px 10px;
+  line-height: 15px;
+  letter-spacing: 0.7px;
+}
+.c-topHeader .myProfile .icon {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 10px;
+  margin-right: 8px;
+  top: -1px;
+}
+.c-topHeader .custome-dropdown {
+  margin-left: 10px;
+}
+.c-topHeader .custome-dropdown .btn {
+  background-color: #fdb714;
+  color: #ffffff;
+  padding: 5px 10px;
+  line-height: 15px;
+  letter-spacing: 0.7px;
+  vertical-align: top;
+  outline: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.c-topHeader .custome-dropdown .btn:focus {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+}
+.c-topHeader .custome-dropdown .dropdown-menu {
+  border-top: 0;
+  top: -3px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.c-topHeader .custome-dropdown .dropdown-menu ul li {
+  padding: 0 10px;
+  transition: ease all 0.3s;
+  -moz-transition: ease all 0.3s;
+  -webkit-transition: ease all 0.3s;
+  -o-transition: ease all 0.3s;
+  -ms-transition: ease all 0.3s;
+}
+.c-topHeader .custome-dropdown .dropdown-menu ul li:hover {
+  background-color: #f5f5f5;
+}
+.c-topHeader .custome-dropdown .dropdown-menu ul li .dropdown-item {
+  background-color: transparent;
+  border-bottom: 1px solid #f5f5f5;
+  color: #999999;
+  font-size: 11px;
+  line-height: 14px;
+  padding: 10px 0;
+}
+
+/* -----------------------------------
+  Component :: Main header
+----------------------------------- */
+.c-mainHeader {
+  background-color: #ffffff;
+  height: auto;
+  box-shadow: 0 2px 3px #dedede;
+  -moz-box-shadow: 0 2px 3px #dedede;
+  -webkit-box-shadow: 0 2px 3px #dedede;
+  -ms-box-shadow: 0 2px 3px #dedede;
+  -o-box-shadow: 0 2px 3px #dedede;
+}
+.c-mainHeader .headerLogo {
+  padding: 20px 0;
+}
+.c-mainHeader .headerLogo a {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+.c-mainHeader .headerLogo a img {
+  max-height: 40px;
+}
+.c-mainHeader .navMenu {
+  padding: 23px 0;
+  display: block;
+  text-align: right;
+}
+.c-mainHeader .navMenu ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.c-mainHeader .navMenu ul li {
+  float: left;
+  padding: 0 20px;
+}
+.c-mainHeader .navMenu ul li:first-child {
+  padding-left: 0;
+}
+.c-mainHeader .navMenu ul li .link {
+  color: #999999;
+  padding: 3px 0;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  transition: ease color 0.4s;
+  -moz-transition: ease color 0.4s;
+  -webkit-transition: ease color 0.4s;
+  -o-transition: ease color 0.4s;
+  -ms-transition: ease color 0.4s;
+}
+.c-mainHeader .navMenu ul li .link:hover {
+  color: #01b7f2;
+}
+.c-mainHeader .navMenu ul li.st-active .link {
+  color: #01b7f2;
+}
+
+/*# sourceMappingURL=components.css.map */

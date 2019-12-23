@@ -1,0 +1,183 @@
+// Utility Link
+@import "./core-utilities.scss";
+
+/* -----------------------------------
+  Component :: Top header
+----------------------------------- */
+.c-topHeader {
+  background-color: $primaryColor;
+  height: 25px;
+  @extend .relative;
+  @extend .block;
+
+  .contactInfo {
+    color: $white;
+    padding: 5.5px 0 5.5px 20px;
+    box-sizing: border-box;
+    line-height: 14px;
+    @extend .block;
+    @extend .font-12;
+    @extend .relative;
+    &::before {
+      display: inline-block;
+      color: $white;
+      font-size: 14px;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      line-height: 14px;
+      font-family: "itours";
+      content: "\6c";
+    }
+  }
+
+  .myProfile {
+    background-color: $secondaryColor;
+    color: $white;
+    padding: 5px 10px;
+    line-height: 15px;
+    letter-spacing: 0.7px;
+    @extend .inlineblock;
+    @extend .font-12;
+    @extend .relative;
+    @extend .noborder;
+    @extend .text-uppercase;
+    @extend .border-box;
+
+    .icon {
+      color: $white;
+      font-size: 13px;
+      line-height: 10px;
+      margin-right: 8px;
+      top: -1px;
+      @extend .inlineblock;
+      @extend .relative;
+      @extend .valign-middle;
+    }
+  }
+
+  .custome-dropdown {
+    margin-left: 10px;
+    @extend .inlineblock;
+    .btn {
+      background-color: $secondaryColor;
+      color: $white;
+      padding: 5px 10px;
+      line-height: 15px;
+      letter-spacing: 0.7px;
+      vertical-align: top;
+      outline: none;
+      @extend .inlineblock;
+      @extend .font-10;
+      @extend .relative;
+      @extend .noborder;
+      @extend .text-uppercase;
+      @extend .border-box;
+      @include rounded-corners(0);
+      &:focus {
+        @include box-shadow(none);
+      }
+    }
+    .dropdown-menu {
+      border-top: 0;
+      top: -3px;
+      @extend .nopad;
+      @include rounded-corners(0);
+      ul {
+        @extend .nopad;
+        @extend .nomargin;
+
+        li {
+          padding: 0 10px;
+          @extend .block;
+          @include transition(ease all 0.3s);
+          &:hover {
+            background-color: #f5f5f5;
+          }
+          .dropdown-item {
+            background-color: transparent;
+            border-bottom: 1px solid #f5f5f5;
+            color: $fontColor;
+            font-size: 11px;
+            line-height: 14px;
+            padding: 10px 0;
+            @extend .block;
+            @extend .text-left;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+}
+
+/* -----------------------------------
+  Component :: Main header
+----------------------------------- */
+.c-mainHeader{
+  background-color: $white;
+  height: auto;
+  @extend .block;
+  @extend .relative;
+  @include box-shadow(0 2px 3px #dedede);
+
+    .headerLogo{
+      padding: 20px 0;
+
+      a{
+        cursor: pointer;
+        text-decoration: none;
+        outline: none;
+        @extend .block;
+          img{
+            max-height: 40px;
+            @extend .block;
+          }
+      }
+    }
+
+    .navMenu{
+      padding: 23px 0;
+      display: block;
+      text-align: right;
+        ul{
+          display: block;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          @extend .right;
+
+            li{
+              float: left;
+              padding: 0 20px;
+
+                &:first-child{
+                  padding-left: 0;
+                }
+
+                .link{
+                  color: $fontColor;
+                  padding: 3px 0;
+                  line-height: 18px;
+                  letter-spacing: 0.04em;
+                  @extend .block;
+                  @extend .font-12;
+                  @extend .text-uppercase;
+                  @include transition(ease color 0.4s);
+
+                    &:hover{
+                      color: $primaryColor;
+                    }
+                }
+                &.st-active{
+                  .link{
+                    color: $primaryColor;
+                  }
+                }
+            }
+        }
+    }
+
+
+}

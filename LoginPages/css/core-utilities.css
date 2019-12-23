@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:400,700&display=swap");
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+/* -------------------------------------
+	Theme default CSS
+------------------------------------- */
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  vertical-align: baseline;
+  color: #646464;
+}
+
+/* -------------------------------------------------
+				iTours :: Font Icons
+	---------------------------------------------------- */
+@font-face {
+  font-family: "itours";
+  src: url("../fonts/itours.eot");
+  src: url("../fonts/itours.eot?#iefix") format("embedded-opentype"), url("../fonts/itours.woff") format("woff"), url("../fonts/itours.ttf") format("truetype"), url("../fonts/itours.svg#itours") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "itours" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=itours-]:before,
+[class*=" itours-"]:before {
+  font-family: "itours" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.itours-exclamation-circle:before {
+  content: "a";
+}
+
+.itours-delete:before {
+  content: "b";
+}
+
+.itours-verified:before {
+  content: "c";
+}
+
+.itours-angle-down:before {
+  content: "d";
+}
+
+.itours-angle-left:before {
+  content: "e";
+}
+
+.itours-angle-right:before {
+  content: "f";
+}
+
+.itours-angle-up:before {
+  content: "g";
+}
+
+.itours-caret-up:before {
+  content: "h";
+}
+
+.itours-caret-right:before {
+  content: "i";
+}
+
+.itours-caret-left:before {
+  content: "j";
+}
+
+.itours-caret-down:before {
+  content: "k";
+}
+
+.itours-call-phone:before {
+  content: "l";
+}
+
+.itours-user:before {
+  content: "m";
+}
+
+/* -------------------------------------------------
+				Utilities and setting variables
+	---------------------------------------------------- */
+.clear {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.nofloat {
+  float: none;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.noborder {
+  border: 0 none;
+}
+
+.hide {
+  display: none;
+}
+
+.novis {
+  visibility: hidden;
+}
+
+.block {
+  display: block;
+}
+
+.inlineblock {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.display-table {
+  display: table;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.bold {
+  font-family: "Biotif-bold", "Segoe UI", sans-serif;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.font-8 {
+  font-size: 8px;
+}
+
+.font-10 {
+  font-size: 10px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-22 {
+  font-size: 22px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.valign-middle {
+  vertical-align: middle;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.nopad, body,
+html {
+  padding: 0;
+}
+
+.pad5 {
+  padding: 5px;
+}
+
+.pad10 {
+  padding: 10px;
+}
+
+.pad15 {
+  padding: 15px;
+}
+
+.pad20 {
+  padding: 20px;
+}
+
+.pad0-top {
+  padding-top: 0;
+}
+
+.pad5-top {
+  padding-top: 5px;
+}
+
+.pad10-top {
+  padding-top: 10px;
+}
+
+.pad15-top {
+  padding-top: 15px;
+}
+
+.pad20-top {
+  padding-top: 20px;
+}
+
+.pad0-right {
+  padding-right: 0;
+}
+
+.pad5-right {
+  padding-right: 5px;
+}
+
+.pad10-right {
+  padding-right: 10px;
+}
+
+.pad15-right {
+  padding-right: 15px;
+}
+
+.pad20-right {
+  padding-right: 20px;
+}
+
+.pad0-bottom {
+  padding-bottom: 0;
+}
+
+.pad5-bottom {
+  padding-bottom: 5px;
+}
+
+.pad10-bottom {
+  padding-bottom: 10px;
+}
+
+.pad15-bottom {
+  padding-bottom: 15px;
+}
+
+.pad20-bottom {
+  padding-bottom: 20px;
+}
+
+.pad0-left {
+  padding-left: 0;
+}
+
+.pad5-left {
+  padding-left: 5px;
+}
+
+.pad10-left {
+  padding-left: 10px;
+}
+
+.pad15-left {
+  padding-left: 15px;
+}
+
+.pad20-left {
+  padding-left: 20px;
+}
+
+.nomargin, body,
+html {
+  margin: 0;
+}
+
+.margin5 {
+  margin: 5px;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.margin15 {
+  margin: 15px;
+}
+
+.margin20 {
+  margin: 20px;
+}
+
+.margin0-top {
+  margin-top: 0;
+}
+
+.margin5-top {
+  margin-top: 5px;
+}
+
+.margin10-top {
+  margin-top: 10px;
+}
+
+.margin15-top {
+  margin-top: 15px;
+}
+
+.margin20-top {
+  margin-top: 20px;
+}
+
+.margin0-right {
+  margin-right: 0;
+}
+
+.margin5-right {
+  margin-right: 5px;
+}
+
+.margin10-right {
+  margin-right: 10px;
+}
+
+.margin15-right {
+  margin-right: 15px;
+}
+
+.margin20-right {
+  margin-right: 20px;
+}
+
+.margin0-bottom {
+  margin-bottom: 0;
+}
+
+.margin5-bottom {
+  margin-bottom: 5px;
+}
+
+.margin10-bottom {
+  margin-bottom: 10px;
+}
+
+.margin15-bottom {
+  margin-bottom: 15px;
+}
+
+.margin20-bottom {
+  margin-bottom: 20px;
+}
+
+.margin0-left {
+  margin-left: 0;
+}
+
+.margin5-left {
+  margin-left: 5px;
+}
+
+.margin10-left {
+  margin-left: 10px;
+}
+
+.margin15-left {
+  margin-left: 15px;
+}
+
+.margin20-left {
+  margin-left: 20px;
+}
+
+.textWhite {
+  color: #ffffff;
+}
+
+.bgWhite {
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=core-utilities.css.map */
