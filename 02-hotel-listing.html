@@ -19,41 +19,9 @@
     <!-- Theme Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link
-      href="http://fonts.googleapis.com/css?family=Lato:300,400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
     <link rel="stylesheet" href="css/animate.min.css" />
-
     <!-- Current Page Styles -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="components/revolution_slider/css/settings.css"
-      media="screen"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="components/revolution_slider/css/style.css"
-      media="screen"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="components/jquery.bxslider/jquery.bxslider.css "
-      media="screen"
-    />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="components/flexslider/flexslider.css"
-      media="screen"
-    />
-    <!-- Main Style -->
-
+    <link rel="stylesheet" type="text/css" href="components/flexslider/flexslider.css" media="screen" />
     <link id="main-style" rel="stylesheet" href="css/itours-styles.css" />
     <link id="main-style" rel="stylesheet" href="css/itours-components.css" />
 
@@ -290,85 +258,163 @@
         <div class="container">
           <div class="row">
             <!-- ***** Hotel Listing Filter ***** -->
-            <div class="col-md-3 col-sm-12">4</div>
+            <div class="col-md-3 col-sm-12">
+
+              <div class="c-filterTitle">
+                <i class="icon soap-icon-search"></i>
+                <span> <strong>250</strong> Results Found</span>
+              </div>
+
+
+                <div class="accordion c-accordion" id="accordionExample">
+
+                  <!-- ***** Rating Filter ***** -->
+                  <div class="card">
+
+                    <div class="card-header" id="headingThree">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        Modify Search
+                      </button>
+                    </div>
+
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <form method="post">
+                          <div class="form-group">
+                              <label>destination</label>
+                              <input type="text" class="input-text full-width" placeholder="" value="Paris" />
+                          </div>
+                          <div class="form-group">
+                              <label>check in</label>
+                              <div class="datepicker-wrap">
+                                  <input type="text" name="date_from" class="input-text full-width" placeholder="mm/dd/yy" />
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>check out</label>
+                              <div class="datepicker-wrap">
+                                  <input type="text" name="date_to" class="input-text full-width" placeholder="mm/dd/yy" />
+                              </div>
+                          </div>
+                          <br />
+                          <button class="btn-medium icon-check uppercase full-width">search again</button>
+                      </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** Rating Filter End ***** -->
+
+                  <!-- ***** Price Filter ***** -->
+                  <div class="card">
+
+                    <div class="card-header" id="headingOne">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Price
+                        </button>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                            <div  class="c-priceRange">
+                              <div class="priceRangeSlider">
+                                <div id="price-range"></div>
+                              </div>
+                              <div class="priceRangeValues">
+                                <span class="min-price pull-left">$0</span>
+                                <span class="max-price pull-right">$1000</span>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** Price Filter End ***** -->
+
+                  <!-- ***** Rating Filter ***** -->
+                  <div class="card">
+
+                    <div class="card-header" id="headingTwo">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                        Rating
+                      </button>
+                    </div>
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div class="card-body filters-container">
+                        <ul class="check-square filters-option">
+                          <li>
+                            <a href="#">
+                              <div class="c-starRating r-5">
+                                <span class="stars"></span>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <div class="c-starRating r-4">
+                                <span class="stars"></span>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <div class="c-starRating r-3">
+                                <span class="stars"></span>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <div class="c-starRating r-2">
+                                <span class="stars"></span>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <div class="c-starRating r-1">
+                                <span class="stars"></span>
+                              </div>
+                            </a>
+                          </li>
+                      </ul>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** Rating Filter End ***** -->
+
+                </div>
+
+            </div>
             <!-- ***** Hotel Listing Filter End ***** -->
 
             <!-- ***** Hotel Listing ***** -->
             <div class="col-md-9 col-sm-12">
-              <!-- ***** Hotel Card ***** -->
-              <div class="c-cardList">
-                <div class="c-cardListTable ">
-                  <!-- *** Hotel Card image *** -->
-                  <div class="cardList-image">
-                    <img src="http://placehold.it/270x160" alt="" />
+              <!-- ***** Hotel Sorting Strip ***** -->
+              <div class="c-sortSection">
+                <div class="row">
+                  <div class="col-sm-3 col-xs-12">
+                    <span class="sortTitle">Sort Hotels by: </span>
                   </div>
-                  <!-- *** Hotel Card image End *** -->
+                  <div class="col-sm-9 col-xs-12">
+                    <button class="sortButton">
+                      Name
+                      <span class="sortIcon"></span>
+                    </button>
 
-                  <!-- *** Hotel Card Info *** -->
-                  <div class="cardList-info">
-                    <div class="dividerSection type-1">
-                      <div class="divider s1">
-                        <h4 class="cardTitle">Hotel Hilton</h4>
-                        <span class="cardInfoLine">Bastille, Paris france</span>
-                        <div class="c-aminityList">
-                          <ul>
-                            <li role="“button”">
-                              <i class="icon soap-icon-wifi"></i>
-                            </li>
-                            <li role="“button”">
-                              <i class="icon soap-icon-fork"></i>
-                            </li>
-                            <li role="“button”">
-                              <i class="icon soap-icon-television"></i>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                    <button class="sortButton st-active">
+                      Price
+                      <span class="sortIcon"></span>
+                    </button>
 
-                      <div class="divider s2">
-                        <span class="priceTag">
-                          $455.00 <small>per / Night</small>
-                        </span>
-                        <div class="c-starRating r-3p5">
-                          <span class="stars"></span>
-                          <p class="rating">200 Rating</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="dividerSection type-1 infoSection">
-                      <div class="divider s1">
-                        <span class="hotelInfo"
-                          >Nunc cursus libero purus ac congue ar lorem cursus ut
-                          sed vitae pulvinar massa idend porta nequetiam
-                          elerisque mi id.</span
-                        >
-                      </div>
-                      <div class="divider s2">
-                        <button
-                          class="c-button lg"
-                          data-toggle="collapse"
-                          href="#collapseExample"
-                          aria-expanded="false"
-                          aria-controls="collapseExample"
-                        >
-                          View Details
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- *** Hotel Card Info End *** -->
-                </div>
-
-                <!-- *** Hotel Details Accordian *** -->
-                <div class="collapse" id="collapseExample">
-                  <div class="cardList-accordian">
-                    Hotel Data
+                    <button class="sortButton">
+                      Rating
+                      <span class="sortIcon"></span>
+                    </button>
                   </div>
                 </div>
-                <!-- *** Hotel Details Accordian End *** -->
               </div>
-              <!-- ***** Hotel Card End ***** -->
+              <!-- ***** Hotel Sorting Strip End ***** -->
 
               <!-- ***** Hotel Card ***** -->
               <div class="c-cardList">
@@ -453,57 +499,768 @@
                             >Room Types</a
                           >
                         </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link"
+                            id="description-tab"
+                            data-toggle="tab"
+                            href="#description"
+                            role="tab"
+                            aria-controls="description"
+                            aria-selected="true"
+                            >Description</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link"
+                            id="policies-tab"
+                            data-toggle="tab"
+                            href="#policies"
+                            role="tab"
+                            aria-controls="policies"
+                            aria-selected="true"
+                            >Policies</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link"
+                            id="gallery-tab"
+                            data-toggle="tab"
+                            href="#gallery"
+                            role="tab"
+                            aria-controls="gallery"
+                            aria-selected="true"
+                            >Gallery</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link"
+                            id="reviews-tab"
+                            data-toggle="tab"
+                            href="#reviews"
+                            role="tab"
+                            aria-controls="reviews"
+                            aria-selected="true"
+                            >Reviews</a
+                          >
+                        </li>
                       </ul>
+
                       <div class="tab-content" id="myTabContent">
+                        <!-- **** Tab Hotel Listing **** -->
                         <div
                           class="tab-pane fade show active"
                           id="home"
                           role="tabpanel"
                           aria-labelledby="home-tab"
                         >
+                          <!-- ***** Hotel List Card ***** -->
+                          <div class="c-cardListHolder">
+                            <div class="c-cardListTable type-2">
+                              <!-- *** Hotel Card image *** -->
+                              <div class="cardList-image">
+                                <img src="http://placehold.it/270x160" alt="" />
+                              </div>
+                              <!-- *** Hotel Card image End *** -->
 
-                        <div class="c-cardListTable type-2">
-                          <!-- *** Hotel Card image *** -->
-                          <div class="cardList-image">
-                            <img src="http://placehold.it/270x160" alt="" />
-                          </div>
-                          <!-- *** Hotel Card image End *** -->
+                              <!-- *** Hotel Card Info *** -->
+                              <div class="cardList-info">
+                                <div class="flexGrid">
+                                  <div class="gridItem">
+                                    <div class="infoCard">
+                                      <span class="infoCard_data">
+                                        Single Bed Room
+                                        <span class="infoCard_notifi m5-l"
+                                          >Available</span
+                                        >
+                                      </span>
+                                    </div>
+                                    <div class="styleForMobile">
+                                      <div class="infoCard c-aminityList sm">
+                                        <ul>
+                                          <li role="“button”">
+                                            <i class="icon soap-icon-wifi"></i>
+                                          </li>
+                                          <li role="“button”">
+                                            <i class="icon soap-icon-fork"></i>
+                                          </li>
+                                          <li role="“button”">
+                                            <i
+                                              class="icon soap-icon-television"
+                                            ></i>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="infoCard c-halfText m0">
+                                        <span class="sect">Max Guests:</span>
+                                        <span class="sect s2">2 Persons</span>
+                                      </div>
+                                    </div>
+                                  </div>
 
-                          <!-- *** Hotel Card Info *** -->
-                          <div class="cardList-info">
-                            <div class="dividerSection type-1">
-                              <div class="divider s1">
-                                <h4 class="cardTitle">Standard Family Room</h4>
-                                <span class="cardInfoLine guests">MAX GUESTS:3 PERSONS</span>
-                                <div class="c-aminityList">
-                                  <ul>
-                                    <li role="“button”">
-                                      <i class="icon soap-icon-wifi"></i>
-                                    </li>
-                                    <li role="“button”">
-                                      <i class="icon soap-icon-fork"></i>
-                                    </li>
-                                    <li role="“button”">
-                                      <i class="icon soap-icon-television"></i>
-                                    </li>
-                                  </ul>
+                                  <div class="gridItem">
+                                    <div class="infoCard m0">
+                                      <div class="M-infoCard">
+                                        <span class="infoCard_label"
+                                          >Charge PER/NIGHT</span
+                                        >
+                                        <span class="infoCard_price"
+                                          >$230.00</span
+                                        >
+                                        <span class="infoCard_priceTax"
+                                          >(inclusive of all taxes)</span
+                                        >
+                                      </div>
+
+                                      <div class="clearfix M-policyLink">
+                                        <button class="policyLink">
+                                          Booking Policy
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="gridItem styleForMobile M-m0">
+                                    <div class="infoCard">
+                                      <div class="selector">
+                                        <select class="full-width">
+                                          <option value="1"
+                                            >Select Room Type</option
+                                          >
+                                          <option value="1">anytime</option>
+                                          <option value="2">morning</option>
+                                        </select>
+                                        <span class="custom-select full-width"
+                                          >Select Room Type</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="infoCard text-right">
+                                      <button class="c-buttonBorder">
+                                        Book Now
+                                      </button>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
+                              <!-- *** Hotel Card Info End *** -->
+                            </div>
+                          </div>
+                          <!-- ***** Hotel List Card End ***** -->
 
-                              <div class="divider s2">
-                                <span class="priceTag">
-                                  $455.00 <small>per / Night</small>
-                                </span>
+                          <!-- ***** Hotel List Card ***** -->
+                          <div class="c-cardListHolder">
+                            <div class="c-cardListTable type-2">
+                              <!-- *** Hotel Card image *** -->
+                              <div class="cardList-image">
+                                <img src="http://placehold.it/270x160" alt="" />
+                              </div>
+                              <!-- *** Hotel Card image End *** -->
+
+                              <!-- *** Hotel Card Info *** -->
+                              <div class="cardList-info">
+                                <div class="flexGrid">
+                                  <div class="gridItem">
+                                    <div class="infoCard">
+                                      <span class="infoCard_data">
+                                        Deluxe Single Room
+                                        <span
+                                          class="infoCard_notifi type-2 m5-l"
+                                          >Full</span
+                                        >
+                                      </span>
+                                    </div>
+                                    <div class="styleForMobile">
+                                      <div class="infoCard c-aminityList sm">
+                                        <ul>
+                                          <li role="“button”">
+                                            <i class="icon soap-icon-wifi"></i>
+                                          </li>
+                                          <li role="“button”">
+                                            <i class="icon soap-icon-fork"></i>
+                                          </li>
+                                          <li role="“button”">
+                                            <i
+                                              class="icon soap-icon-television"
+                                            ></i>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="infoCard c-halfText m0">
+                                        <span class="sect">Max Guests:</span>
+                                        <span class="sect s2">2 Persons</span>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="gridItem">
+                                    <div class="infoCard m0">
+                                      <div class="M-infoCard">
+                                        <span class="infoCard_label"
+                                          >Charge PER/NIGHT</span
+                                        >
+                                        <span class="infoCard_price"
+                                          >$230.00</span
+                                        >
+                                        <span class="infoCard_priceTax"
+                                          >(inclusive of all taxes)</span
+                                        >
+                                      </div>
+
+                                      <div class="clearfix M-policyLink">
+                                        <button class="policyLink">
+                                          Booking Policy
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="gridItem styleForMobile M-m0">
+                                    <div class="infoCard">
+                                      <div class="selector">
+                                        <select class="full-width">
+                                          <option value="1"
+                                            >Select Room Type</option
+                                          >
+                                          <option value="1">anytime</option>
+                                          <option value="2">morning</option>
+                                        </select>
+                                        <span class="custom-select full-width"
+                                          >Select Room Type</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="infoCard text-right">
+                                      <button class="c-buttonBorder">
+                                        Book Now
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- *** Hotel Card Info End *** -->
+                            </div>
+                          </div>
+                          <!-- ***** Hotel List Card End ***** -->
+
+                          <!-- ***** Hotel List Card ***** -->
+                          <div class="c-cardListHolder">
+                            <div class="c-cardListTable type-2">
+                              <!-- *** Hotel Card image *** -->
+                              <div class="cardList-image">
+                                <img src="http://placehold.it/270x160" alt="" />
+                              </div>
+                              <!-- *** Hotel Card image End *** -->
+
+                              <!-- *** Hotel Card Info *** -->
+                              <div class="cardList-info">
+                                <div class="flexGrid">
+                                  <div class="gridItem">
+                                    <div class="infoCard">
+                                      <span class="infoCard_data">
+                                        Superior Double Room
+                                        <span
+                                          class="infoCard_notifi type-2 m5-l"
+                                          >Full</span
+                                        >
+                                      </span>
+                                    </div>
+                                    <div class="styleForMobile">
+                                      <div class="infoCard c-aminityList sm">
+                                        <ul>
+                                          <li role="“button”">
+                                            <i class="icon soap-icon-wifi"></i>
+                                          </li>
+                                          <li role="“button”">
+                                            <i class="icon soap-icon-fork"></i>
+                                          </li>
+                                          <li role="“button”">
+                                            <i
+                                              class="icon soap-icon-television"
+                                            ></i>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="infoCard c-halfText m0">
+                                        <span class="sect">Max Guests:</span>
+                                        <span class="sect s2">6 Persons</span>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="gridItem">
+                                    <div class="infoCard m0">
+                                      <div class="M-infoCard">
+                                        <span class="infoCard_label"
+                                          >Charge PER/NIGHT</span
+                                        >
+                                        <span class="infoCard_price"
+                                          >$230.00</span
+                                        >
+                                        <span class="infoCard_priceTax"
+                                          >(inclusive of all taxes)</span
+                                        >
+                                      </div>
+
+                                      <div class="clearfix M-policyLink">
+                                        <button class="policyLink">
+                                          Booking Policy
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="gridItem styleForMobile M-m0">
+                                    <div class="infoCard">
+                                      <div class="selector">
+                                        <select class="full-width">
+                                          <option value="1"
+                                            >Select Room Type</option
+                                          >
+                                          <option value="1">anytime</option>
+                                          <option value="2">morning</option>
+                                        </select>
+                                        <span class="custom-select full-width"
+                                          >Select Room Type</span
+                                        >
+                                      </div>
+                                    </div>
+                                    <div class="infoCard text-right">
+                                      <button class="c-buttonBorder">
+                                        Book Now
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- *** Hotel Card Info End *** -->
+                            </div>
+                          </div>
+                          <!-- ***** Hotel List Card End ***** -->
+                        </div>
+                        <!-- **** Tab Hotel Listing End **** -->
+
+                        <!-- **** Tab Description **** -->
+                        <div
+                          class="tab-pane fade"
+                          id="description"
+                          role="tabpanel"
+                          aria-labelledby="description-tab"
+                        >
+                          <!-- **** Description **** -->
+                          <div class="clearfix margin20-bottom">
+                            <h3 class="c-heading">
+                              About Hilton Hotel and Resorts
+                            </h3>
+                            <p class="c-statictext">
+                              Sed aliquam nunc eget velit imperdiet, in rutrum
+                              mauris malesuada. Quisque ullamcorper vulputate
+                              nisi, et fringilla ante convallis quis. Nullam vel
+                              tellus non elit suscipit volutpat. Integer id
+                              felis et nibh rutrum dignissim ut non risus. In
+                              tincidunt urna quis sem luctus, sed accumsan magna
+                              pellentesque. Donec et iaculis tellus. Vestibulum
+                              ut iaculis justo, auctor sodales lectus. Donec et
+                              tellus tempus, dignissim maurornare, consequat
+                              lacus. Integer dui neque, scelerisque nec
+                              sollicitudin sit amet, sodales a erat. Duis vitae
+                              condimentum ligula. Integer eu mi nisl. Donec
+                              massa dui, commodo id arcu quis, venenatis
+                              scelerisque velit.
+                            </p>
+                            <p class="c-statictext">
+                              Sed aliquam nunc eget velit imperdiet, in rutrum
+                              mauris malesuada. Quisque ullamcorper vulputate
+                              nisi, et fringilla ante convallis quis. Nullam vel
+                              tellus non elit suscipit volutpat. Integer id
+                              felis et nibh rutrum dignissim ut non risus. In
+                              tincidunt urna quis sem luctus, sed accumsan magna
+                              pellentesque. Donec et iaculis tellus.
+                            </p>
+                          </div>
+                          <!-- **** Description End **** -->
+
+                          <!-- **** Amenities **** -->
+                          <div class="clearfix margin20-bottom">
+                            <h3 class="c-heading">
+                              Amenities
+                            </h3>
+                            <div class="clearfix">
+                              <ul class="row c-amenitiesType2">
+                                <li class="col-md-4 col-sm-6 col-xs-12">
+                                  <div class="amenitiesList">
+                                    <i class="soap-icon-wifi icon"></i>WI_FI
+                                  </div>
+                                </li>
+                                <li class="col-md-4 col-sm-6 col-xs-12">
+                                  <div class="amenitiesList">
+                                    <i class="soap-icon-swimming icon"></i
+                                    >swimming pool
+                                  </div>
+                                </li>
+                                <li class="col-md-4 col-sm-6 col-xs-12">
+                                  <div class="amenitiesList">
+                                    <i class="soap-icon-television icon"></i
+                                    >television
+                                  </div>
+                                </li>
+                                <li class="col-md-4 col-sm-6 col-xs-12">
+                                  <div class="amenitiesList">
+                                    <i class="soap-icon-breakfast icon"></i
+                                    >complimentary breakfast
+                                  </div>
+                                </li>
+                                <li class="col-md-4 col-sm-6 col-xs-12">
+                                  <div class="amenitiesList">
+                                    <i class="soap-icon-pickanddrop icon"></i
+                                    >pick and drop
+                                  </div>
+                                </li>
+                                <li class="col-md-4 col-sm-6 col-xs-12">
+                                  <div class="amenitiesList">
+                                    <i class="soap-icon-television icon"></i
+                                    >television
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- **** Amenities **** -->
+                        </div>
+                        <!-- **** Tab Description End **** -->
+
+                        <!-- **** Tab Policies **** -->
+                        <div
+                          class="tab-pane fade"
+                          id="policies"
+                          role="tabpanel"
+                          aria-labelledby="policies-tab"
+                        >
+                          <!-- **** Policies List **** -->
+                          <div class="c-infoDivider">
+                            <div class="infoTitle">
+                              <h4 class="policyHeading">
+                                Check In & Check Out
+                              </h4>
+                            </div>
+                            <div class="infoDescription">
+                              <ul class="policyListing">
+                                <li>Check-In: from 14:00 hours</li>
+                                <li>Check-Out: until 12:00 hours</li>
+                                <li>
+                                  Early check in and Late check out is subject
+                                  to availability, will be charged accordingly.
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="c-infoDivider">
+                            <div class="infoTitle">
+                              <h4 class="policyHeading">Meal Policy</h4>
+                            </div>
+                            <div class="infoDescription">
+                              <ul class="policyListing">
+                                <li>
+                                  Children's under 5 years - Complimentary in
+                                  room with Parents.
+                                </li>
+                                <li>
+                                  Children's under 12 years - 50% of the meal
+                                  prices.
+                                </li>
+                                <li>
+                                  Children`s 12 years and above - 100% of the
+                                  meal prices.
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="c-infoDivider">
+                            <div class="infoTitle">
+                              <h4 class="policyHeading">Extra bed Policy</h4>
+                            </div>
+                            <div class="infoDescription">
+                              <ul class="policyListing">
+                                <li>
+                                  Extra bed Charge: AED 150/- net per bed per
+                                  night.
+                                </li>
+                                <li>
+                                  Children's under 5 years: Complimentary in
+                                  room with Parents.
+                                </li>
+                                <li>
+                                  Children's under 12 years: Sharing parent's
+                                  room without extra bed is free of charge.
+                                </li>
+                                <li>
+                                  Children's of age 12 years and above will be
+                                  considered us Adult.
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- **** Policies List End **** -->
+                        </div>
+                        <!-- **** Tab Policies End **** -->
+
+                        <!-- **** Tab Gallery **** -->
+                        <div
+                          class="tab-pane fade"
+                          id="gallery"
+                          role="tabpanel"
+                          aria-labelledby="gallery-tab"
+                        >
+                          <!-- **** photo List **** -->
+                          <div class="clearfix">
+                            <div
+                              id="gallery_style1"
+                              class="flexslider photo-gallery"
+                              data-animation="slide"
+                              data-sync="#carousel_style1"
+                            >
+                              <ul class="slides">
+                                <li>
+                                  <img
+                                    src="http://placehold.it/1170x342"
+                                    alt=""
+                                  />
+                                </li>
+                                <li>
+                                  <img
+                                    src="http://placehold.it/1170x342"
+                                    alt=""
+                                  />
+                                </li>
+                                <li>
+                                  <img
+                                    src="http://placehold.it/1170x342"
+                                    alt=""
+                                  />
+                                </li>
+                                <li>
+                                  <img
+                                    src="http://placehold.it/1170x342"
+                                    alt=""
+                                  />
+                                </li>
+                                <li>
+                                  <img
+                                    src="http://placehold.it/1170x342"
+                                    alt=""
+                                  />
+                                </li>
+                                <li>
+                                  <img
+                                    src="http://placehold.it/1170x342"
+                                    alt=""
+                                  />
+                                </li>
+                                <li>
+                                  <img
+                                    src="http://placehold.it/1170x342"
+                                    alt=""
+                                  />
+                                </li>
+                                <li>
+                                  <img
+                                    src="http://placehold.it/1170x342"
+                                    alt=""
+                                  />
+                                </li>
+                              </ul>
+                            </div>
+                            <div
+                              id="carousel_style1"
+                              class="flexslider image-carousel"
+                              data-animation="slide"
+                              data-item-width="70"
+                              data-item-margin="10"
+                              data-sync="#gallery_style1"
+                            >
+                              <ul class="slides">
+                                <li>
+                                  <img src="http://placehold.it/70x70" alt="" />
+                                </li>
+                                <li>
+                                  <img src="http://placehold.it/70x70" alt="" />
+                                </li>
+                                <li>
+                                  <img src="http://placehold.it/70x70" alt="" />
+                                </li>
+                                <li>
+                                  <img src="http://placehold.it/70x70" alt="" />
+                                </li>
+                                <li>
+                                  <img src="http://placehold.it/70x70" alt="" />
+                                </li>
+                                <li>
+                                  <img src="http://placehold.it/70x70" alt="" />
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- **** photo List End **** -->
+                        </div>
+                        <!-- **** Tab Gallery End **** -->
+
+                        <!-- **** Tab Reviews **** -->
+                        <div
+                          class="tab-pane fade"
+                          id="reviews"
+                          role="tabpanel"
+                          aria-labelledby="reviews-tab"
+                        >
+                          <!-- **** Reviews List **** -->
+                          <div class="c-reviewDivider">
+                            <div class="infoTitle">
+                              <div class="userImage">
+                                <img src="http://placehold.it/270x263" />
+                              </div>
+                              <h4 class="userTitle">
+                                Jessica Brown
+                              </h4>
+                              <span class="userDate">NOV, 12, 2013</span class="userTitle">
+                            </div>
+                            <div class="infoDescription">
+                              <div class="row">
+                                <div class="col-md-8">
+                                  <h4 class="reviewTitle">We had great experience while our stay and Hilton Hotels!</h4>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="reviewRating">
+                                    <div class="c-starRating r-3p5">
+                                      <span class="stars"></span>
+                                    </div>
+                                    <span class="rating">3.5 / 5</span>
+                                  </div>
+                                </div>
+                                <div class="col-xs-12">
+                                  <span class="reviewText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stand dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</span>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <!-- *** Hotel Card Info End *** -->
+                          <!-- **** Reviews List End **** -->
+
+                          <!-- **** Reviews List **** -->
+                          <div class="c-reviewDivider">
+                            <div class="infoTitle">
+                              <div class="userImage">
+                                <img src="http://placehold.it/270x263" />
+                              </div>
+                              <h4 class="userTitle">
+                                Jessica Brown
+                              </h4>
+                              <span class="userDate">NOV, 12, 2013</span class="userTitle">
+                            </div>
+                            <div class="infoDescription">
+                              <div class="row">
+                                <div class="col-md-8">
+                                  <h4 class="reviewTitle">We had great experience while our stay and Hilton Hotels!</h4>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="reviewRating">
+                                    <div class="c-starRating r-3p5">
+                                      <span class="stars"></span>
+                                    </div>
+                                    <span class="rating">3.5 / 5</span>
+                                  </div>
+                                </div>
+                                <div class="col-xs-12">
+                                  <span class="reviewText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stand dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- **** Reviews List End **** -->
+
                         </div>
-                        </div>
+                        <!-- **** Tab Reviews End **** -->
 
                       </div>
                     </div>
                     <!-- ***** Hotel Info Tabs End***** -->
+                  </div>
+                </div>
+                <!-- *** Hotel Details Accordian End *** -->
+              </div>
+              <!-- ***** Hotel Card End ***** -->
+
+              <!-- ***** Hotel Card ***** -->
+              <div class="c-cardList">
+                <div class="c-cardListTable ">
+                  <!-- *** Hotel Card image *** -->
+                  <div class="cardList-image">
+                    <img src="http://placehold.it/270x160" alt="" />
+                  </div>
+                  <!-- *** Hotel Card image End *** -->
+
+                  <!-- *** Hotel Card Info *** -->
+                  <div class="cardList-info">
+                    <div class="dividerSection type-1">
+                      <div class="divider s1">
+                        <h4 class="cardTitle">Hotel Hilton</h4>
+                        <span class="cardInfoLine">Bastille, Paris france</span>
+                        <div class="c-aminityList">
+                          <ul>
+                            <li role="“button”">
+                              <i class="icon soap-icon-wifi"></i>
+                            </li>
+                            <li role="“button”">
+                              <i class="icon soap-icon-fork"></i>
+                            </li>
+                            <li role="“button”">
+                              <i class="icon soap-icon-television"></i>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="divider s2">
+                        <span class="priceTag">
+                          $455.00 <small>per / Night</small>
+                        </span>
+                        <div class="c-starRating r-3p5">
+                          <span class="stars"></span>
+                          <p class="rating">200 Rating</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="dividerSection type-1 infoSection">
+                      <div class="divider s1">
+                        <span class="hotelInfo"
+                          >Nunc cursus libero purus ac congue ar lorem cursus ut
+                          sed vitae pulvinar massa idend porta nequetiam
+                          elerisque mi id.</span
+                        >
+                      </div>
+                      <div class="divider s2">
+                        <button
+                          class="c-button lg"
+                          data-toggle="collapse"
+                          href="#collapseExample"
+                          aria-expanded="false"
+                          aria-controls="collapseExample"
+                        >
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- *** Hotel Card Info End *** -->
+                </div>
+
+                <!-- *** Hotel Details Accordian *** -->
+                <div class="collapse" id="collapseExample">
+                  <div class="cardList-accordian">
+                    Hotel Data
                   </div>
                 </div>
                 <!-- *** Hotel Details Accordian End *** -->
@@ -695,10 +1452,17 @@
     <!-- Javascript -->
     <!-- Javascript -->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.1.10.4.min.js"></script>
     <!-- Twitter Bootstrap -->
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-4.min.js"></script>
     <!-- load page Javascript -->
+
+      <!-- Flex Slider -->
+      <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+
     <script type="text/javascript" src="js/theme-scripts.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>
