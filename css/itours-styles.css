@@ -870,31 +870,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* 2.1. Form Elements ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-input.input-text, select, textarea, span.custom-select {
+input.input-text, select, textarea, span.c-custom-select {
   background: #f5f5f5;
   border: none;
   line-height: normal;
 }
 
-input.input-text, textarea, span.custom-select {
+input.input-text, textarea, span.c-custom-select {
   padding-left: 15px;
   padding-right: 15px;
   height: 34px;
 }
-input.input-text.input-large, textarea.input-large, span.custom-select.input-large {
+input.input-text.input-large, textarea.input-large, span.c-custom-select.input-large {
   height: 43px;
   font-size: 1.1667em;
 }
-input.input-text.input-medium, textarea.input-medium, span.custom-select.input-medium {
+input.input-text.input-medium, textarea.input-medium, span.c-custom-select.input-medium {
   height: 34px;
 }
-input.input-text.input-small, textarea.input-small, span.custom-select.input-small {
+input.input-text.input-small, textarea.input-small, span.c-custom-select.input-small {
   height: 28px;
 }
-input.input-text.input-mini, textarea.input-mini, span.custom-select.input-mini {
+input.input-text.input-mini, textarea.input-mini, span.c-custom-select.input-mini {
   height: 19px;
 }
-input.input-text.white, textarea.white, span.custom-select.white {
+input.input-text.white, textarea.white, span.c-custom-select.white {
   background: #fff;
 }
 
@@ -931,7 +931,7 @@ select option {
   -webkit-appearance: menulist-button;
   line-height: 30px;
 }
-.selector span.custom-select {
+.selector span.c-custom-select {
   display: inline-block;
   line-height: 32px;
   padding: 0 10px;
@@ -940,7 +940,7 @@ select option {
   overflow: hidden;
   white-space: nowrap;
 }
-.selector span.custom-select:before {
+.selector span.c-custom-select:before {
   position: absolute;
   right: 0;
   top: 0;
@@ -949,7 +949,7 @@ select option {
   width: 24px;
   height: 100%;
 }
-.selector span.custom-select:after {
+.selector span.c-custom-select:after {
   position: absolute;
   right: 9px;
   top: 15px;
@@ -958,10 +958,10 @@ select option {
   border-right: 3px solid transparent;
   content: "";
 }
-.selector.style1 span.custom-select:before {
+.selector.style1 span.c-custom-select:before {
   background: transparent;
 }
-.selector.style1 span.custom-select:after {
+.selector.style1 span.c-custom-select:after {
   border-top-color: #fdb714;
 }
 
@@ -2225,7 +2225,7 @@ button.ui-button::-moz-focus-inner {
   border-right-color: #2d3e52;
 }
 
-input.input-text, textarea, .selector select + .custom-select {
+input.input-text, textarea, .selector select + .c-custom-select {
   -moz-transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
   -o-transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
   -webkit-transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
@@ -2233,9 +2233,10 @@ input.input-text, textarea, .selector select + .custom-select {
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
   border: 1px solid transparent;
   cursor: text;
+  border-radius: 0;
 }
 
-input.input-text:focus, textarea:focus, .selector select:focus + .custom-select {
+input.input-text:focus, textarea:focus, .selector select:focus + .c-custom-select {
   outline: none;
   border: 1px solid #01b7f2;
   box-shadow: 0 0 8px rgba(1, 183, 242, 0.6);

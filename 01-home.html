@@ -17,43 +17,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Theme Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link
-      href="http://fonts.googleapis.com/css?family=Lato:300,400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="css/animate.min.css" />
-
-    <!-- Current Page Styles -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="components/revolution_slider/css/settings.css"
-      media="screen"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="components/revolution_slider/css/style.css"
-      media="screen"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="components/jquery.bxslider/jquery.bxslider.css "
-      media="screen"
-    />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="components/flexslider/flexslider.css"
-      media="screen"
-    />
-    <!-- Main Style -->
-
+    <link rel="stylesheet" href="css/bootstrap-4.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link id="main-style" rel="stylesheet" href="css/itours-styles.css" />
     <link id="main-style" rel="stylesheet" href="css/itours-components.css" />
 
@@ -64,6 +29,7 @@
   </head>
   <body>
     <div class="c-pageWrapper">
+
       <!-- ********** Component :: Header ********** -->
       <header class="c-header">
         <!-- **** Header :: Top Strip ***** -->
@@ -78,7 +44,10 @@
               </li>
 
               <li class="ribbon">
-                <a href="javascript:void(0);" class="c-link">English</a>
+                <a href="javascript:void(0);" class="c-link">
+                  <span>English</span>
+                  <i class="icon it itours-caret-down"></i>
+                </a>
                 <ul class="menu mini">
                   <li><a href="javascript:void(0);" title="Dansk">Dansk</a></li>
                   <li>
@@ -121,7 +90,10 @@
               </li>
 
               <li class="ribbon currency">
-                <a href="javascript:void(0);" title="">USD</a>
+                <a href="javascript:void(0);" title="">
+                  <span>USD</span>
+                  <i class="icon it itours-caret-down"></i>
+                </a>
                 <ul class="menu mini">
                   <li><a href="javascript:void(0);" title="AUD">AUD</a></li>
                   <li><a href="javascript:void(0);" title="BRL">BRL</a></li>
@@ -147,15 +119,16 @@
 
         <!-- **** Header :: Top Nav ***** -->
         <div class="main-header">
-          <a
+
+
+          <div class="container">
+            <a
             href="#st-openMenu"
             data-toggle="collapse"
             class="mobile-menu-toggle"
           >
             Mobile Menu Toggle
           </a>
-
-          <div class="container">
             <h1 class="logo navbar-brand">
               <a href="javascript: void(0);" title="iTours - home">
                 <img src="images/logo.png" alt="iTours HTML5 Template" />
@@ -163,15 +136,17 @@
             </h1>
 
             <div class="c-shoppingCart dropdown">
-              <button class="cartBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-shopping-cart"></i>
+              <button
+                class="cartBtn" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              >
+                <i class="icon it itours-shopping-cart"></i>
                 <span class="notify">2</span>
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <ul class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
                 ...
               </ul>
             </div>
-
 
             <!-- **** Header :: Top Nav For Desktop ***** -->
             <nav class="main-menu" role="navigation">
@@ -191,9 +166,6 @@
               </ul>
             </nav>
             <!-- **** Header :: Top Nav For Desktop End ***** -->
-
-
-
           </div>
 
           <!-- **** Header :: Top Nav For Mobile ***** -->
@@ -286,42 +258,29 @@
 
       <!-- ********** Component :: Main Slider ********** -->
       <div class="c-mainSlider">
-        <div class="fullwidthbanner-container sm">
-          <div class="revolution-slider rev_slider">
-            <ul>
+          <div class="js-mainSlider owl-carousel">
+
               <!-- SLIDE  -->
               <!-- Slide1 -->
-              <li
-                data-transition="zoomin"
-                data-slotamount="7"
-                data-masterspeed="1500"
-              >
+              <div class="item">
                 <!-- MAIN IMAGE -->
                 <img src="http://placehold.it/1800x400" alt="" />
-              </li>
+              </div>
 
               <!-- Slide2 -->
-              <li
-                data-transition="zoomout"
-                data-slotamount="7"
-                data-masterspeed="1500"
-              >
+              <div class="item">
                 <!-- MAIN IMAGE -->
                 <img src="http://placehold.it/1800x400" alt="" />
-              </li>
+              </div>
 
               <!-- Slide3 -->
-              <li
-                data-transition="slidedown"
-                data-slotamount="7"
-                data-masterspeed="1500"
-              >
+              <div  class="item">
                 <!-- MAIN IMAGE -->
                 <img src="http://placehold.it/1800x400" alt="" />
-              </li>
-            </ul>
+              </div>
+
           </div>
-        </div>
+
       </div>
       <!-- ********** Component :: Main Slider End ********** -->
 
@@ -331,31 +290,53 @@
         <div class="c-searchContainer">
           <div class="search-box container">
             <!-- ***** Search From Tabs ****** -->
-            <ul class="search-tabs clearfix">
-              <li class="active"><a href="#activities-tab" data-toggle="tab">ACTIVITIES</a></li>
-              <li><a href="#visa-tab" data-toggle="tab">Combo Packages</a></li>
-              <li><a href="#hotels-tab" data-toggle="tab">HOTELS</a></li>
-              <li><a href="#visa-tab" data-toggle="tab">VISA</a></li>
+            <ul class="c-search-tabs nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-toggle="tab"
+                  href="#activities-tab"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                  >ACTIVITIES</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-toggle="tab"
+                  href="#visa-tab"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                  >HOTELS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-toggle="tab"
+                  href="#hotels-tab"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                  >VISA</a
+                >
+              </li>
             </ul>
-
-            <div class="visible-mobile">
-              <ul
-                id="mobile-search-tabs"
-                class="search-tabs clearfix m-search-tabs"
-              >
-                <li class="active"><a href="#hotels-tab">HOTELS</a></li>
-                <li><a href="#activities-tab">ACTIVITIES</a></li>
-                <li><a href="#visa-tab">VISA</a></li>
-              </ul>
-            </div>
             <!-- ***** Search From Tabs End ****** -->
 
             <!-- ***** Search Form Fields ****** -->
-            <div class="search-tab-content">
-              <div class="tab-pane fade" id="hotels-tab">
+            <div class="search-tab-content tab-content">
+              <div
+                class="tab-pane fade show active"
+                role="tabpanel"
+                id="activities-tab"
+              >
                 <form action="javascript:void(0);" method="post">
                   <div class="row">
-                    <div class="form-group col-sm-6 col-md-3">
+                    <div class="form-group col-md-3 col-sm-6 col-12">
                       <h4 class="c-heading sm">Where</h4>
                       <label>Your Destination</label>
                       <input
@@ -365,10 +346,10 @@
                       />
                     </div>
 
-                    <div class="form-group col-sm-6 col-md-4">
+                    <div class="form-group col-md-4 col-sm-6 col-12">
                       <h4 class="c-heading sm">When</h4>
                       <div class="row">
-                        <div class="col-xs-6">
+                        <div class="col-6">
                           <label>Check In</label>
                           <div class="datepicker-wrap">
                             <input
@@ -379,7 +360,7 @@
                             />
                           </div>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-6">
                           <label>Check Out</label>
                           <div class="datepicker-wrap">
                             <input
@@ -393,10 +374,11 @@
                       </div>
                     </div>
 
-                    <div class="form-group col-sm-6 col-md-3">
+                    <div class="form-group col-md-5 col-sm-6 col-12">
                       <h4 class="c-heading sm">Who</h4>
+
                       <div class="row">
-                        <div class="col-xs-4">
+                        <div class="col-4">
                           <label>Rooms</label>
                           <div class="selector">
                             <select class="full-width">
@@ -407,7 +389,7 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-4">
                           <label>Adults</label>
                           <div class="selector">
                             <select class="full-width">
@@ -418,7 +400,7 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-4">
                           <label>Kids</label>
                           <div class="selector">
                             <select class="full-width">
@@ -430,15 +412,14 @@
                           </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div class="form-group col-sm-6 col-md-2 fixheight">
-                      <label class="hidden-xs">&nbsp;</label>
+                    </div>
+                  </div>
+                    <div class="row">
+                    <div class="form-group col-md-3 offset-md-9 col-sm-6 offset-sm-3  col-12">
                       <button
                         type="submit"
-                        class="full-width icon-check animated"
-                        data-animation-type="bounce"
-                        data-animation-duration="1"
+                        class="full-width icon-check"
                       >
                         SEARCH NOW
                       </button>
@@ -447,135 +428,8 @@
                 </form>
               </div>
 
-              <div class="tab-pane fade active in" id="activities-tab">
-                <form action="flight-list-view.html" method="post">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <h4 class="c-heading sm">Where</h4>
-                      <div class="form-group">
-                        <label>Leaving From</label>
-                        <input
-                          type="text"
-                          class="input-text full-width"
-                          placeholder="city, distirct or specific airpot"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label>Going To</label>
-                        <input
-                          type="text"
-                          class="input-text full-width"
-                          placeholder="city, distirct or specific airpot"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="col-md-4">
-                      <h4 class="c-heading sm">When</h4>
-                      <label>Departing On</label>
-                      <div class="form-group row">
-                        <div class="col-xs-6">
-                          <div class="datepicker-wrap">
-                            <input
-                              type="text"
-                              name="date_from"
-                              class="input-text full-width"
-                              placeholder="mm/dd/yy"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-xs-6">
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="1">anytime</option>
-                              <option value="2">morning</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <label>Arriving On</label>
-                      <div class="form-group row">
-                        <div class="col-xs-6">
-                          <div class="datepicker-wrap">
-                            <input
-                              type="text"
-                              name="date_to"
-                              class="input-text full-width"
-                              placeholder="mm/dd/yy"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-xs-6">
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="1">anytime</option>
-                              <option value="2">morning</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-4">
-                      <h4 class="c-heading sm">Who</h4>
-                      <div class="form-group row">
-                        <div class="col-xs-3">
-                          <label>Adults</label>
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="1">01</option>
-                              <option value="2">02</option>
-                              <option value="3">03</option>
-                              <option value="4">04</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-xs-3">
-                          <label>Kids</label>
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="1">01</option>
-                              <option value="2">02</option>
-                              <option value="3">03</option>
-                              <option value="4">04</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-xs-6">
-                          <label>Promo Code</label>
-                          <input
-                            type="text"
-                            class="input-text full-width"
-                            placeholder="type here"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="col-xs-3">
-                          <label>Infants</label>
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="1">01</option>
-                              <option value="2">02</option>
-                              <option value="3">03</option>
-                              <option value="4">04</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-xs-6 pull-right">
-                          <label>&nbsp;</label>
-                          <button class="full-width icon-check">
-                            SERACH NOW
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-
-              <div class="tab-pane fade" id="visa-tab">
-                <form action="car-list-view.html" method="post">
+              <div class="tab-pane fade" role="tabpanel" id="visa-tab">
+                <form action="javascript:void(0);" method="post">
                   <div class="row">
                     <div class="col-md-4">
                       <h4 class="c-heading sm">Where</h4>
@@ -602,7 +456,7 @@
                       <div class="form-group">
                         <label>Pick-Up Date / Time</label>
                         <div class="row">
-                          <div class="col-xs-6">
+                          <div class="col-6">
                             <div class="datepicker-wrap">
                               <input
                                 type="text"
@@ -612,7 +466,7 @@
                               />
                             </div>
                           </div>
-                          <div class="col-xs-6">
+                          <div class="col-6">
                             <div class="selector">
                               <select class="full-width">
                                 <option value="1">anytime</option>
@@ -625,7 +479,7 @@
                       <div class="form-group">
                         <label>Drop-Off Date / Time</label>
                         <div class="row">
-                          <div class="col-xs-6">
+                          <div class="col-6">
                             <div class="datepicker-wrap">
                               <input
                                 type="text"
@@ -635,7 +489,7 @@
                               />
                             </div>
                           </div>
-                          <div class="col-xs-6">
+                          <div class="col-6">
                             <div class="selector">
                               <select class="full-width">
                                 <option value="1">anytime</option>
@@ -650,7 +504,7 @@
                     <div class="col-md-4">
                       <h4 class="c-heading sm">Who</h4>
                       <div class="form-group row">
-                        <div class="col-xs-3">
+                        <div class="col-3">
                           <label>Adults</label>
                           <div class="selector">
                             <select class="full-width">
@@ -661,7 +515,7 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-xs-3">
+                        <div class="col-3">
                           <label>Kids</label>
                           <div class="selector">
                             <select class="full-width">
@@ -672,7 +526,7 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-6">
                           <label>Promo Code</label>
                           <input
                             type="text"
@@ -682,7 +536,7 @@
                         </div>
                       </div>
                       <div class="form-group row">
-                        <div class="col-xs-6">
+                        <div class="col-6">
                           <label>Car Type</label>
                           <div class="selector">
                             <select class="full-width">
@@ -692,7 +546,137 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-6">
+                          <label>&nbsp;</label>
+                          <button class="full-width icon-check">
+                            SERACH NOW
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="tab-pane fade" role="tabpanel" id="hotels-tab">
+                <form action="javascript:void(0);" method="post">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h4 class="c-heading sm">Where</h4>
+                      <div class="form-group">
+                        <label>Pick Up</label>
+                        <input
+                          type="text"
+                          class="input-text full-width"
+                          placeholder="city, distirct or specific airpot"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label>Drop Off</label>
+                        <input
+                          type="text"
+                          class="input-text full-width"
+                          placeholder="city, distirct or specific airpot"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <h4 class="c-heading sm">When</h4>
+                      <div class="form-group">
+                        <label>Pick-Up Date / Time</label>
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="datepicker-wrap">
+                              <input
+                                type="text"
+                                name="date_from"
+                                class="input-text full-width"
+                                placeholder="mm/dd/yy"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="selector">
+                              <select class="full-width">
+                                <option value="1">anytime</option>
+                                <option value="2">morning</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Drop-Off Date / Time</label>
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="datepicker-wrap">
+                              <input
+                                type="text"
+                                name="date_to"
+                                class="input-text full-width"
+                                placeholder="mm/dd/yy"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="selector">
+                              <select class="full-width">
+                                <option value="1">anytime</option>
+                                <option value="2">morning</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <h4 class="c-heading sm">Who</h4>
+                      <div class="form-group row">
+                        <div class="col-3">
+                          <label>Adults</label>
+                          <div class="selector">
+                            <select class="full-width">
+                              <option value="1">01</option>
+                              <option value="2">02</option>
+                              <option value="3">03</option>
+                              <option value="4">04</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <label>Kids</label>
+                          <div class="selector">
+                            <select class="full-width">
+                              <option value="1">01</option>
+                              <option value="2">02</option>
+                              <option value="3">03</option>
+                              <option value="4">04</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <label>Promo Code</label>
+                          <input
+                            type="text"
+                            class="input-text full-width"
+                            placeholder="type here"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-6">
+                          <label>Car Type</label>
+                          <div class="selector">
+                            <select class="full-width">
+                              <option value="">select a car type</option>
+                              <option value="economy">Economy</option>
+                              <option value="compact">Compact</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-6">
                           <label>&nbsp;</label>
                           <button class="full-width icon-check">
                             SERACH NOW
@@ -720,7 +704,7 @@
           <div class="c-cardPallet">
             <div class="overflow-hidden">
               <div class="cardPalletBox column-5-no-margin">
-                <article class="icon-box">
+                <article class="icon-box" >
                   <div class="imageBox">
                     <img src="images/svg/iTours-balloon.svg" alt="img" />
                   </div>
@@ -778,18 +762,14 @@
       <!-- ********** Component :: Info Section ********** -->
 
       <!-- ********** Component :: Destination Ideas Section ********** -->
-      <div class="c-destinatioBanner" data-stellar-background-ratio="0.5">
+      <div class="c-destinatioBanner">
         <div class="container">
           <div class="sectionTitle">
             Amazing Destination Ideas for <em>you!</em>
           </div>
           <div class="row">
-            <div class="col-xs-6 col-sm-4 col-md-2">
-              <div
-                class="icon-box  animated"
-                data-animation-type="slideInRight"
-                data-animation-delay="0"
-              >
+            <div class="col-6 col-sm-4 col-md-2">
+              <div class="icon-box">
                 <i class="soap-icon-adventure"></i>
                 <h4 class="box-title">Adventure</h4>
                 <p class="description">
@@ -797,12 +777,8 @@
                 </p>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-4 col-md-2">
-              <div
-                class="icon-box animated"
-                data-animation-type="slideInRight"
-                data-animation-delay="0.3"
-              >
+            <div class="col-6 col-sm-4 col-md-2">
+              <div class="icon-box">
                 <i class="soap-icon-beach"></i>
                 <h4 class="box-title">Beach</h4>
                 <p class="description">
@@ -810,12 +786,8 @@
                 </p>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-4 col-md-2">
-              <div
-                class="icon-box  animated"
-                data-animation-type="slideInRight"
-                data-animation-delay="0.6"
-              >
+            <div class="col-6 col-sm-4 col-md-2">
+              <div class="icon-box">
                 <i class="soap-icon-party "></i>
                 <h4 class="box-title">Party</h4>
                 <p class="description">
@@ -823,12 +795,8 @@
                 </p>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-4 col-md-2">
-              <div
-                class="icon-box  animated"
-                data-animation-type="slideInRight"
-                data-animation-delay="0.9"
-              >
+            <div class="col-6 col-sm-4 col-md-2">
+              <div class="icon-box">
                 <i class="soap-icon-playplace "></i>
                 <h4 class="box-title">Golf</h4>
                 <p class="description">
@@ -836,12 +804,8 @@
                 </p>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-4 col-md-2">
-              <div
-                class="icon-box  animated"
-                data-animation-type="slideInRight"
-                data-animation-delay="1.2"
-              >
+            <div class="col-6 col-sm-4 col-md-2">
+              <div class="icon-box">
                 <i class="soap-icon-couples "></i>
                 <h4 class="box-title">Romance</h4>
                 <p class="description">
@@ -849,12 +813,8 @@
                 </p>
               </div>
             </div>
-            <div class="col-xs-6 col-sm-4 col-md-2">
-              <div
-                class="icon-box  animated"
-                data-animation-type="slideInRight"
-                data-animation-delay="1.5"
-              >
+            <div class="col-6 col-sm-4 col-md-2">
+              <div class="icon-box">
                 <i class="soap-icon-ski "></i>
                 <h4 class="box-title">Ski</h4>
                 <p class="description">
@@ -872,21 +832,12 @@
         <div class="container">
           <div class="block">
             <h2 class="c-heading lg">Popular Destinations</h2>
-            <div
-              class="c-cardSlider flexslider image-carousel"
-              data-animation="slide"
-              data-item-width="270"
-              data-item-margin="30"
-            >
-              <ul class="slides">
-                <li>
+            <div class="c-cardSlider">
+              <div class="js-cardSlider owl-carousel">
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/270x160" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -899,15 +850,11 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
-                <li>
+                </div>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/270x160" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -920,15 +867,11 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
-                <li>
+                </div>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/270x160" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -941,15 +884,11 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
-                <li>
+                </div>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/270x160" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -962,15 +901,11 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
-                <li>
+                </div>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/270x160" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -983,50 +918,8 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
-                <li>
-                  <!-- *** Component :: Card Type - 1 **** -->
-                  <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
-                      <img src="http://placehold.it/270x160" alt="image" />
-                    </figure>
-                    <div class="cardDetails">
-                      <a href="javascript:void(0);" class="c-link">
-                        <h4 class="cardTitle">
-                          Atlantis - The Palm
-                          <small>Paris</small>
-                        </h4>
-                      </a>
-                    </div>
-                  </article>
-                  <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
-                <li>
-                  <!-- *** Component :: Card Type - 1 **** -->
-                  <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
-                      <img src="http://placehold.it/270x160" alt="image" />
-                    </figure>
-                    <div class="cardDetails">
-                      <a href="javascript:void(0);" class="c-link">
-                        <h4 class="cardTitle">
-                          Atlantis - The Palm
-                          <small>Paris</small>
-                        </h4>
-                      </a>
-                    </div>
-                  </article>
-                  <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1034,10 +927,9 @@
       <!-- ********** Component :: Destination Slider Section End ********** -->
 
       <!-- ********** Component :: Destination Type 02 ********** -->
-      <div class="c-destinatioBanner" data-stellar-background-ratio="0.5">
+      <div class="c-destinatioBanner">
         <div class="container">
           <div class="col-sm-12">
-
             <h3 class="sectionTitle text-center">
               Popular Destinations for Honeymoon
             </h3>
@@ -1052,16 +944,17 @@
               <div class="col-sms-6 col-sm-6 col-md-3">
                 <!-- *** Component :: Card Type - 1 **** -->
                 <article class="c-cardType-01">
-                  <figure
-                    class="animated"
-                    data-animation-type="fadeInDown"
-                    data-animation-duration="1"
-                  >
+                  <figure>
                     <img src="http://placehold.it/270x160" alt="image" />
-                    <span class="discount"><span class="discount-text">10% Discount</span></span>
+                    <span class="discount"
+                      ><span class="discount-text">10% Discount</span></span
+                    >
                   </figure>
                   <div class="cardDetails">
-                    <a href="javascript:void(0);" class="c-link clearfix m10-btm">
+                    <a
+                      href="javascript:void(0);"
+                      class="c-link clearfix m10-btm"
+                    >
                       <div class="dividerSection type-1">
                         <div class="divider s1">
                           <h4 class="cardTitle">
@@ -1115,16 +1008,17 @@
               <div class="col-sms-6 col-sm-6 col-md-3">
                 <!-- *** Component :: Card Type - 1 **** -->
                 <article class="c-cardType-01">
-                  <figure
-                    class="animated"
-                    data-animation-type="fadeInDown"
-                    data-animation-duration="1"
-                  >
+                  <figure>
                     <img src="http://placehold.it/270x160" alt="image" />
-                    <span class="discount"><span class="discount-text">10% Discount</span></span>
+                    <span class="discount"
+                      ><span class="discount-text">10% Discount</span></span
+                    >
                   </figure>
                   <div class="cardDetails">
-                    <a href="javascript:void(0);" class="c-link clearfix m10-btm">
+                    <a
+                      href="javascript:void(0);"
+                      class="c-link clearfix m10-btm"
+                    >
                       <div class="dividerSection type-1">
                         <div class="divider s1">
                           <h4 class="cardTitle">
@@ -1178,16 +1072,17 @@
               <div class="col-sms-6 col-sm-6 col-md-3">
                 <!-- *** Component :: Card Type - 1 **** -->
                 <article class="c-cardType-01">
-                  <figure
-                    class="animated"
-                    data-animation-type="fadeInDown"
-                    data-animation-duration="1"
-                  >
+                  <figure>
                     <img src="http://placehold.it/270x160" alt="image" />
-                    <span class="discount"><span class="discount-text">10% Discount</span></span>
+                    <span class="discount"
+                      ><span class="discount-text">10% Discount</span></span
+                    >
                   </figure>
                   <div class="cardDetails">
-                    <a href="javascript:void(0);" class="c-link clearfix m10-btm">
+                    <a
+                      href="javascript:void(0);"
+                      class="c-link clearfix m10-btm"
+                    >
                       <div class="dividerSection type-1">
                         <div class="divider s1">
                           <h4 class="cardTitle">
@@ -1241,16 +1136,17 @@
               <div class="col-sms-6 col-sm-6 col-md-3">
                 <!-- *** Component :: Card Type - 1 **** -->
                 <article class="c-cardType-01">
-                  <figure
-                    class="animated"
-                    data-animation-type="fadeInDown"
-                    data-animation-duration="1"
-                  >
+                  <figure>
                     <img src="http://placehold.it/270x160" alt="image" />
-                    <span class="discount"><span class="discount-text">10% Discount</span></span>
+                    <span class="discount"
+                      ><span class="discount-text">10% Discount</span></span
+                    >
                   </figure>
                   <div class="cardDetails">
-                    <a href="javascript:void(0);" class="c-link clearfix m10-btm">
+                    <a
+                      href="javascript:void(0);"
+                      class="c-link clearfix m10-btm"
+                    >
                       <div class="dividerSection type-1">
                         <div class="divider s1">
                           <h4 class="cardTitle">
@@ -1300,9 +1196,7 @@
                 </article>
                 <!-- *** Component :: Card Type - 1 End **** -->
               </div>
-
             </div>
-
           </div>
         </div>
       </div>
@@ -1313,21 +1207,12 @@
         <div class="container">
           <div class="block">
             <h2 class="c-heading lg">Popular Activities</h2>
-            <div
-              class="c-cardSlider flexslider image-carousel"
-              data-animation="slide"
-              data-item-width="370"
-              data-item-margin="30"
-            >
-              <ul class="slides">
-                <li>
+            <div class="c-cardSlider">
+              <div class="js-cardSlider owl-carousel">
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/370x190" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -1337,16 +1222,12 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
+                </div>
 
-                <li>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/370x190" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -1356,16 +1237,12 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
+                </div>
 
-                <li>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/370x190" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -1375,16 +1252,12 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
+                </div>
 
-                <li>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/370x190" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -1394,16 +1267,12 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
+                </div>
 
-                <li>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/370x190" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -1413,8 +1282,8 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1423,42 +1292,42 @@
 
       <!-- ********** Component :: Add banner Section ********** -->
       <div class="c-destinatioBanner c-addBanner">
-          <div class="container">
-              <div class="row">
-                  <div class="dividerSection vAlign-mid">
-
-                      <div class="col-md-3 col-sm-12 divider noFloat onlyForDesktop">
-                          <img src="./images/girl.png" alt="" class="animated" data-animation-type="fadeInUp" />
-                      </div>
-
-                      <div class="col-md-9 col-sm-12 divider noFloat">
-
-                          <div class="dividerSection vAlign-mid">
-
-                              <div class="divider col-md-8 M-m20-btm">
-                                  <span class="c-heading col-white md txt-light">
-                                      Tell us where you would like to go.
-                                  </span>
-                                  <span class="c-heading col-white lg txt-bold m0">
-                                    <em>3,000+ Amazing Places to Visit!</em>
-                                  </span>
-                              </div>
-
-                              <div class="divider action-section col-md-4">
-                                <form method="post" action="">
-                                  <input type="text" class="input-text input-large full-width m10-btm" value="" placeholder="Enter destination or hotel name" />
-                                  <button class="full-width btn-large">search cruises</button>
-                                </form>
-                              </div>
-
-                          </div>
-
-                      </div>
-
-                  </div>
+        <div class="container">
+          <div class="row">
+            <div class="dividerSection vAlign-mid">
+              <div class="col-md-3 col-sm-12 divider noFloat onlyForDesktop">
+                <img src="./images/girl.png" alt="" />
               </div>
 
+              <div class="col-md-9 col-sm-12 divider noFloat">
+                <div class="dividerSection vAlign-mid">
+                  <div class="divider M-m20-btm">
+                    <span class="c-heading col-white md txt-light">
+                      Tell us where you would like to go.
+                    </span>
+                    <span class="c-heading col-white lg txt-bold m0">
+                      <em>3,000+ Amazing Places to Visit!</em>
+                    </span>
+                  </div>
+
+                  <div class="divider action-section">
+                    <form method="post" action="">
+                      <input
+                        type="text"
+                        class="input-text input-large full-width m10-btm"
+                        value=""
+                        placeholder="Enter destination or hotel name"
+                      />
+                      <button class="full-width btn-large">
+                        search cruises
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
       <!-- ********** Component :: Add banner Section End ********** -->
 
@@ -1467,21 +1336,12 @@
         <div class="container">
           <div class="block">
             <h2 class="c-heading lg">Popular Hotels</h2>
-            <div
-              class="c-cardSlider flexslider image-carousel"
-              data-animation="slide"
-              data-item-width="370"
-              data-item-margin="30"
-            >
-              <ul class="slides">
-                <li>
+            <div class="c-cardSlider">
+              <div class="js-cardSlider owl-carousel">
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/270x160" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -1503,16 +1363,12 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
+                </div>
 
-                <li>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/270x160" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -1534,16 +1390,12 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
+                </div>
 
-                <li>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/270x160" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -1565,16 +1417,12 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
+                </div>
 
-                <li>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/270x160" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -1596,16 +1444,12 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
+                </div>
 
-                <li>
+                <div class="item">
                   <!-- *** Component :: Card Type - 1 **** -->
                   <article class="c-cardType-01">
-                    <figure
-                      class="animated"
-                      data-animation-type="fadeInDown"
-                      data-animation-duration="1"
-                    >
+                    <figure>
                       <img src="http://placehold.it/270x160" alt="image" />
                     </figure>
                     <div class="cardDetails">
@@ -1627,22 +1471,18 @@
                     </div>
                   </article>
                   <!-- *** Component :: Card Type - 1 End **** -->
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <!-- ********** Component :: Hotel Slider Section End ********** -->
 
-
       <!-- ********** Component :: Destination Type 02 ********** -->
-      <div
-        class="c-destinatioBanner pad0-btm M-p50-btm"
-        data-stellar-background-ratio="0.5"
-      >
+      <div class="c-destinatioBanner pad0-btm M-p50-btm">
         <div class="container">
-          <div class="col-sm-6 pull-right">
+          <div class="col-md-6 col-12 pull-right">
             <h3 class="sectionTitle text-left">
               Popular Destinations for Honeymoon
             </h3>
@@ -1652,16 +1492,10 @@
               vitae pulvinar.
             </p>
             <div class="row">
-              <div class="col-sms-4 col-sm-4">
+              <div class="col-4">
                 <article class="c-cardType-01">
                   <figure>
-                    <a
-                      href="javascript:void(0);"
-                      title=""
-                      class="animated"
-                      data-animation-type="fadeInUp"
-                      data-animation-duration="1"
-                    >
+                    <a href="javascript:void(0);" title="">
                       <img src="http://placehold.it/250x250" alt=""
                     /></a>
                   </figure>
@@ -1674,16 +1508,10 @@
                   </div>
                 </article>
               </div>
-              <div class="col-sms-4 col-sm-4">
+              <div class="col-4">
                 <article class="c-cardType-01">
                   <figure>
-                    <a
-                      href="javascript:void(0);"
-                      title=""
-                      class="animated"
-                      data-animation-type="fadeInUp"
-                      data-animation-duration="1"
-                      data-animation-delay="0.4"
+                    <a href="javascript:void(0);" title=""
                       ><img src="http://placehold.it/250x250" alt=""
                     /></a>
                   </figure>
@@ -1696,16 +1524,10 @@
                   </div>
                 </article>
               </div>
-              <div class="col-sms-4 col-sm-4">
+              <div class="col-4">
                 <article class="c-cardType-01">
                   <figure>
-                    <a
-                      href="javascript:void(0);"
-                      title=""
-                      class="animated"
-                      data-animation-type="fadeInUp"
-                      data-animation-duration="1"
-                      data-animation-delay="0.8"
+                    <a href="javascript:void(0);" title=""
                       ><img src="http://placehold.it/250x250" alt=""
                     /></a>
                   </figure>
@@ -1720,14 +1542,8 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 image-container no-margin onlyForDesktop">
-            <img
-              src="./images/couple.png"
-              alt=""
-              class="animated"
-              data-animation-type="fadeInUp"
-              data-animation-duration="2"
-            />
+          <div class="col-md-6 image-container no-margin onlyForDesktop">
+            <img src="./images/couple.png" alt="" />
           </div>
         </div>
       </div>
@@ -1735,13 +1551,14 @@
 
       <!-- ********** Component :: Footer ********** -->
       <footer class="c-footer">
+
         <div class="footer-wrapper">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-md-3">
                 <h2 class="c-heading">Discover</h2>
                 <div class="row">
-                  <div class="col-xs-6">
+                  <div class="col-6">
                     <ul class="c-footerLink">
                       <li><a href="javascript:void(0);">Safety</a></li>
                       <li><a href="javascript:void(0);">Travelo Picks</a></li>
@@ -1751,7 +1568,7 @@
                       <li><a href="javascript:void(0);">Help Topics</a></li>
                     </ul>
                   </div>
-                  <div class="col-xs-6">
+                  <div class="col-6">
                     <ul class="c-footerLink">
                       <li><a href="javascript:void(0);">Travelo Picks</a></li>
                       <li><a href="javascript:void(0);">Why Host</a></li>
@@ -1851,58 +1668,86 @@
                   >
                 </address>
 
-                <ul class="social-icons clearfix">
-                  <li class="twitter">
-                    <a
-                      title="twitter"
-                      href="javascript:void(0);"
-                      data-toggle="tooltip"
-                      ><i class="soap-icon-twitter"></i
-                    ></a>
-                  </li>
-                  <li class="googleplus">
-                    <a
-                      title="googleplus"
-                      href="javascript:void(0);"
-                      data-toggle="tooltip"
-                      ><i class="soap-icon-googleplus"></i
-                    ></a>
-                  </li>
-                  <li class="facebook">
-                    <a
-                      title="facebook"
-                      href="javascript:void(0);"
-                      data-toggle="tooltip"
-                      ><i class="soap-icon-facebook"></i
-                    ></a>
-                  </li>
-                </ul>
+
               </div>
             </div>
           </div>
         </div>
 
-        <div class="bottom gray-area">
+        <div class="c-bottom">
           <div class="container">
-            <div class="logo pull-left">
-              <a href="javascript: void(0);" title="iTours - home">
-                <img src="images/logo.png" alt="iTours HTML5 Template" />
-              </a>
+
+            <div class="row">
+
+              <div class="col-sm-6 col-12">
+                <div class="c-footerLogos">
+                  <ul>
+                    <li><img src="./images/svg/american-express.svg" /></li>
+                    <li><img src="./images/svg/visa.svg" /></li>
+                    <li><img src="./images/svg/mastercard.svg" /></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <div class="c-footerSocial clearfix">
+                  <ul class="social-icons">
+                    <li class="twitter">
+                      <a
+                        title="twitter"
+                        href="javascript:void(0);"
+                        ><i class="soap-icon-twitter"></i
+                      ></a>
+                    </li>
+                    <li class="googleplus">
+                      <a
+                        title="googleplus"
+                        href="javascript:void(0);"
+                        ><i class="soap-icon-googleplus"></i
+                      ></a>
+                    </li>
+                    <li class="facebook">
+                      <a
+                        title="facebook"
+                        href="javascript:void(0);"
+                        ><i class="soap-icon-facebook"></i
+                      ></a>
+                    </li>
+                    <li class="twitter">
+                      <a
+                        title="twitter"
+                        href="javascript:void(0);"
+                        ><i class="soap-icon-twitter"></i
+                      ></a>
+                    </li>
+                    <li class="googleplus">
+                      <a
+                        title="googleplus"
+                        href="javascript:void(0);"
+                        ><i class="soap-icon-googleplus"></i
+                      ></a>
+                    </li>
+                    <li class="facebook">
+                      <a
+                        title="facebook"
+                        href="javascript:void(0);"
+                        ><i class="soap-icon-facebook"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
 
-            <div class="pull-right">
-              <a
-                id="back-to-top"
-                href="javascript:void(0);"
-                class="animated"
-                data-animation-type="bounce"
-                ><i class="soap-icon-longarrow-up circle"></i
-              ></a>
+            <div class="row">
+              <div class="col-12 c-footerText">
+                <span>© 2019 iTours</span>
+              </div>
             </div>
 
-            <div class="copyright pull-right">
-              <p>&copy; 2019 iTours</p>
-            </div>
+
+
           </div>
         </div>
       </footer>
@@ -1910,107 +1755,12 @@
     </div>
 
     <!-- Javascript -->
-    <!-- Javascript -->
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.noconflict.js"></script>
-    <script type="text/javascript" src="js/modernizr.2.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.1.10.4.min.js"></script>
-
-    <!-- Twitter Bootstrap -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-    <!-- load revolution slider scripts -->
-    <script
-      type="text/javascript"
-      src="components/revolution_slider/js/jquery.themepunch.tools.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="components/revolution_slider/js/jquery.themepunch.revolution.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="components/flexslider/jquery.flexslider-min.js"
-    ></script>
-    <!-- load BXSlider scripts -->
-    <script
-      type="text/javascript"
-      src="components/jquery.bxslider/jquery.bxslider.min.js"
-    ></script>
-
-    <!-- parallax -->
-    <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
-
-    <!-- waypoint -->
-    <script type="text/javascript" src="js/waypoints.min.js"></script>
-
-    <!-- load page Javascript -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-4.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/theme-scripts.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-
-    <script type="text/javascript">
-      tjq(document).ready(function() {
-        tjq(".revolution-slider").revolution({
-          sliderType: "standard",
-          sliderLayout: "auto",
-          dottedOverlay: "none",
-          delay: 5000,
-          navigation: {
-            keyboardNavigation: "off",
-            keyboard_direction: "horizontal",
-            mouseScrollNavigation: "off",
-            mouseScrollReverse: "default",
-            onHoverStop: "on",
-            touch: {
-              touchenabled: "on",
-              swipe_threshold: 75,
-              swipe_min_touches: 1,
-              swipe_direction: "horizontal",
-              drag_block_vertical: false
-            },
-            arrows: {
-              style: "default",
-              enable: true,
-              hide_onmobile: false,
-              hide_onleave: false,
-              tmp: "",
-              left: {
-                h_align: "left",
-                v_align: "center",
-                h_offset: 20,
-                v_offset: 0
-              },
-              right: {
-                h_align: "right",
-                v_align: "center",
-                h_offset: 20,
-                v_offset: 0
-              }
-            }
-          },
-          visibilityLevels: [1240, 1024, 778, 480],
-          gridwidth: 1170,
-          gridheight: 400,
-          lazyType: "none",
-          shadow: 0,
-          spinner: "spinner4",
-          stopLoop: "off",
-          stopAfterLoops: -1,
-          stopAtSlide: -1,
-          shuffle: "off",
-          autoHeight: "off",
-          hideThumbsOnMobile: "off",
-          hideSliderAtLimit: 0,
-          hideCaptionAtLimit: 0,
-          hideAllCaptionAtLilmit: 0,
-          debugMode: false,
-          fallbacks: {
-            simplifyAll: "off",
-            nextSlideOnWindowFocus: "off",
-            disableFocusListener: false
-          }
-        });
-      });
-    </script>
   </body>
 </html>
