@@ -120,8 +120,39 @@ font-family: 'Lato', sans-serif;
 .itours-cancel-circle:before {
   content: "\79";
 }
-
-
+.itours-clock:before {
+  content: "\41";
+}
+.itours-skyline:before {
+  content: "\7a";
+}
+.itours-align-left:before {
+  content: "\42";
+}
+.itours-text-left:before {
+  content: "\43";
+}
+.itours-calendar:before {
+  content: "\44";
+}
+.itours-hour-glass:before {
+  content: "\45";
+}
+.itours-bus:before {
+  content: "\46";
+}
+.itours-handshake:before {
+  content: "\47";
+}
+.itours-printer:before {
+  content: "\48";
+}
+.itours-handshake-1:before {
+  content: "\49";
+}
+.itours-checkmark:before {
+  content: "\4a";
+}
 :root {
   --blue: #6dace6;
   --indigo: #6610f2;
@@ -244,7 +275,12 @@ font-family: 'Lato', sans-serif;
   margin-right: 15px;
   text-align: center;
 }
-
+.amenitiesList .icon.it {
+  width: 42px;
+  line-height: 42px;
+  font-size: 19px;
+}
+.amenitiesList .icon.it::before {position: relative; top: 2px;}
 
 .c-appliedFilters{
   background-color: #fff;
@@ -310,6 +346,32 @@ font-family: 'Lato', sans-serif;
   border:1px solid #f5f5f5;
 }
 
+
+.c-infoChecklist{
+  display: block;
+  margin: 0 0 20px;
+  padding: 0;
+}
+.c-infoChecklist li{
+  position: relative;
+  padding: 3px 3px 3px 25px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #adadad;
+  margin-bottom: 5px;
+}
+.c-infoChecklist li::before{
+  content: "\4a";
+  color: #7db921;
+  font-size: 14px;
+  font-family: "itours";
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  line-height: 15px;
+}
+
 /* ----------------------------------------------
     Component :: Buttons
 ------------------------------------------------- */
@@ -357,7 +419,7 @@ font-family: 'Lato', sans-serif;
   color: #333;
   font-size: 18px;
   line-height: 23px;
-  margin: 0 0 20px;
+  margin: 0 0 15px;
 }
 .c-heading.sm {
   font-size: 14px;
@@ -1421,16 +1483,25 @@ ul.c-search-tabs .nav-link.active {
   font-family: "Saira Condensed", sans-serif;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
+  line-height: 14px;
 }
-.cardList-info .cardInfoLine::before {
+.cardList-info .cardInfoLine:not(.cust)::before {
   color: #fdb714;
   font-size: 16px;
   line-height: 17px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -2px;
   font-family: "soap-icons";
   content: "\e85d";
+}
+.cardList-info .cardInfoLine.cust .icon {
+  color: #fdb714;
+  font-size: 12px;
+  line-height: 11px;
+  position: absolute;
+  left: 0;
+  top: 0px;
 }
 .cardList-info .cardInfoLine.guests::before {
   content: "\e8b7";
@@ -1454,17 +1525,42 @@ ul.c-search-tabs .nav-link.active {
   line-height: 14px;
   text-transform: uppercase;
 }
+.cardList-info .priceTag.inline {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.cardList-info .priceTag.inline small {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
 .cardList-info .hotelInfo {
   display: block;
   color: #adadad;
   font-size: 13px;
   line-height: 18px;
 }
+.cardList-info .hotelInfo.cust {
+  padding-left: 20px;
+  position: relative;
+}
+.cardList-info .hotelInfo.cust::before {
+  color: #fdb714;
+  font-size: 14px;
+  line-height: 15px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-family: "itours";
+  content: "\43";
+}
 .cardList-info .dividerSection.infoSection {
   border: 0;
   margin: 0;
   padding: 0;
 }
+
 
 .c-aminityList {
   display: block;
@@ -1539,13 +1635,42 @@ ul.c-search-tabs .nav-link.active {
   -webkit-box-shadow: 0 1px 4px #e6e6e6;
 }
 
+
+/* -- Activity -- */
+.c-cardList.activity .cardList-info .cardTitle{margin-bottom: 5px;}
+.c-cardList.activity .infoSection{margin-bottom: 10px;}
+.c-cardList.activity .infoSection .cardInfoLine{
+  margin-right: 20px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.c-cardList.activity > .c-cardListTable .cardList-image,
+.c-cardList.activity > .c-cardListTable .cardList-image img{width: 230px;}
+.c-cardList.activity .c-cardListTable .cardList-info{vertical-align: top;}
+.c-cardList.activity .cardList-info .dividerSection{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+.c-cardList.activity .cardList-info .dividerSection .divider.s1{width: calc(100% - 150px);}
+.c-cardList.activity .cardList-info .dividerSection .divider.s2{width: 150px;}
+.c-cardList.activity .cardList-info .c-starRating{margin-bottom: 10px;}
+
+
+@media (max-width: 990px) {
+  .c-cardListTable .cardList-image,
+  .c-cardListTable .cardList-image img,
+  .c-cardList.activity > .c-cardListTable .cardList-image,
+  .c-cardList.activity > .c-cardListTable .cardList-image img {
+    width: 170px;
+  }
+  .hotelInfo.cust{display: none;}
+}
+
 @media (max-width: 600px) {
   .c-cardListTable .cardList-image {
     vertical-align: middle;
-  }
-  .c-cardListTable .cardList-image,
-  .c-cardListTable .cardList-image img {
-    width: 170px;
   }
   .cardList-info .dividerSection.infoSection .divider.s1 {
     display: none;
@@ -1561,7 +1686,9 @@ ul.c-search-tabs .nav-link.active {
     display: block;
   }
   .c-cardListTable .cardList-image,
-  .c-cardListTable .cardList-image img {
+  .c-cardListTable .cardList-image img,
+  .c-cardList.activity > .c-cardListTable .cardList-image,
+  .c-cardList.activity > .c-cardListTable .cardList-image img {
     display: block;
     width: 100%;
   }
@@ -1586,7 +1713,16 @@ ul.c-search-tabs .nav-link.active {
     display: block;
     width: 100%;
   }
+  .hotelInfo.cust{display: block;}
+
+  .c-cardList.activity .cardList-info .dividerSection .divider.s1,
+  .c-cardList.activity .cardList-info .dividerSection .divider.s2{width: 100%; display: block;}
+  .c-cardList.activity .cardList-info .dividerSection .divider.s1{margin-bottom: 20px;}
+  .c-cardList.activity .cardList-info .dividerSection .divider.s2{border: 0; padding-left: 0; text-align: left;}
+  .c-cardList.activity .cardList-info .priceTag{float: left;}
+  .c-cardList.activity .cardList-info .c-starRating{float: right;}
 }
+
 
 /* ----------------------------------------------
     Component :: Hotel List Section
@@ -1735,6 +1871,7 @@ ul.c-search-tabs .nav-link.active {
   height: auto;
 }
 
+
 @media (max-width: 768px) {
   .c-cardListHolder {
     border: 0;
@@ -1863,7 +2000,7 @@ ul.c-search-tabs .nav-link.active {
   font-weight: 600;
 }
 @media (max-width: 600px) {
-  .c-compTabs .nav-tabs .nav-item{width: calc(50% - 5px); margin:0 5px 5px 0;}
+  .c-compTabs .nav-tabs .nav-item{width: calc(50% - 7px); margin:0 5px 5px 0;}
 }
 
 
@@ -2321,7 +2458,10 @@ ul.c-search-tabs .nav-link.active {
   margin-top: 20px;
 }
 .m10-btm {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
+}
+.m20-btm {
+  margin-bottom: 20px;
 }
 .m5-l {
   margin-left: 5px;

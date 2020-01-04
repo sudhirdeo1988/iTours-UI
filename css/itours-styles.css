@@ -958,12 +958,13 @@ select option {
   border-right: 3px solid transparent;
   content: "";
 }
-.selector.style1 span.c-custom-select:before {
-  background: transparent;
-}
-.selector.style1 span.c-custom-select:after {
-  border-top-color: #fdb714;
-}
+
+.selector.sm select,.selector.sm span.c-custom-select{height: 26px; line-height: 26px;}
+.selector.sm span.c-custom-select:after{top: 10px;}
+
+.sm input.input-text{height: 26px; line-height: 26px;}
+.sm.datepicker-wrap:after{font-size: 22px; line-height: 26px;}
+
 
 /* 2.1.2. File input box */
 .fileinput {
