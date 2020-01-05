@@ -153,6 +153,24 @@ font-family: 'Lato', sans-serif;
 .itours-checkmark:before {
   content: "\4a";
 }
+.itours-search:before {
+  content: "\4b";
+}
+.itours-sort-1:before {
+  content: "\4c";
+}
+.itours-check-in:before {
+  content: "\4d";
+}
+.itours-check-out:before {
+  content: "\4e";
+}
+.itours-timetable:before {
+  content: "\4f";
+}
+.itours-person:before {
+  content: "\50";
+}
 :root {
   --blue: #6dace6;
   --indigo: #6610f2;
@@ -454,6 +472,74 @@ font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 22px;
   text-align: left;
+}
+
+.searchHeading{
+  font-family: 'Saira Condensed', sans-serif;
+}
+.searchHeading .pageTitle{
+  color: #fff;
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.searchHeading .sortSection{
+  border-right: 1px solid #6d6d6d;
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  margin: 0 10px 10px 0;
+}
+.searchHeading .sortSection:last-child{border: 0; padding-right: 0; margin-right: 0;}
+.searchHeading .sortSection .sortTitle{
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  padding-left: 20px;
+  position: relative;
+}
+.searchHeading .sortSection .sortTitle .icon{
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  color: #fdb714;
+  font-size: 13px;
+  line-height: 13px;
+}
+.searchHeading .sortSection .dropdown{display: inline-block;}
+.searchHeading .sortSection .dropdown .btn-dd{
+  display: inline-block;
+    padding: 1px 5px;
+    height: auto;
+    line-height: 17px;
+    margin-left: 10px;
+    border: 1px solid #6d6d6d;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 400;
+    outline: none;
+    border-radius: 3px;
+}
+.searchHeading .sortSection .dropdown .btn-dd::after{vertical-align: middle;}
+.searchHeading .dropdown-menu{
+  border: 1px solid #eee;
+  width: 150px;
+}
+.searchHeading .dropdown-menu .dropdown-item{
+  display: block;
+  padding: 3px 0;
+  margin-bottom: 2px;
+  font-size: 14px;
 }
 
 .c-breadcrumbs ul{margin: 0; padding: 0; float: right;}
@@ -1052,7 +1138,7 @@ ul.c-search-tabs .nav-link.active {
   padding: 7px 0;
   margin: 0;
 }
-.c-cardType-01 .discount {
+.c-discount {
   color: #fff;
   background: url(../images/discount-ribin.png) no-repeat;
   line-height: 80px;
@@ -1069,7 +1155,7 @@ ul.c-search-tabs .nav-link.active {
   height: 102px;
   z-index: 1;
 }
-.c-cardType-01 .discount .discount-text {
+.c-discount .discount-text {
   display: inline-block;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -1958,9 +2044,9 @@ ul.c-search-tabs .nav-link.active {
 .c-compTabs .nav-tabs .nav-item .nav-link {
   border: 0;
   border-bottom: 1px solid transparent;
-  background-color: #eee;
+  background-color: #6DACE6;
   display: block;
-  color: #999;
+  color: #fff;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1971,7 +2057,7 @@ ul.c-search-tabs .nav-link.active {
   border-radius: 0;
 }
 .c-compTabs .nav-tabs .nav-item .nav-link.active {
-  background-color: #6dace6;
+  background-color: #fdb714;
   color: #fff;
 }
 .c-compTabs .tab-pane {
@@ -2007,7 +2093,7 @@ ul.c-search-tabs .nav-link.active {
 /* ----------------------------------------------
     Component :: Result Sort Strip
 ------------------------------------------------- */
-.c-sortSection {
+/* .c-sortSection {
   background: #fff;
   padding: 10px 15px;
   margin-bottom: 20px;
@@ -2063,7 +2149,7 @@ ul.c-search-tabs .nav-link.active {
     width: calc(50% - 15px);
     margin: 0 10px 10px 0;
   }
-}
+} */
 
 
 .c-infoDivider {
@@ -2083,7 +2169,7 @@ ul.c-search-tabs .nav-link.active {
   width: 200px;
   border-right: 1px solid #eee;
 }
-
+.c-infoDivider .policyHeading{margin: 0;}
 .policyHeading {
   color: #838383;
   display: block;
@@ -2104,6 +2190,7 @@ ul.c-search-tabs .nav-link.active {
   line-height: 18px;
   margin-bottom: 7px;
 }
+.policyListing li:last-child{margin-bottom: 0;}
 @media (max-width: 560px) {
   .c-infoDivider,
   .c-infoDivider .infoTitle,
@@ -2360,6 +2447,7 @@ ul.c-search-tabs .nav-link.active {
 .c-checkSquare{display: block; position: relative;}
 .c-checkSquare li{display: block; margin-bottom: 2px;}
 .c-checkSquare li .filterCheckbox{
+  color: #999;
   border: 0;
   background-color: #f9f9f9;
   display: block;
@@ -2383,7 +2471,7 @@ ul.c-search-tabs .nav-link.active {
   font-size: 15px;
   line-height: 16px;
 }
-.c-checkSquare .filterCheckbox.st-checked{background-color: #6dace6}
+.c-checkSquare .filterCheckbox.st-checked{background-color: #6dace6; color: #fff;}
 .c-checkSquare .filterCheckbox.st-checked::after{color: #fff;}
 .c-checkSquare .c-starRating{vertical-align: middle; background-color: transparent;}
 .c-checkSquare .c-starRating .stars{background-color: transparent;}

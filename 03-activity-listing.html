@@ -262,7 +262,38 @@
         <div class="container">
           <div class="row">
             <div class="col-md-7 col-12">
-              <span class="pageTitle">Activites Search Result</span>
+
+              <div class="searchHeading">
+                <span class="pageTitle">Activites and More in Goa</span>
+                <div class="clearfix">
+
+                  <div class="sortSection">
+                    <span class="sortTitle">
+                      <i class="icon it itours-sort-1"></i>
+                      Sort Activites by:
+                    </span>
+                    <div class="dropdown">
+                      <button class="btn-dd dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Most Popular
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Price - High to Low</a>
+                        <a class="dropdown-item" href="#">Price - Low to High</a>
+                        <a class="dropdown-item" href="#">Popularity</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sortSection">
+                    <span class="sortTitle st-search">
+                      <i class="icon it itours-search"></i>
+                      Showing 370 activites in Goa
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
             <div class="col-md-5 col-12 c-breadcrumbs">
               <ul>
@@ -285,11 +316,11 @@
           <div class="row">
             <!-- ***** Hotel Listing Filter ***** -->
             <div class="col-md-3 col-sm-12">
-
+<!--
               <div class="c-filterTitle">
                 <i class="icon soap-icon-search"></i>
                 <span> <strong>250</strong> Results Found</span>
-              </div>
+              </div> -->
 
               <!-- ***** Applied Filter ***** -->
               <div class="c-appliedFilters">
@@ -435,26 +466,6 @@
 
             <!-- ***** Hotel Listing ***** -->
             <div class="col-md-9 col-sm-12">
-              <!-- ***** Hotel Sorting Strip ***** -->
-              <div class="c-sortSection">
-                <div class="row">
-                  <div class="col-sm-3 col-12">
-                    <span class="sortTitle">Sort Activites by: </span>
-                  </div>
-                  <div class="col-sm-9 col-12">
-                    <button class="sortButton st-active">
-                      Most Popular
-                      <span class="sortIcon"></span>
-                    </button>
-
-                    <button class="sortButton">
-                      Rating
-                      <span class="sortIcon"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- ***** Hotel Sorting Strip End ***** -->
 
               <!-- ***** Hotel Card ***** -->
               <div class="c-cardList activity">
@@ -462,6 +473,9 @@
                   <!-- *** Hotel Card image *** -->
                   <div class="cardList-image">
                     <img src="http://placehold.it/270x160" alt="" />
+                    <span class="c-discount">
+                      <span class="discount-text">10% Discount</span>
+                    </span>
                   </div>
                   <!-- *** Hotel Card image End *** -->
 
@@ -538,6 +552,18 @@
                             aria-controls="description"
                             aria-selected="true"
                             >Description</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link"
+                            id="timings-tab"
+                            data-toggle="tab"
+                            href="#timings"
+                            role="tab"
+                            aria-controls="timings"
+                            aria-selected="true"
+                            >Timing</a
                           >
                         </li>
                         <li class="nav-item">
@@ -819,6 +845,108 @@
                             </div>
                           </div>
                           <!-- **** Amenities **** -->
+                        </div>
+                        <!-- **** Tab Description End **** -->
+
+                        <!-- **** Tab Description **** -->
+                        <div
+                          class="tab-pane fade"
+                          id="timings"
+                          role="tabpanel"
+                          aria-labelledby="timings-tab"
+                        >
+                          <!-- **** Description **** -->
+                          <div class="clearfix m20-btm">
+                            <h3 class="c-heading">
+                              Singapore City Tour with Guide
+                            </h3>
+
+                            <div class="c-infoDivider">
+                              <div class="infoTitle">
+                                <h4 class="policyHeading">
+                                  Duration
+                                </h4>
+                              </div>
+                              <div class="infoDescription">
+                                <ul class="policyListing">
+                                  <li>5 - 6 Hours (Approx)</li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="c-infoDivider">
+                              <div class="infoTitle">
+                                <h4 class="policyHeading">
+                                  Reporting Time
+                                </h4>
+                              </div>
+                              <div class="infoDescription">
+                                <ul class="policyListing">
+                                  <li>4 PM</li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="c-infoDivider">
+                              <div class="infoTitle">
+                                <h4 class="policyHeading">
+                                  Departure Point
+                                </h4>
+                              </div>
+                              <div class="infoDescription">
+                                <ul class="policyListing">
+                                  <li>Hotel (Centrally located in City Center Area Dubai)</li>
+                                  <li>Hotel (Sharjah Sahara Center Dubai Side)</li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="c-infoDivider">
+                              <div class="infoTitle">
+                                <h4 class="policyHeading">
+                                  Transfer Timings
+                                </h4>
+                              </div>
+                              <div class="infoDescription">
+                                <ul class="policyListing">
+                                  <li>Sharing Transfer : Between 2:30 PM to 3:30 PM (5 - 6 Hours Approx)</li>
+                                  <li>Private Transfer : Between 3:00 PM to 4:00 PM PM (5 - 6 Hours Approx)</li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="c-infoDivider">
+                              <div class="infoTitle">
+                                <h4 class="policyHeading">
+                                  Tour Language
+                                </h4>
+                              </div>
+                              <div class="infoDescription">
+                                <ul class="policyListing">
+                                  <li>English</li>
+                                  <li>Arabic</li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="c-infoDivider">
+                              <div class="infoTitle">
+                                <h4 class="policyHeading">
+                                  Meals Options
+                                </h4>
+                              </div>
+                              <div class="infoDescription">
+                                <ul class="policyListing">
+                                  <li>Veg BBQ buffet dinner</li>
+                                  <li>Nonveg BBQ buffet dinner</li>
+                                </ul>
+                              </div>
+                            </div>
+
+                          </div>
+
+                          <!-- **** Description End **** -->
+
                         </div>
                         <!-- **** Tab Description End **** -->
 

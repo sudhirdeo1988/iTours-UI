@@ -262,8 +262,68 @@
         <div class="container">
           <div class="row">
             <div class="col-md-7 col-12">
-              <span class="pageTitle">Hotel Search Result</span>
+
+              <!-- *** Search Head **** -->
+              <div class="searchHeading">
+                <span class="pageTitle">Hotels in Goa</span>
+
+                <div class="clearfix">
+
+                  <div class="sortSection">
+                    <span class="sortTitle st-search">
+                      <i class="icon it itours-timetable"></i>
+                      Check In: <strong>Sat, 1 Feb 2020</strong>
+                    </span>
+                  </div>
+
+                  <div class="sortSection">
+                    <span class="sortTitle st-search">
+                      <i class="icon it itours-timetable"></i>
+                      Check Out: <strong>Tues, 4 Feb 2020</strong>
+                    </span>
+                  </div>
+
+                  <div class="sortSection">
+                    <span class="sortTitle st-search">
+                      <i class="icon it itours-person"></i>
+                      3 Adults, 2 Childs
+                    </span>
+                  </div>
+
+                </div>
+
+                <div class="clearfix">
+
+                  <div class="sortSection">
+                    <span class="sortTitle">
+                      <i class="icon it itours-sort-1"></i>
+                      Sort Hotels by:
+                    </span>
+                    <div class="dropdown">
+                      <button class="btn-dd dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Most Popular
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Price - High to Low</a>
+                        <a class="dropdown-item" href="#">Price - Low to High</a>
+                        <a class="dropdown-item" href="#">Popularity</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sortSection">
+                    <span class="sortTitle st-search">
+                      <i class="icon it itours-search"></i>
+                      Showing 370 Hotels in Goa
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+              <!-- *** Search Head End **** -->
+
             </div>
+
             <div class="col-md-5 col-12 c-breadcrumbs">
               <ul>
                 <li>
@@ -274,6 +334,7 @@
                 </li>
               </ul>
             </div>
+
           </div>
         </div>
       </div>
@@ -285,11 +346,6 @@
           <div class="row">
             <!-- ***** Hotel Listing Filter ***** -->
             <div class="col-md-3 col-sm-12">
-
-              <div class="c-filterTitle">
-                <i class="icon soap-icon-search"></i>
-                <span> <strong>250</strong> Results Found</span>
-              </div>
 
               <!-- ***** Applied Filter ***** -->
               <div class="c-appliedFilters">
@@ -378,7 +434,7 @@
 
                     <div class="card-header">
                       <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#jsFilterRating" aria-expanded="false" aria-controls="jsFilterRating">
-                        Rating
+                        User Rating
                       </button>
                     </div>
 
@@ -428,6 +484,45 @@
                   </div>
                   <!-- ***** Rating Filter End ***** -->
 
+                  <!-- ***** Rating Filter ***** -->
+                  <div class="accordion c-accordion" id="filterCatagory">
+                    <div class="card">
+
+                      <div class="card-header">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#jsFilterCatagory" aria-expanded="false" aria-controls="jsFilterCatagory">
+                          Hotel Star Category
+                        </button>
+                      </div>
+
+                      <div id="jsFilterCatagory" class="collapse" aria-labelledby="jsFilterCatagory" data-parent="#filterCatagory">
+                        <div class="card-body filters-container">
+                          <ul class="c-checkSquare">
+                            <li>
+                              <button class="filterCheckbox">5 Star Hotels</button>
+                            </li>
+                            <li>
+                              <button class="filterCheckbox">4 Star Hotels</button>
+                            </li>
+                            <li>
+                              <button class="filterCheckbox">3 Star Hotels</button>
+                            </li>
+                            <li>
+                              <button class="filterCheckbox">2 Star Hotels</button>
+                            </li>
+                            <li>
+                              <button class="filterCheckbox">1 Star Hotels</button>
+                            </li>
+                            <li>
+                              <button class="filterCheckbox">Non-rated Hotels</button>
+                            </li>
+                        </ul>
+
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <!-- ***** Rating Filter End ***** -->
+
 
 
             </div>
@@ -435,31 +530,6 @@
 
             <!-- ***** Hotel Listing ***** -->
             <div class="col-md-9 col-sm-12">
-              <!-- ***** Hotel Sorting Strip ***** -->
-              <div class="c-sortSection">
-                <div class="row">
-                  <div class="col-sm-3 col-12">
-                    <span class="sortTitle">Sort Hotels by: </span>
-                  </div>
-                  <div class="col-sm-9 col-12">
-                    <button class="sortButton">
-                      Name
-                      <span class="sortIcon"></span>
-                    </button>
-
-                    <button class="sortButton st-active">
-                      Price
-                      <span class="sortIcon"></span>
-                    </button>
-
-                    <button class="sortButton">
-                      Rating
-                      <span class="sortIcon"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- ***** Hotel Sorting Strip End ***** -->
 
               <!-- ***** Hotel Card ***** -->
               <div class="c-cardList">
@@ -467,6 +537,9 @@
                   <!-- *** Hotel Card image *** -->
                   <div class="cardList-image">
                     <img src="http://placehold.it/270x160" alt="" />
+                    <span class="c-discount">
+                      <span class="discount-text">10% Discount</span>
+                    </span>
                   </div>
                   <!-- *** Hotel Card image End *** -->
 
@@ -1189,80 +1262,6 @@
               </div>
               <!-- ***** Hotel Card End ***** -->
 
-              <!-- ***** Hotel Card ***** -->
-              <div class="c-cardList">
-                <div class="c-cardListTable ">
-                  <!-- *** Hotel Card image *** -->
-                  <div class="cardList-image">
-                    <img src="http://placehold.it/270x160" alt="" />
-                  </div>
-                  <!-- *** Hotel Card image End *** -->
-
-                  <!-- *** Hotel Card Info *** -->
-                  <div class="cardList-info">
-                    <div class="dividerSection type-1">
-                      <div class="divider s1">
-                        <h4 class="cardTitle">Hotel Hilton</h4>
-                        <span class="cardInfoLine">Bastille, Paris france</span>
-                        <div class="c-aminityList">
-                          <ul>
-                            <li role="“button”">
-                              <i class="icon soap-icon-wifi"></i>
-                            </li>
-                            <li role="“button”">
-                              <i class="icon soap-icon-fork"></i>
-                            </li>
-                            <li role="“button”">
-                              <i class="icon soap-icon-television"></i>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div class="divider s2">
-                        <span class="priceTag">
-                          $455.00 <small>per / Night</small>
-                        </span>
-                        <div class="c-starRating r-3p5">
-                          <span class="stars"></span>
-                          <p class="rating">200 Rating</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="dividerSection type-1 infoSection">
-                      <div class="divider s1">
-                        <span class="hotelInfo"
-                          >Nunc cursus libero purus ac congue ar lorem cursus ut
-                          sed vitae pulvinar massa idend porta nequetiam
-                          elerisque mi id.</span
-                        >
-                      </div>
-                      <div class="divider s2">
-                        <button
-                          class="c-button lg"
-                          data-toggle="collapse"
-                          href="#collapseExample"
-                          aria-expanded="false"
-                          aria-controls="collapseExample"
-                        >
-                          View Details
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- *** Hotel Card Info End *** -->
-                </div>
-
-                <!-- *** Hotel Details Accordian *** -->
-                <div class="collapse" id="collapseExample">
-                  <div class="cardList-accordian">
-                    Hotel Data
-                  </div>
-                </div>
-                <!-- *** Hotel Details Accordian End *** -->
-              </div>
-              <!-- ***** Hotel Card End ***** -->
             </div>
             <!-- ***** Hotel Listing End ***** -->
           </div>
