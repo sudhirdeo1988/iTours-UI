@@ -195,6 +195,7 @@ function changeTraveloElementUI() {
 
 $(document).ready(function() {
     changeTraveloElementUI();
+    $('[data-toggle="tooltip"]').tooltip();
 
 	if ( stGlobals.isMobile ) {
         $("body").addClass("is-mobile");

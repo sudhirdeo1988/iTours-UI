@@ -2582,6 +2582,7 @@ ul.c-search-tabs .nav-link.active {
 .onlyForDesktop {
   display: block !important;
 }
+.tooltip-inner{font-size: 11px;}
 @media (max-width: 768px) {
   .onlyForMobile {
     display: block !important;
