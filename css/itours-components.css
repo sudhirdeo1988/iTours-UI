@@ -171,6 +171,27 @@ font-family: 'Lato', sans-serif;
 .itours-person:before {
   content: "\50";
 }
+.itours-gas-station:before {
+  content: "\51";
+}
+.itours-dashboard:before {
+  content: "\52";
+}
+.itours-ac:before {
+  content: "\53";
+}
+.itours-location-pin:before {
+  content: "\54";
+}
+.itours-briefcase:before {
+  content: "\55";
+}
+.itours-suitcase:before {
+  content: "\56";
+}
+.itours-car:before {
+  content: "\57";
+}
 :root {
   --blue: #6dace6;
   --indigo: #6610f2;
@@ -451,6 +472,21 @@ font-family: 'Lato', sans-serif;
 }
 .c-heading.col-white {
   color: #fff;
+}
+.c-midHeading{
+  font-family: 'Saira Condensed', sans-serif;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #69a1d4;
+  padding: 2px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 11px;
+  background: -moz-linear-gradient(left,  rgba(109,172,230,0.35) 10%, rgba(1,2,3,0) 87%, rgba(0,0,0,0) 88%);
+  background: -webkit-linear-gradient(left,  rgba(109,172,230,0.35) 10%,rgba(1,2,3,0) 87%,rgba(0,0,0,0) 88%);
+  background: linear-gradient(to right,  rgba(109,172,230,0.35) 10%,rgba(1,2,3,0) 87%,rgba(0,0,0,0) 88%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#596dace6', endColorstr='#00000000',GradientType=1 );
 }
 .c-statictext {
   display: block;
@@ -1565,7 +1601,7 @@ ul.c-search-tabs .nav-link.active {
   font-size: 11px;
   color: #838383;
   text-transform: uppercase;
-  padding-left: 15px;
+  padding-left: 18px;
   font-family: "Saira Condensed", sans-serif;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
@@ -1723,17 +1759,21 @@ ul.c-search-tabs .nav-link.active {
 
 
 /* -- Activity -- */
-.c-cardList.activity .cardList-info .cardTitle{margin-bottom: 5px;}
-.c-cardList.activity .infoSection{margin-bottom: 10px;}
-.c-cardList.activity .infoSection .cardInfoLine{
+.c-cardList.activity .cardList-info .cardTitle,
+.c-cardList.type2 .cardList-info .cardTitle{margin-bottom: 5px;}
+.c-cardList.activity .infoSection,
+.c-cardList.type2 .infoSection{margin-bottom: 10px;}
+.c-cardList.activity .infoSection .cardInfoLine,
+.c-cardList.type2 .infoSection .cardInfoLine{
   margin-right: 20px;
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 .c-cardList.activity > .c-cardListTable .cardList-image,
 .c-cardList.activity > .c-cardListTable .cardList-image img{width: 230px;}
 .c-cardList.activity .c-cardListTable .cardList-info{vertical-align: top;}
-.c-cardList.activity .cardList-info .dividerSection{
+.c-cardList.activity .cardList-info .dividerSection,
+.c-cardList.type2 .cardList-info .dividerSection{
   border: 0;
   margin: 0;
   padding: 0;
@@ -1743,6 +1783,9 @@ ul.c-search-tabs .nav-link.active {
 .c-cardList.activity .cardList-info .dividerSection .divider.s2{width: 150px;}
 .c-cardList.activity .cardList-info .c-starRating{margin-bottom: 10px;}
 
+
+/* -- Car -- */
+.c-cardList.car{}
 
 @media (max-width: 990px) {
   .c-cardListTable .cardList-image,
@@ -2545,6 +2588,7 @@ ul.c-search-tabs .nav-link.active {
 .m20-top {
   margin-top: 20px;
 }
+.m5-btm{margin-bottom: 5px !important;}
 .m10-btm {
   margin-bottom: 10px !important;
 }
