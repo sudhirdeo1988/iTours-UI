@@ -1170,9 +1170,9 @@ button, input[type="button"].button {
   height: 34px;
   line-height: 34px;
 }
-button:hover, input[type="button"].button:hover {
+/* button:hover, input[type="button"].button:hover {
   background: #7fb231;
-}
+} */
 
 a.button {
   display: inline-block;

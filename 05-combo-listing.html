@@ -611,28 +611,29 @@
                     <!-- ***** Hotel Info Tabs ***** -->
                     <div class="c-compTabs">
                       <ul class="nav nav-tabs" id="myTab" role="tablist">
+
                         <li class="nav-item">
                           <a
                             class="nav-link active"
-                            id="home-tab"
-                            data-toggle="tab"
-                            href="#home"
-                            role="tab"
-                            aria-controls="home"
-                            aria-selected="true"
-                            >Room Types</a
-                          >
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link"
                             id="description-tab"
                             data-toggle="tab"
                             href="#description"
                             role="tab"
                             aria-controls="description"
                             aria-selected="true"
-                            >Description</a
+                            >Itinerary</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link"
+                            id="costing-tab"
+                            data-toggle="tab"
+                            href="#costing"
+                            role="tab"
+                            aria-controls="costing"
+                            aria-selected="true"
+                            >Costing</a
                           >
                         </li>
                         <li class="nav-item">
@@ -674,394 +675,235 @@
                       </ul>
 
                       <div class="tab-content" id="myTabContent">
-                        <!-- **** Tab Hotel Listing **** -->
-                        <div
-                          class="tab-pane fade show active"
-                          id="home"
-                          role="tabpanel"
-                          aria-labelledby="home-tab"
-                        >
-                          <!-- ***** Hotel List Card ***** -->
-                          <div class="c-cardListHolder">
-                            <div class="c-cardListTable type-2">
-                              <!-- *** Hotel Card image *** -->
-                              <div class="cardList-image">
-                                <img src="http://placehold.it/270x160" alt="" />
-                              </div>
-                              <!-- *** Hotel Card image End *** -->
-
-                              <!-- *** Hotel Card Info *** -->
-                              <div class="cardList-info">
-                                <div class="flexGrid">
-                                  <div class="gridItem">
-                                    <div class="infoCard">
-                                      <span class="infoCard_data">
-                                        Single Bed Room
-                                        <span class="infoCard_notifi m5-l"
-                                          >Available</span
-                                        >
-                                      </span>
-                                    </div>
-                                    <div class="styleForMobile">
-                                      <div class="infoCard c-aminityList sm">
-                                        <ul>
-                                          <li role="button" data-toggle="tooltip" data-placement="top" title="Free WiFi">
-                                            <i class="icon soap-icon-wifi"></i>
-                                          </li>
-                                          <li role="button">
-                                            <i class="icon soap-icon-fork" data-toggle="tooltip" data-placement="top" title="Free Breakfast"></i>
-                                          </li>
-                                          <li role="button" data-toggle="tooltip" data-placement="top" title="TV in room">
-                                            <i
-                                              class="icon soap-icon-television"
-                                            ></i>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="infoCard c-halfText m0">
-                                        <span class="sect">Max Guests:</span>
-                                        <span class="sect s2">2 Persons</span>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="gridItem">
-                                    <div class="infoCard m0">
-                                      <div class="M-infoCard">
-                                        <span class="infoCard_label"
-                                          >Charge PER/NIGHT</span
-                                        >
-                                        <span class="infoCard_price"
-                                          >$230.00</span
-                                        >
-                                        <span class="infoCard_priceTax"
-                                          >(inclusive of all taxes)</span
-                                        >
-                                      </div>
-
-                                      <div class="clearfix M-policyLink">
-                                        <button class="policyLink">
-                                          Booking Policy
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="gridItem styleForMobile M-m0">
-                                    <div class="infoCard">
-                                      <div class="selector">
-                                        <select class="full-width">
-                                          <option value="1"
-                                            >Select Room Type</option
-                                          >
-                                          <option value="1">anytime</option>
-                                          <option value="2">morning</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="infoCard text-right">
-                                      <button class="c-buttonBorder">
-                                        Book Now
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- *** Hotel Card Info End *** -->
-                            </div>
-                          </div>
-                          <!-- ***** Hotel List Card End ***** -->
-
-                          <!-- ***** Hotel List Card ***** -->
-                          <div class="c-cardListHolder">
-                            <div class="c-cardListTable type-2">
-                              <!-- *** Hotel Card image *** -->
-                              <div class="cardList-image">
-                                <img src="http://placehold.it/270x160" alt="" />
-                              </div>
-                              <!-- *** Hotel Card image End *** -->
-
-                              <!-- *** Hotel Card Info *** -->
-                              <div class="cardList-info">
-                                <div class="flexGrid">
-                                  <div class="gridItem">
-                                    <div class="infoCard">
-                                      <span class="infoCard_data">
-                                        Deluxe Single Room
-                                        <span
-                                          class="infoCard_notifi type-2 m5-l"
-                                          >Full</span
-                                        >
-                                      </span>
-                                    </div>
-                                    <div class="styleForMobile">
-                                      <div class="infoCard c-aminityList sm">
-                                        <ul>
-                                          <li role="“button”">
-                                            <i class="icon soap-icon-wifi"></i>
-                                          </li>
-                                          <li role="“button”">
-                                            <i class="icon soap-icon-fork"></i>
-                                          </li>
-                                          <li role="“button”">
-                                            <i
-                                              class="icon soap-icon-television"
-                                            ></i>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="infoCard c-halfText m0">
-                                        <span class="sect">Max Guests:</span>
-                                        <span class="sect s2">2 Persons</span>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="gridItem">
-                                    <div class="infoCard m0">
-                                      <div class="M-infoCard">
-                                        <span class="infoCard_label"
-                                          >Charge PER/NIGHT</span
-                                        >
-                                        <span class="infoCard_price"
-                                          >$230.00</span
-                                        >
-                                        <span class="infoCard_priceTax"
-                                          >(inclusive of all taxes)</span
-                                        >
-                                      </div>
-
-                                      <div class="clearfix M-policyLink">
-                                        <button class="policyLink">
-                                          Booking Policy
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="gridItem styleForMobile M-m0">
-                                    <div class="infoCard">
-                                      <div class="selector">
-                                        <select class="full-width">
-                                          <option value="1"
-                                            >Select Room Type</option
-                                          >
-                                          <option value="1">anytime</option>
-                                          <option value="2">morning</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="infoCard text-right">
-                                      <button class="c-buttonBorder">
-                                        Book Now
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- *** Hotel Card Info End *** -->
-                            </div>
-                          </div>
-                          <!-- ***** Hotel List Card End ***** -->
-
-                          <!-- ***** Hotel List Card ***** -->
-                          <div class="c-cardListHolder">
-                            <div class="c-cardListTable type-2">
-                              <!-- *** Hotel Card image *** -->
-                              <div class="cardList-image">
-                                <img src="http://placehold.it/270x160" alt="" />
-                              </div>
-                              <!-- *** Hotel Card image End *** -->
-
-                              <!-- *** Hotel Card Info *** -->
-                              <div class="cardList-info">
-                                <div class="flexGrid">
-                                  <div class="gridItem">
-                                    <div class="infoCard">
-                                      <span class="infoCard_data">
-                                        Superior Double Room
-                                        <span
-                                          class="infoCard_notifi type-2 m5-l"
-                                          >Full</span
-                                        >
-                                      </span>
-                                    </div>
-                                    <div class="styleForMobile">
-                                      <div class="infoCard c-aminityList sm">
-                                        <ul>
-                                          <li role="“button”">
-                                            <i class="icon soap-icon-wifi"></i>
-                                          </li>
-                                          <li role="“button”">
-                                            <i class="icon soap-icon-fork"></i>
-                                          </li>
-                                          <li role="“button”">
-                                            <i
-                                              class="icon soap-icon-television"
-                                            ></i>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="infoCard c-halfText m0">
-                                        <span class="sect">Max Guests:</span>
-                                        <span class="sect s2">6 Persons</span>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="gridItem">
-                                    <div class="infoCard m0">
-                                      <div class="M-infoCard">
-                                        <span class="infoCard_label"
-                                          >Charge PER/NIGHT</span
-                                        >
-                                        <span class="infoCard_price"
-                                          >$230.00</span
-                                        >
-                                        <span class="infoCard_priceTax"
-                                          >(inclusive of all taxes)</span
-                                        >
-                                      </div>
-
-                                      <div class="clearfix M-policyLink">
-                                        <button class="policyLink">
-                                          Booking Policy
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="gridItem styleForMobile M-m0">
-                                    <div class="infoCard">
-                                      <div class="selector">
-                                        <select class="full-width">
-                                          <option value="1"
-                                            >Select Room Type</option
-                                          >
-                                          <option value="1">anytime</option>
-                                          <option value="2">morning</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="infoCard text-right">
-                                      <button class="c-buttonBorder">
-                                        Book Now
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- *** Hotel Card Info End *** -->
-                            </div>
-                          </div>
-                          <!-- ***** Hotel List Card End ***** -->
-                        </div>
-                        <!-- **** Tab Hotel Listing End **** -->
 
                         <!-- **** Tab Description **** -->
                         <div
-                          class="tab-pane fade"
+                          class="tab-pane fade show active"
                           id="description"
                           role="tabpanel"
                           aria-labelledby="description-tab"
                         >
-                          <!-- **** Description **** -->
-                          <div class="clearfix margin20-bottom">
 
-                            <div class="c-ratingBlock">
-                              <div class="row">
+                          <!-- **** Day Info List **** -->
+                          <div class="c-cardListInfo">
+                            <div class="cardListInfo-row">
 
-                              </div>
-                              <h3 class="c-heading">
-                                Total Rating
-                              </h3>
-                              <div class="clearfix">
-                                <div class="c-starRating lg r-3p5">
-                                  <span class="stars"></span>
+                              <!-- **** List **** -->
+                              <div class="ListInfo-col">
+
+                                <div class="dayCount">
+                                  <span class="s1">DAY</span>
+                                  <span class="s2">1</span>
                                 </div>
+
+                                <div class="dayInfo">
+                                  <h5 class="h1">Kanyakupari sightseeing</h5>
+                                  <span class="staticText">
+                                    Arrival :12:00 kanyakumari devi temple, Gandhi smarak
+                                  </span>
+                                  <div class="itemList">
+                                    <span class="item">
+                                      <i class="icon it itours-coffee"></i>
+                                      Meal Plan
+                                    </span>
+                                    <span class="item">
+                                      <i class="icon it itours-cutlery"></i>
+                                      Lunch
+                                    </span>
+                                    <span class="item">
+                                      <i class="icon it itours-dinner"></i>
+                                      Dinner
+                                    </span>
+                                    <span class="item">
+                                      <i class="icon it itours-bed"></i>
+                                      Overnight Stay
+                                    </span>
+                                  </div>
+                                </div>
+
                               </div>
+                              <!-- **** List End **** -->
+
+                              <!-- **** List **** -->
+                              <div class="ListInfo-col">
+
+                                <div class="dayCount">
+                                  <span class="s1">DAY</span>
+                                  <span class="s2">2</span>
+                                </div>
+
+                                <div class="dayInfo">
+                                  <h5 class="h1">Kanyakupari sightseeing</h5>
+                                  <span class="staticText">
+                                    Arrival :12:00 kanyakumari devi temple, Gandhi smarak
+                                  </span>
+                                  <div class="itemList">
+                                    <span class="item">
+                                      <i class="icon it itours-coffee"></i>
+                                      Breakfast
+                                    </span>
+                                    <span class="item">
+                                      <i class="icon it itours-cutlery"></i>
+                                      Lunch
+                                    </span>
+                                    <span class="item">
+                                      <i class="icon it itours-dinner"></i>
+                                      Dinner
+                                    </span>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <!-- **** List End **** -->
+
+                              <!-- **** List **** -->
+                              <div class="ListInfo-col">
+
+                                <div class="dayCount">
+                                  <span class="s1">DAY</span>
+                                  <span class="s2">3</span>
+                                </div>
+
+                                <div class="dayInfo">
+                                  <h5 class="h1">Kanyakupari sightseeing</h5>
+                                  <span class="staticText">
+                                    Arrival :12:00 kanyakumari devi temple, Gandhi smarak
+                                  </span>
+                                  <div class="itemList">
+                                    <span class="item">
+                                      <i class="icon it itours-coffee"></i>
+                                      Breakfast
+                                    </span>
+                                    <span class="item">
+                                      <i class="icon it itours-cutlery"></i>
+                                      Lunch
+                                    </span>
+                                    <span class="item">
+                                      <i class="icon it itours-dinner"></i>
+                                      Dinner
+                                    </span>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <!-- **** List End **** -->
+
+                              <!-- **** List **** -->
+                              <div class="ListInfo-col">
+
+                                <div class="dayCount">
+                                  <span class="s1">DAY</span>
+                                  <span class="s2">4</span>
+                                </div>
+
+                                <div class="dayInfo">
+                                  <h5 class="h1">Kanyakupari sightseeing</h5>
+                                  <span class="staticText">
+                                    Arrival :12:00 kanyakumari devi temple, Gandhi smarak
+                                  </span>
+                                  <div class="itemList">
+                                    <span class="item">
+                                      <i class="icon it itours-coffee"></i>
+                                      Breakfast
+                                    </span>
+                                    <span class="item">
+                                      <i class="icon it itours-cutlery"></i>
+                                      Lunch
+                                    </span>
+                                    <span class="item">
+                                      <i class="icon it itours-dinner"></i>
+                                      Dinner
+                                    </span>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <!-- **** List End **** -->
 
                             </div>
-
-                            <h3 class="c-heading">
-                              About Hilton Hotel and Resorts
-                            </h3>
-                            <p class="c-statictext">
-                              Sed aliquam nunc eget velit imperdiet, in rutrum
-                              mauris malesuada. Quisque ullamcorper vulputate
-                              nisi, et fringilla ante convallis quis. Nullam vel
-                              tellus non elit suscipit volutpat. Integer id
-                              felis et nibh rutrum dignissim ut non risus. In
-                              tincidunt urna quis sem luctus, sed accumsan magna
-                              pellentesque. Donec et iaculis tellus. Vestibulum
-                              ut iaculis justo, auctor sodales lectus. Donec et
-                              tellus tempus, dignissim maurornare, consequat
-                              lacus. Integer dui neque, scelerisque nec
-                              sollicitudin sit amet, sodales a erat. Duis vitae
-                              condimentum ligula. Integer eu mi nisl. Donec
-                              massa dui, commodo id arcu quis, venenatis
-                              scelerisque velit.
-                            </p>
-                            <p class="c-statictext">
-                              Sed aliquam nunc eget velit imperdiet, in rutrum
-                              mauris malesuada. Quisque ullamcorper vulputate
-                              nisi, et fringilla ante convallis quis. Nullam vel
-                              tellus non elit suscipit volutpat. Integer id
-                              felis et nibh rutrum dignissim ut non risus. In
-                              tincidunt urna quis sem luctus, sed accumsan magna
-                              pellentesque. Donec et iaculis tellus.
-                            </p>
                           </div>
-                          <!-- **** Description End **** -->
-
-                          <!-- **** Amenities **** -->
-                          <div class="clearfix margin20-bottom">
-                            <h3 class="c-heading">
-                              Amenities
-                            </h3>
-                            <div class="clearfix">
-                              <ul class="row c-amenitiesType2">
-                                <li class="col-md-4 col-sm-6 col-12">
-                                  <div class="amenitiesList">
-                                    <i class="soap-icon-wifi icon"></i>WI_FI
-                                  </div>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-12">
-                                  <div class="amenitiesList">
-                                    <i class="soap-icon-swimming icon"></i
-                                    >swimming pool
-                                  </div>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-12">
-                                  <div class="amenitiesList">
-                                    <i class="soap-icon-television icon"></i
-                                    >television
-                                  </div>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-12">
-                                  <div class="amenitiesList">
-                                    <i class="soap-icon-breakfast icon"></i
-                                    >complimentary breakfast
-                                  </div>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-12">
-                                  <div class="amenitiesList">
-                                    <i class="soap-icon-pickanddrop icon"></i
-                                    >pick and drop
-                                  </div>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-12">
-                                  <div class="amenitiesList">
-                                    <i class="soap-icon-television icon"></i
-                                    >television
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <!-- **** Amenities **** -->
+                          <!-- **** Day Info List **** -->
                         </div>
                         <!-- **** Tab Description End **** -->
+
+                        <!-- **** Tab costing **** -->
+                        <div
+                          class="tab-pane fade"
+                          id="costing"
+                          role="tabpanel"
+                          aria-labelledby="costing-tab"
+                        >
+
+                          <!-- **** Policies List **** -->
+                          <div class="clearfix m20-btm">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="c-flexCards">
+                                  <div>1</div>
+                                  <div>1</div>
+                                  <div>1</div>
+                                  <div>1</div>
+                                  <div>1</div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- **** Policies List End **** -->
+
+                          <!-- **** Policies List **** -->
+                          <div class="clearfix m20-btm">
+                            <div class="row">
+                              <div class="col-12">
+                                <h3 class="c-heading">
+                                  Note :
+                                </h3>
+                                <ul class="c-infoChecklist">
+                                  <li>Family Combo (2 Adults + 2 Kids age 6 to 11 yrs.)</li>
+                                  <li>Price Per Person Single Privie is based on special room for individual</li>
+                                  <li>Once you finalised your tour you can visit our head  Office, Preferred Sales Partners (PSP’s)  fill the booking form with copies of Id Proof and Payment Cheque.</li>
+                                  <li>If you have selected the Tour and agreed upon the Terms and Conditions, then we can even send our representative to your door step.</li>
+                                </ul>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- **** Policies List End **** -->
+
+                          <!-- **** Policies List **** -->
+                          <div class="clearfix m20-btm">
+                            <div class="row">
+                              <div class="col-md-6 col-12">
+                                <h3 class="c-heading">
+                                  Inclusions :
+                                </h3>
+                                <ul class="c-infoChecklist">
+                                  <li>Suntec City</li>
+                                  <li>Orchard Road</li>
+                                  <li>Merlion Park (Plenty photo-ops)</li>
+                                  <li>Fountain of Wealth</li>
+                                  <li>Drive through Chinatown and Little India</li>
+                                </ul>
+                              </div>
+                              <div class="col-md-6 col-12">
+                                <h3 class="c-heading">
+                                  Exclusion :
+                                </h3>
+                                <ul class="c-infoChecklist">
+                                  <li>Suntec City</li>
+                                  <li>Orchard Road</li>
+                                  <li>Merlion Park (Plenty photo-ops)</li>
+                                  <li>Fountain of Wealth</li>
+                                  <li>Drive through Chinatown and Little India</li>
+                                </ul>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- **** Policies List End **** -->
+
+                        </div>
+                        <!-- **** Tab costing End **** -->
 
                         <!-- **** Tab Policies **** -->
                         <div
