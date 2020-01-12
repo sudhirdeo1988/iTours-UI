@@ -204,6 +204,15 @@ font-family: 'Lato', sans-serif;
 .itours-bed:before {
   content: "\30";
 }
+.itours-dot:before {
+  content: "\31";
+}
+.itours-globe:before {
+  content: "\32";
+}
+.itours-globe-1:before {
+  content: "\33";
+}
 :root {
   --blue: #6dace6;
   --indigo: #6610f2;
@@ -423,6 +432,36 @@ font-family: 'Lato', sans-serif;
   line-height: 15px;
 }
 
+
+.c-banktls{
+  display: block;
+  position: relative;
+}
+.c-banktls .bCard{
+  display: block;
+  font-family: 'Saira Condensed', sans-serif;
+  position: relative;
+  margin-bottom: 10px;
+}
+.c-banktls .bCard .title{
+  border-bottom: 1px solid #f3f3f3;
+  display: block;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ababab;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 11px;
+}
+.c-banktls .bCard .info{
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: #69a1d4;
+}
+
 /* ----------------------------------------------
     Component :: Buttons
 ------------------------------------------------- */
@@ -491,7 +530,7 @@ font-family: 'Lato', sans-serif;
   font-size: 11px;
   font-weight: 600;
   color: #69a1d4;
-  padding: 2px;
+  padding: 2px 2px 1px 2px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   line-height: 11px;
@@ -2621,6 +2660,17 @@ ul.c-search-tabs .nav-link.active {
   display: block;
   margin: 0 0 5px;
   font-size: 12px;
+  position: relative;
+  padding-left: 13px;
+}
+.cardListInfo-row .ListInfo-col .staticText::before{
+  position: absolute;
+  top: 0;
+  left: -3px;
+  font-size: 17px;
+  color: #537190;
+  font-family: "itours";
+  content: "\31";
 }
 .cardListInfo-row .ListInfo-col .itemList{
   display: block;
@@ -2661,15 +2711,37 @@ ul.c-search-tabs .nav-link.active {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.c-flexCards > div{
+.c-flexCards .f_card{
   padding: 10px;
-  background-color: red;
+  background-color: #537190;
   width: calc(25% - 10px);
   margin: 0 10px 10px 0;
+  font-family: "Saira Condensed", sans-serif;
 }
-
+.f_card .currency_icon,
+.f_card .currency_amount,
+.f_card .currency_for{
+  display: block;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 5px;
+}
+.f_card .currency_icon{
+  font-size: 14px;
+  color: #96b4d4;
+  line-height: 12px;
+}
+.f_card .currency_for{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin-bottom: 0;
+  line-height: 14px;
+}
 @media (max-width: 600px) {
-  .c-flexCards > div{
+  .c-flexCards .f_card{
     padding: 10px;
     display: inline-block;
     width: calc(50% - 10px);
@@ -2678,7 +2750,7 @@ ul.c-search-tabs .nav-link.active {
 }
 
 @media (max-width: 480px) {
-  .c-flexCards > div{
+  .c-flexCards .f_card{
     padding: 10px;
     display: inline-block;
     width: 100%;
