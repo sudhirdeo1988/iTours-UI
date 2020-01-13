@@ -500,6 +500,23 @@ font-family: 'Lato', sans-serif;
   display: block;
   width: 100%;
 }
+.c-button[aria-expanded]{
+  position: relative;
+  padding-right: 30px;
+}
+.c-button[aria-expanded]::before{
+  position: absolute;
+  top: 10px;
+  right: 7px;
+  height: 8px;
+  width: 9px;
+  line-height: 14px;
+  content: '';
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  border-bottom: 0;
+  border-left: 4px solid transparent;
+}
 
 /* ----------------------------------------------
     Component :: Headings
