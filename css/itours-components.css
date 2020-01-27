@@ -518,6 +518,17 @@ font-family: 'Lato', sans-serif;
   border-left: 4px solid transparent;
 }
 
+
+.c-tag{
+  display: inline-block;
+  padding: 2px 10px;
+  background: #fdb714;
+  font-size: 11px;
+  color: #fff;
+  border-radius: 30px;
+  line-height: 11px;
+  vertical-align: middle;
+}
 /* ----------------------------------------------
     Component :: Headings
 ------------------------------------------------- */
