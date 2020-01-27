@@ -2865,6 +2865,14 @@ ul.c-search-tabs .nav-link.active {
   display: block !important;
 }
 .tooltip-inner{font-size: 11px;}
+.c-lineDiv:not(:first-child),
+.c-lineDiv:not(:last-child){
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
 @media (max-width: 768px) {
   .onlyForMobile {
     display: block !important;

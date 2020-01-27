@@ -29,7 +29,6 @@
   </head>
   <body>
     <div class="c-pageWrapper">
-
       <!-- ********** Component :: Header ********** -->
       <header class="c-header">
         <!-- **** Header :: Top Strip ***** -->
@@ -119,16 +118,14 @@
 
         <!-- **** Header :: Top Nav ***** -->
         <div class="main-header">
-
-
           <div class="container">
             <a
-            href="#st-openMenu"
-            data-toggle="collapse"
-            class="mobile-menu-toggle"
-          >
-            Mobile Menu Toggle
-          </a>
+              href="#st-openMenu"
+              data-toggle="collapse"
+              class="mobile-menu-toggle"
+            >
+              Mobile Menu Toggle
+            </a>
             <h1 class="logo navbar-brand">
               <a href="javascript: void(0);" title="iTours - home">
                 <img src="images/logo.png" alt="iTours HTML5 Template" />
@@ -137,13 +134,17 @@
 
             <div class="c-shoppingCart dropdown">
               <button
-                class="cartBtn" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                class="cartBtn"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
                 <i class="icon it itours-shopping-cart"></i>
                 <span class="notify">2</span>
               </button>
-              <ul class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 ...
               </ul>
             </div>
@@ -258,29 +259,26 @@
 
       <!-- ********** Component :: Main Slider ********** -->
       <div class="c-mainSlider">
-          <div class="js-mainSlider owl-carousel">
-
-              <!-- SLIDE  -->
-              <!-- Slide1 -->
-              <div class="item">
-                <!-- MAIN IMAGE -->
-                <img src="http://placehold.it/1800x400" alt="" />
-              </div>
-
-              <!-- Slide2 -->
-              <div class="item">
-                <!-- MAIN IMAGE -->
-                <img src="http://placehold.it/1800x400" alt="" />
-              </div>
-
-              <!-- Slide3 -->
-              <div  class="item">
-                <!-- MAIN IMAGE -->
-                <img src="http://placehold.it/1800x400" alt="" />
-              </div>
-
+        <div class="js-mainSlider owl-carousel">
+          <!-- SLIDE  -->
+          <!-- Slide1 -->
+          <div class="item">
+            <!-- MAIN IMAGE -->
+            <img src="http://placehold.it/1800x400" alt="" />
           </div>
 
+          <!-- Slide2 -->
+          <div class="item">
+            <!-- MAIN IMAGE -->
+            <img src="http://placehold.it/1800x400" alt="" />
+          </div>
+
+          <!-- Slide3 -->
+          <div class="item">
+            <!-- MAIN IMAGE -->
+            <img src="http://placehold.it/1800x400" alt="" />
+          </div>
+        </div>
       </div>
       <!-- ********** Component :: Main Slider End ********** -->
 
@@ -289,28 +287,29 @@
         <!-- ********** Search From ********** -->
         <div class="c-searchContainer">
           <div class="search-box container">
+
             <!-- ***** Search From Tabs ****** -->
             <ul class="c-search-tabs nav nav-tabs" role="tablist">
               <li class="nav-item">
                 <a
                   class="nav-link active"
                   data-toggle="tab"
-                  href="#activities-tab"
+                  href="#visa-tab"
                   role="tab"
-                  aria-controls="home"
-                  aria-selected="true"
-                  >ACTIVITIES</a
+                  aria-controls="profile"
+                  aria-selected="false"
+                  >HOTELS</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link"
                   data-toggle="tab"
-                  href="#visa-tab"
+                  href="#activities-tab"
                   role="tab"
-                  aria-controls="profile"
-                  aria-selected="false"
-                  >HOTELS</a
+                  aria-controls="home"
+                  aria-selected="true"
+                  >ACTIVITIES</a
                 >
               </li>
               <li class="nav-item">
@@ -329,11 +328,186 @@
 
             <!-- ***** Search Form Fields ****** -->
             <div class="search-tab-content tab-content">
+              <!-- ***** Tab Hotel ****** -->
               <div
                 class="tab-pane fade show active"
                 role="tabpanel"
-                id="activities-tab"
+                id="visa-tab"
               >
+                <form action="javascript:void(0);" method="post">
+                  <div class="row">
+                    <div class="col-md-4 col-12">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="form-group">
+                            <label>Enter Destination</label>
+                            <input
+                              type="text"
+                              class="input-text full-width"
+                              placeholder="city, distirct or specific Hotel"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 col-12">
+                          <div class="form-group">
+                            <label>Check In Date</label>
+                            <div class="datepicker-wrap">
+                              <input
+                                type="text"
+                                name="date_from"
+                                class="input-text full-width"
+                                placeholder="mm/dd/yy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 col-12">
+                          <div class="form-group">
+                            <label>Check Out Date</label>
+                            <div class="datepicker-wrap">
+                              <input
+                                type="text"
+                                name="date_from"
+                                class="input-text full-width"
+                                placeholder="mm/dd/yy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-5 col-12">
+                      <!-- ***** Room 1 Section ***** -->
+                      <div class="clearfix">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="form-group">
+                              <label>Rooms</label>
+                              <div class="selector">
+                                <select class="full-width">
+                                  <option value="1">01</option>
+                                  <option value="2">02</option>
+                                  <option value="3">03</option>
+                                  <option value="4">04</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-8 col-12">
+                            <!-- ***** Room 1 Section ***** -->
+                            <div class="c-lineDiv">
+                              <div class="row">
+                                <div class="col-md-6 col-sm-6 col-12">
+                                  <div class="form-group">
+                                    <label>Adults</label>
+                                    <div class="selector">
+                                      <select class="full-width">
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6 col-12">
+                                  <div class="form-group">
+                                    <label>Childrens</label>
+                                    <div class="selector">
+                                      <select class="full-width">
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- *** Room 1 - Child Section *** -->
+                                <div class="col-12 c-childSection">
+                                  <div class="row">
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                      <div class="form-group">
+                                        <label>Child 1 Age</label>
+                                        <div class="selector">
+                                          <select class="full-width">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                      <div class="form-group">
+                                        <label>Child 2 Age</label>
+                                        <div class="selector">
+                                          <select class="full-width">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                      <div class="form-group">
+                                        <label>Child 3 Age</label>
+                                        <div class="selector">
+                                          <select class="full-width">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- *** Room 1 - Child Section End *** -->
+                              </div>
+                            </div>
+                            <!-- ***** Room 1 Section End ***** -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ***** Room 1 Section End ***** -->
+                    </div>
+
+                    <div class="col-md-3 col-12 align-self-top">
+                      <div class="clearfix m20-btm">
+                        <label>Nationality</label>
+                        <div class="selector">
+                          <select class="full-width">
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <button class="full-width">
+                        SERACH NOW
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- ***** Tab Hotel End ****** -->
+
+              <div class="tab-pane fade" role="tabpanel" id="activities-tab">
                 <form action="javascript:void(0);" method="post">
                   <div class="row">
                     <div class="form-group col-md-3 col-sm-6 col-12">
@@ -412,147 +586,15 @@
                           </div>
                         </div>
                       </div>
-
                     </div>
                   </div>
-                    <div class="row">
-                    <div class="form-group col-md-3 offset-md-9 col-sm-6 offset-sm-3  col-12">
-                      <button
-                        type="submit"
-                        class="full-width icon-check"
-                      >
+                  <div class="row">
+                    <div
+                      class="form-group col-md-3 offset-md-9 col-sm-6 offset-sm-3  col-12"
+                    >
+                      <button type="submit" class="full-width icon-check">
                         SEARCH NOW
                       </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-
-              <div class="tab-pane fade" role="tabpanel" id="visa-tab">
-                <form action="javascript:void(0);" method="post">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <h4 class="c-heading sm">Where</h4>
-                      <div class="form-group">
-                        <label>Pick Up</label>
-                        <input
-                          type="text"
-                          class="input-text full-width"
-                          placeholder="city, distirct or specific airpot"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label>Drop Off</label>
-                        <input
-                          type="text"
-                          class="input-text full-width"
-                          placeholder="city, distirct or specific airpot"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="col-md-4">
-                      <h4 class="c-heading sm">When</h4>
-                      <div class="form-group">
-                        <label>Pick-Up Date / Time</label>
-                        <div class="row">
-                          <div class="col-6">
-                            <div class="datepicker-wrap">
-                              <input
-                                type="text"
-                                name="date_from"
-                                class="input-text full-width"
-                                placeholder="mm/dd/yy"
-                              />
-                            </div>
-                          </div>
-                          <div class="col-6">
-                            <div class="selector">
-                              <select class="full-width">
-                                <option value="1">anytime</option>
-                                <option value="2">morning</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label>Drop-Off Date / Time</label>
-                        <div class="row">
-                          <div class="col-6">
-                            <div class="datepicker-wrap">
-                              <input
-                                type="text"
-                                name="date_to"
-                                class="input-text full-width"
-                                placeholder="mm/dd/yy"
-                              />
-                            </div>
-                          </div>
-                          <div class="col-6">
-                            <div class="selector">
-                              <select class="full-width">
-                                <option value="1">anytime</option>
-                                <option value="2">morning</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-4">
-                      <h4 class="c-heading sm">Who</h4>
-                      <div class="form-group row">
-                        <div class="col-3">
-                          <label>Adults</label>
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="1">01</option>
-                              <option value="2">02</option>
-                              <option value="3">03</option>
-                              <option value="4">04</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-3">
-                          <label>Kids</label>
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="1">01</option>
-                              <option value="2">02</option>
-                              <option value="3">03</option>
-                              <option value="4">04</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <label>Promo Code</label>
-                          <input
-                            type="text"
-                            class="input-text full-width"
-                            placeholder="type here"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="col-6">
-                          <label>Car Type</label>
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="">select a car type</option>
-                              <option value="economy">Economy</option>
-                              <option value="compact">Compact</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <label>&nbsp;</label>
-                          <button class="full-width icon-check">
-                            SERACH NOW
-                          </button>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </form>
@@ -687,6 +729,7 @@
                   </div>
                 </form>
               </div>
+
             </div>
             <!-- ***** Search Form Fields End ****** -->
           </div>
@@ -704,7 +747,7 @@
           <div class="c-cardPallet">
             <div class="overflow-hidden">
               <div class="cardPalletBox column-5-no-margin">
-                <article class="icon-box" >
+                <article class="icon-box">
                   <div class="imageBox">
                     <img src="images/svg/iTours-balloon.svg" alt="img" />
                   </div>
@@ -1291,7 +1334,7 @@
       <!-- ********** Component :: Destination Slider Section End ********** -->
 
       <!-- ********** Component :: Add banner Section ********** -->
-      <div class="c-destinatioBanner c-addBanner">
+      <div class="c-destinatioBanner c-addBanner pad0">
         <div class="container">
           <div class="row">
             <div class="dividerSection vAlign-mid">
@@ -1551,7 +1594,6 @@
 
       <!-- ********** Component :: Footer ********** -->
       <footer class="c-footer">
-
         <div class="footer-wrapper">
           <div class="container">
             <div class="row">
@@ -1667,8 +1709,6 @@
                     >help@iTours.com</a
                   >
                 </address>
-
-
               </div>
             </div>
           </div>
@@ -1676,9 +1716,7 @@
 
         <div class="c-bottom">
           <div class="container">
-
             <div class="row">
-
               <div class="col-sm-6 col-12">
                 <div class="c-footerLogos">
                   <ul>
@@ -1693,51 +1731,38 @@
                 <div class="c-footerSocial clearfix">
                   <ul class="social-icons">
                     <li class="twitter">
-                      <a
-                        title="twitter"
-                        href="javascript:void(0);"
+                      <a title="twitter" href="javascript:void(0);"
                         ><i class="soap-icon-twitter"></i
                       ></a>
                     </li>
                     <li class="googleplus">
-                      <a
-                        title="googleplus"
-                        href="javascript:void(0);"
+                      <a title="googleplus" href="javascript:void(0);"
                         ><i class="soap-icon-googleplus"></i
                       ></a>
                     </li>
                     <li class="facebook">
-                      <a
-                        title="facebook"
-                        href="javascript:void(0);"
+                      <a title="facebook" href="javascript:void(0);"
                         ><i class="soap-icon-facebook"></i
                       ></a>
                     </li>
                     <li class="twitter">
-                      <a
-                        title="twitter"
-                        href="javascript:void(0);"
+                      <a title="twitter" href="javascript:void(0);"
                         ><i class="soap-icon-twitter"></i
                       ></a>
                     </li>
                     <li class="googleplus">
-                      <a
-                        title="googleplus"
-                        href="javascript:void(0);"
+                      <a title="googleplus" href="javascript:void(0);"
                         ><i class="soap-icon-googleplus"></i
                       ></a>
                     </li>
                     <li class="facebook">
-                      <a
-                        title="facebook"
-                        href="javascript:void(0);"
+                      <a title="facebook" href="javascript:void(0);"
                         ><i class="soap-icon-facebook"></i
                       ></a>
                     </li>
                   </ul>
                 </div>
               </div>
-
             </div>
 
             <div class="row">
@@ -1745,9 +1770,6 @@
                 <span>© 2019 iTours</span>
               </div>
             </div>
-
-
-
           </div>
         </div>
       </footer>
