@@ -213,6 +213,9 @@ font-family: 'Lato', sans-serif;
 .itours-globe-1:before {
   content: "\33";
 }
+.itours-building:before {
+  content: "\34";
+}
 :root {
   --blue: #6dace6;
   --indigo: #6610f2;
@@ -751,6 +754,11 @@ section.dataContainer:after {
 }
 .dividerSection.vAlign-mid .divider {
   vertical-align: middle;
+}
+.cardList-info .dividerSection.noborder{
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 /* ----------------------------------------------
@@ -1791,6 +1799,45 @@ ul.c-search-tabs .nav-link.active {
   padding: 0;
 }
 
+.c-cardList.type-hotel .cardList-info .cardTitle{
+  margin-bottom: 5px;
+}
+.c-cardList.type-hotel .infoSection .cardInfoLine{
+  display: inline-block;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 2px solid #eee;
+}
+.c-cardList.type-hotel .infoSection{margin-bottom: 5px;}
+.c-cardList.type-hotel .infoSection .cardInfoLine:last-child{
+  border: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+.c-cardList.type-hotel .cardList-info{vertical-align: top;}
+
+
+.c-tagSection{
+  display: block;
+  margin: 0 0 15px;
+}
+.c-tagSection .tag{
+  color: #333;
+  display: inline-block;
+  margin: 0 4px 4px 0;
+  height: 20px;
+  font-size: 11px;
+  line-height: 21px;
+  background-color: rgb(204, 234, 231);
+  padding: 0px 15px;
+  font-family: "Saira Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  border-radius: 20px;
+}
+
+/* -------- Amenity List --------- */
 
 .c-aminityList {
   display: block;
@@ -1839,6 +1886,46 @@ ul.c-search-tabs .nav-link.active {
   font-size: 18px;
   line-height: 18px;
 }
+
+.c-aminityListBlock{
+  display: block;
+  height: auto;
+  overflow: hidden;
+}
+.c-aminityListBlock ul{display: block;}
+.c-aminityListBlock ul li{
+  float: left;
+  height: auto;
+  overflow: hidden;
+  padding-right: 1px;
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0) 4%, rgba(206,206,206,1) 50%, rgba(232,232,232,0) 96%);
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 4%,rgba(206,206,206,1) 50%,rgba(232,232,232,0) 96%);
+  background: linear-gradient(to bottom,  rgba(255,255,255,0) 4%,rgba(206,206,206,1) 50%,rgba(232,232,232,0) 96%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00e8e8e8',GradientType=0 );
+}
+.c-aminityListBlock ul li:last-child{padding-right: 0;}
+.c-aminityListBlock ul li .amenity{
+  height: auto;
+  min-width: 60px;
+  background-color: #fff;
+}
+.c-aminityListBlock ul li img{
+  display: block;
+  margin: 0 auto 6px;
+  height: 22px;
+  width: 22px;
+}
+.c-aminityListBlock ul li span{
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: #999;
+  line-height: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-family: "Saira Condensed", sans-serif;
+}
+
 .cardList-info .c-starRating {
   margin: 10px 0 0;
 }
