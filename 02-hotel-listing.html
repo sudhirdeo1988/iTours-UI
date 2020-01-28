@@ -533,7 +533,12 @@
 
               <!-- ***** Hotel Card ***** -->
               <div class="c-cardList">
-                <div class="c-cardListTable ">
+                <div class="c-cardListTable"
+                role="button"
+                data-toggle="collapse"
+                href="#collapseExample1"
+                aria-expanded="false"
+                aria-controls="collapseExample">
                   <!-- *** Hotel Card image *** -->
                   <div class="cardList-image">
                     <img src="http://placehold.it/270x160" alt="" />
@@ -545,10 +550,19 @@
 
                   <!-- *** Hotel Card Info *** -->
                   <div class="cardList-info">
+
                     <div class="dividerSection type-1">
                       <div class="divider s1">
-                        <h4 class="cardTitle">Hotel Hilton</h4>
+                        <h4 class="cardTitle">
+                          Hotel Hilton
+                          <div class="hotelStar">
+                            <div class="c-starRating cust s4">
+                              <span class="stars"></span>
+                            </div>
+                          </div>
+                        </h4>
                         <span class="cardInfoLine">Bastille, Paris france</span>
+
                         <div class="c-aminityList">
                           <ul>
                             <li role="button" data-toggle="tooltip" data-placement="top" title="Free WiFi">
@@ -562,6 +576,7 @@
                             </li>
                           </ul>
                         </div>
+
                       </div>
 
                       <div class="divider s2">
@@ -576,26 +591,7 @@
                       </div>
                     </div>
 
-                    <div class="dividerSection type-1 infoSection">
-                      <div class="divider s1">
-                        <span class="hotelInfo"
-                          >Nunc cursus libero purus ac congue ar lorem cursus ut
-                          sed vitae pulvinar massa idend porta nequetiam
-                          elerisque mi id.</span
-                        >
-                      </div>
-                      <div class="divider s2">
-                        <button
-                          class="c-button lg"
-                          data-toggle="collapse"
-                          href="#collapseExample1"
-                          aria-expanded="false"
-                          aria-controls="collapseExample"
-                        >
-                          View Details
-                        </button>
-                      </div>
-                    </div>
+
                   </div>
                   <!-- *** Hotel Card Info End *** -->
                 </div>
