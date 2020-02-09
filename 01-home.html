@@ -376,6 +376,43 @@
                             </div>
                           </div>
                         </div>
+
+                        <div class="col-12">
+                          <div class="form-group">
+                            <label>Hotel Star Catagory</label>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="c1" value="option1">
+                              <label class="form-check-label" for="c1">
+                                1 <i class="icon-star"></i>
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="c2" value="option2">
+                              <label class="form-check-label" for="c2">
+                                2 <i class="icon-star"></i>
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="c3" value="option3">
+                              <label class="form-check-label" for="c3">
+                                3<i class="icon-star"></i>
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="c4" value="option4">
+                              <label class="form-check-label" for="c4">
+                                4 <i class="icon-star"></i>
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="c5" value="option5">
+                              <label class="form-check-label" for="c5">
+                                5<i class="icon-star"></i>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
 
@@ -387,9 +424,9 @@
                             <div class="form-group">
                               <label>Rooms</label>
                               <div class="selector">
-                                <select class="full-width">
+                                <select class="full-width js-roomCount">
                                   <option value="1">01</option>
-                                  <option value="2">02</option>
+                                  <option value="2" selected>02</option>
                                   <option value="3">03</option>
                                   <option value="4">04</option>
                                 </select>
@@ -398,87 +435,132 @@
                           </div>
 
                           <div class="col-md-8 col-12">
-                            <!-- ***** Room 1 Section ***** -->
-                            <div class="c-lineDiv">
-                              <div class="row">
-                                <div class="col-md-6 col-sm-6 col-12">
-                                  <div class="form-group">
-                                    <label>Adults</label>
-                                    <div class="selector">
-                                      <select class="full-width">
-                                        <option value="1">01</option>
-                                        <option value="2">02</option>
-                                        <option value="3">03</option>
-                                        <option value="4">04</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
 
-                                <div class="col-md-6 col-sm-6 col-12">
-                                  <div class="form-group">
-                                    <label>Childrens</label>
-                                    <div class="selector">
-                                      <select class="full-width">
-                                        <option value="1">01</option>
-                                        <option value="2">02</option>
-                                        <option value="3">03</option>
-                                        <option value="4">04</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
+                            <!-- ***** Room Listing ***** -->
+                            <div class="c-roomListing">
 
-                                <!-- *** Room 1 - Child Section *** -->
-                                <div class="col-12 c-childSection">
-                                  <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-12">
-                                      <div class="form-group">
-                                        <label>Child 1 Age</label>
-                                        <div class="selector">
-                                          <select class="full-width">
-                                            <option value="1">01</option>
-                                            <option value="2">02</option>
-                                            <option value="3">03</option>
-                                            <option value="4">04</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-sm-6 col-12">
-                                      <div class="form-group">
-                                        <label>Child 2 Age</label>
-                                        <div class="selector">
-                                          <select class="full-width">
-                                            <option value="1">01</option>
-                                            <option value="2">02</option>
-                                            <option value="3">03</option>
-                                            <option value="4">04</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-sm-6 col-12">
-                                      <div class="form-group">
-                                        <label>Child 3 Age</label>
-                                        <div class="selector">
-                                          <select class="full-width">
-                                            <option value="1">01</option>
-                                            <option value="2">02</option>
-                                            <option value="3">03</option>
-                                            <option value="4">04</option>
-                                          </select>
-                                        </div>
+                              <!-- ***** Room 1 Section ***** -->
+                              <div class="c-lineDiv">
+                                <span class="c-midHeading">Room 1</span>
+                                <div class="row">
+                                  <div class="col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                      <label>Adults</label>
+                                      <div class="selector">
+                                        <select class="full-width">
+                                          <option value="1">01</option>
+                                          <option value="2">02</option>
+                                          <option value="3">03</option>
+                                          <option value="4">04</option>
+                                        </select>
                                       </div>
                                     </div>
                                   </div>
+
+                                  <div class="col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                      <label>Childrens</label>
+                                      <div class="selector">
+                                        <select class="full-width">
+                                          <option value="1">01</option>
+                                          <option value="2">02</option>
+                                          <option value="3">03</option>
+                                          <option value="4">04</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- *** Room 1 - Child Section *** -->
+                                  <div class="col-12 c-childSection">
+                                    <div class="row">
+                                      <div class="col-md-4 col-sm-6 col-12">
+                                        <div class="form-group">
+                                          <label>Child 1 Age</label>
+                                          <div class="selector">
+                                            <select class="full-width">
+                                              <option value="1">01</option>
+                                              <option value="2">02</option>
+                                              <option value="3">03</option>
+                                              <option value="4">04</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-4 col-sm-6 col-12">
+                                        <div class="form-group">
+                                          <label>Child 2 Age</label>
+                                          <div class="selector">
+                                            <select class="full-width">
+                                              <option value="1">01</option>
+                                              <option value="2">02</option>
+                                              <option value="3">03</option>
+                                              <option value="4">04</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-4 col-sm-6 col-12">
+                                        <div class="form-group">
+                                          <label>Child 3 Age</label>
+                                          <div class="selector">
+                                            <select class="full-width">
+                                              <option value="1">01</option>
+                                              <option value="2">02</option>
+                                              <option value="3">03</option>
+                                              <option value="4">04</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- *** Room 1 - Child Section End *** -->
                                 </div>
-                                <!-- *** Room 1 - Child Section End *** -->
                               </div>
+                              <!-- ***** Room 1 Section End ***** -->
+
+                              <!-- ***** Room 1 Section ***** -->
+                              <div class="c-lineDiv">
+                                <span class="c-midHeading">Room 2</span>
+                                <div class="row">
+                                  <div class="col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                      <label>Adults</label>
+                                      <div class="selector">
+                                        <select class="full-width">
+                                          <option value="1">01</option>
+                                          <option value="2">02</option>
+                                          <option value="3">03</option>
+                                          <option value="4">04</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                      <label>Childrens</label>
+                                      <div class="selector">
+                                        <select class="full-width">
+                                          <option value="1">01</option>
+                                          <option value="2">02</option>
+                                          <option value="3">03</option>
+                                          <option value="4">04</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+                              <!-- ***** Room 1 Section End ***** -->
+
                             </div>
-                            <!-- ***** Room 1 Section End ***** -->
+                            <!-- ***** Room Listing End ***** -->
+
                           </div>
                         </div>
                       </div>
@@ -487,13 +569,20 @@
 
                     <div class="col-md-3 col-12 align-self-top">
                       <div class="clearfix m20-btm">
+                          <label>Total Stay</label>
+                          <span class="c-dayNight">
+                            <strong>5</strong> Days,
+                            <strong>4</strong> Nights
+                          </span>
+                      </div>
+                      <div class="clearfix m20-btm">
                         <label>Nationality</label>
                         <div class="selector">
                           <select class="full-width">
-                            <option value="1">01</option>
-                            <option value="2">02</option>
-                            <option value="3">03</option>
-                            <option value="4">04</option>
+                            <option value="1">Select Country</option>
+                            <option value="2">India</option>
+                            <option value="3">USA</option>
+                            <option value="4">Dubai</option>
                           </select>
                         </div>
                       </div>

@@ -82,4 +82,93 @@ $(document).ready(function() {
       }
   });
 
+  $(".js-roomCount1").on('change',function() {
+    var roomCount = $(this).val();
+    var html = '<div class="c-lineDiv">'+
+    '<span class="c-midHeading">Room'+parseInt(i)+'</span>'+
+    '<div class="row">'+
+      '<div class="col-md-6 col-sm-6 col-12">'+
+        '<div class="form-group">'+
+          '<label>Adults</label>'+
+          '<div class="selector">'+
+            '<select class="full-width">'+
+              '<option value="1">01</option>'+
+              '<option value="2">02</option>'+
+              '<option value="3">03</option>'+
+              '<option value="4">04</option>'+
+            '</select>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+
+      '<div class="col-md-6 col-sm-6 col-12">'+
+        '<div class="form-group">'+
+          '<label>Childrens</label>'+
+          '<div class="selector">'+
+            '<select class="full-width">'+
+              '<option value="1">01</option>'+
+              '<option value="2">02</option>'+
+              '<option value="3">03</option>'+
+              '<option value="4">04</option>'+
+            '</select>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+
+
+      '<div class="col-12 c-childSection">'+
+        '<div class="row">'+
+          '<div class="col-md-4 col-sm-6 col-12">'+
+            '<div class="form-group">'+
+              '<label>Child 1 Age</label>'+
+              '<div class="selector">'+
+                '<select class="full-width">'+
+                  '<option value="1">01</option>'+
+                  '<option value="2">02</option>'+
+                  '<option value="3">03</option>'+
+                  '<option value="4">04</option>'+
+                '</select>'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="col-md-4 col-sm-6 col-12">'+
+            '<div class="form-group">'+
+              '<label>Child 2 Age</label>'+
+              '<div class="selector">'+
+                '<select class="full-width">'+
+                  '<option value="1">01</option>'+
+                  '<option value="2">02</option>'+
+                  '<option value="3">03</option>'+
+                  '<option value="4">04</option>'+
+                '</select>'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="col-md-4 col-sm-6 col-12">'+
+            '<div class="form-group">'+
+              '<label>Child 3 Age</label>'+
+              '<div class="selector">'+
+                '<select class="full-width">'+
+                  '<option value="1">01</option>'+
+                  '<option value="2">02</option>'+
+                  '<option value="3">03</option>'+
+                  '<option value="4">04</option>'+
+                '</select>'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+
+    '</div>'+
+  '</div>';
+
+    for(var i=0; i < roomCount; i++){
+
+      $(".c-roomListing").append(html);
+    }
+  })
+
 });

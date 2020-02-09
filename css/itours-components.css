@@ -216,6 +216,9 @@ font-family: 'Lato', sans-serif;
 .itours-building:before {
   content: "\34";
 }
+.itours-star-1:before {
+  content: "\35";
+}
 :root {
   --blue: #6dace6;
   --indigo: #6610f2;
@@ -578,6 +581,7 @@ font-family: 'Lato', sans-serif;
   color: #fff;
 }
 .c-midHeading{
+  display: block;
   font-family: 'Saira Condensed', sans-serif;
   margin-bottom: 10px;
   font-size: 11px;
@@ -1815,6 +1819,20 @@ ul.c-search-tabs .nav-link.active {
   padding-right: 0;
 }
 .c-cardList.type-hotel .cardList-info{vertical-align: top;}
+.c-cardList.type-hotel .priceTag .price_main{
+  display: block;
+  color: #7db921;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.c-cardList.type-hotel .priceTag .price_sub{
+  display: block;
+  color: #999;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
 
 
 .c-tagSection{
@@ -2985,8 +3003,38 @@ ul.c-search-tabs .nav-link.active {
 .c-lineDiv:not(:last-child){
   position: relative;
   margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #CCCCCC;
+}
+.icon-star{
+  display: inline-block;
+  position: relative;
+  font-family: "itours" !important;
+  content: '';
+  font-size: 14px;
+  text-align: left;
+  cursor: default;
+  white-space: nowrap;
+  line-height: 13px;
+  color: #FDB712;
+  font-style: normal;
+  top: 2px;
+}
+.icon-star::before {
+  display: block;
+  content: "\35";
+}
+.c-dayNight{
+  color: #838383;
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.c-dayNight strong{
+  color: #333;
+  display: inline-block;
+  margin-right: 3px;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
