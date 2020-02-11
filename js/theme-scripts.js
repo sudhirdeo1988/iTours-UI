@@ -77,8 +77,8 @@ stGlobals.isIOS = (/iphone|ipad|ipod/gi).test(navigator.appVersion);
 }(this, document, jQuery));
 
 
-function changeTraveloElementUI() {
-    // change UI of select box
+// ----------- For Dropdown Select box
+function initilizeDropdown(){
     $(".selector select").each(function() {
         var obj = $(this);
         if (obj.parent().children(".c-custom-select").length < 1) {
@@ -103,6 +103,11 @@ function changeTraveloElementUI() {
             $(this).next("span.c-custom-select").text($(this).find("option:selected").text());
         }
     });
+}
+
+// ----------- For Form Elements
+function changeTraveloElementUI() {
+    initilizeDropdown();
 
     // change UI of file input
     $(".fileinput input[type=file]").each(function() {

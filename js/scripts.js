@@ -82,7 +82,7 @@ $(document).ready(function() {
       }
   });
 
-  $(".js-roomCount1").on('change',function() {
+  $(".js-roomCount").on('change',function() {
     var roomCount = $(this).val();
     var html = '<div class="c-lineDiv">'+
     '<span class="c-midHeading">Room'+parseInt(i)+'</span>'+
@@ -166,9 +166,15 @@ $(document).ready(function() {
   '</div>';
 
     for(var i=0; i < roomCount; i++){
-
       $(".c-roomListing").append(html);
     }
-  })
+    initilizeDropdown();
+  });
+
+  // $('.c-select2DD select').select2({
+  //   minimumInputLength: 2
+  // });
+
+    $('.c-select2DD select').select2();
 
 });

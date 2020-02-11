@@ -19,6 +19,10 @@
     <!-- Theme Styles -->
     <link rel="stylesheet" href="css/bootstrap-4.min.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
     <link id="main-style" rel="stylesheet" href="css/itours-styles.css" />
     <link id="main-style" rel="stylesheet" href="css/itours-components.css" />
 
@@ -287,7 +291,6 @@
         <!-- ********** Search From ********** -->
         <div class="c-searchContainer">
           <div class="search-box container">
-
             <!-- ***** Search From Tabs ****** -->
             <ul class="c-search-tabs nav nav-tabs" role="tablist">
               <li class="nav-item">
@@ -335,17 +338,163 @@
                 id="visa-tab"
               >
                 <form action="javascript:void(0);" method="post">
+                  <!-- ***** Hotel Search Form ***** -->
+                  <div class="row">
+                    <!-- *** Hotel Name *** -->
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                        <label>Enter Hotel Name</label>
+                        <div class="c-select2DD">
+                          <select name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- *** Hotel Name End *** -->
+
+                    <!-- *** City Name *** -->
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                        <label>Enter City</label>
+                        <div class="c-select2DD">
+                          <select name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- *** City Name End *** -->
+
+                    <!-- *** Check in Date *** -->
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                        <label>Check In Date</label>
+                        <div class="datepicker-wrap">
+                          <input
+                            type="text"
+                            name="date_from"
+                            class="input-text full-width"
+                            placeholder="mm/dd/yy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- *** Check in Date End *** -->
+
+                    <!-- *** Check Out Date *** -->
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                        <label>Check Out Date</label>
+                        <div class="datepicker-wrap">
+                          <input
+                            type="text"
+                            name="date_from"
+                            class="input-text full-width"
+                            placeholder="mm/dd/yy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- *** Check Out Date End *** -->
+
+                    <!-- *** Hotel Star *** -->
+                    <div class="col-md-4 col-sm-6 col-12">
+                      <div class="form-group clearfix">
+                        <label>Hotel Star Catagory</label>
+
+                        <div class="form-check form-check-inline c-checkGroup">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="c1"
+                            value="1"
+                          />
+                          <label class="form-check-label" role="button" for="c1">
+                            1 <i class="icon-star"></i>
+                          </label>
+                        </div>
+
+                        <div class="form-check form-check-inline c-checkGroup">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="c2"
+                            value="option2"
+                          />
+                          <label class="form-check-label" role="button" for="c2">
+                            2 <i class="icon-star"></i>
+                          </label>
+                        </div>
+
+                        <div class="form-check form-check-inline c-checkGroup">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="c3"
+                            value="3"
+                          />
+                          <label class="form-check-label" role="button" for="c3">
+                            3 <i class="icon-star"></i>
+                          </label>
+                        </div>
+
+                        <div class="form-check form-check-inline c-checkGroup">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="c4"
+                            value="1"
+                          />
+                          <label class="form-check-label" role="button" for="c4">
+                            4 <i class="icon-star"></i>
+                          </label>
+                        </div>
+
+                        <div class="form-check form-check-inline c-checkGroup">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="c5"
+                            value="option2"
+                          />
+                          <label class="form-check-label" role="button" for="c5">
+                            5 <i class="icon-star"></i>
+                          </label>
+                        </div>
+
+                        <div class="form-check form-check-inline c-checkGroup">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="c7"
+                            value="3"
+                          />
+                          <label class="form-check-label" role="button" for="c7">
+                            7 <i class="icon-star"></i>
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- *** Hotel Star End *** -->
+                  </div>
+                  <!-- ***** Hotel Search Form End ***** -->
+
                   <div class="row">
                     <div class="col-md-4 col-12">
                       <div class="row">
                         <div class="col-md-6 col-12">
                           <div class="form-group">
                             <label>Enter Hotel Name</label>
-                            <input
-                              type="text"
-                              class="input-text full-width"
-                              placeholder="Enter Hotel name"
-                            />
+                            <div class="c-select2DD">
+                              <select name="state">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
                           </div>
                         </div>
 
@@ -395,44 +544,73 @@
                           <div class="form-group">
                             <label>Hotel Star Catagory</label>
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="c1" value="option1">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="c1"
+                                value="option1"
+                              />
                               <label class="form-check-label" for="c1">
                                 1 <i class="icon-star"></i>
                               </label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="c2" value="option2">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="c2"
+                                value="option2"
+                              />
                               <label class="form-check-label" for="c2">
                                 2 <i class="icon-star"></i>
                               </label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="c3" value="option3">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="c3"
+                                value="option3"
+                              />
                               <label class="form-check-label" for="c3">
                                 3<i class="icon-star"></i>
                               </label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="c4" value="option4">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="c4"
+                                value="option4"
+                              />
                               <label class="form-check-label" for="c4">
                                 4 <i class="icon-star"></i>
                               </label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="c5" value="option5">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="c5"
+                                value="option5"
+                              />
                               <label class="form-check-label" for="c5">
                                 5<i class="icon-star"></i>
                               </label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="c7" value="option5">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="c7"
+                                value="option5"
+                              />
                               <label class="form-check-label" for="c7">
                                 7<i class="icon-star"></i>
                               </label>
                             </div>
                           </div>
                         </div>
-
                       </div>
                     </div>
 
@@ -455,10 +633,8 @@
                           </div>
 
                           <div class="col-md-8 col-12">
-
                             <!-- ***** Room Listing ***** -->
                             <div class="c-roomListing">
-
                               <!-- ***** Room 1 Section ***** -->
                               <div class="c-lineDiv">
                                 <span class="c-midHeading">Room 1</span>
@@ -573,14 +749,11 @@
                                       </div>
                                     </div>
                                   </div>
-
                                 </div>
                               </div>
                               <!-- ***** Room 1 Section End ***** -->
-
                             </div>
                             <!-- ***** Room Listing End ***** -->
-
                           </div>
                         </div>
                       </div>
@@ -589,10 +762,10 @@
 
                     <div class="col-md-3 col-12 align-self-top">
                       <div class="clearfix m20-btm">
-                          <label>Total Stay</label>
-                          <span class="c-dayNight">
-                            <strong>4</strong> Nights
-                          </span>
+                        <label>Total Stay</label>
+                        <span class="c-dayNight">
+                          <strong>4</strong> Nights
+                        </span>
                       </div>
                       <div class="clearfix m20-btm">
                         <label>Nationality</label>
@@ -837,7 +1010,6 @@
                   </div>
                 </form>
               </div>
-
             </div>
             <!-- ***** Search Form Fields End ****** -->
           </div>
@@ -1890,6 +2062,7 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-4.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
     <script type="text/javascript" src="js/theme-scripts.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>
