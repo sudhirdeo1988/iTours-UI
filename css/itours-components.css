@@ -3265,11 +3265,64 @@ ul.c-search-tabs .nav-link.active {
 .c-modal .modal-header .close{
   padding: 13px;
 }
+.c-modal .modal-footer{padding: 10px;}
+.c-modal .c-lineDiv .form-group{margin-bottom: 10px;}
+.c-modal .c-lineDiv .form-group label{
+  margin-bottom: 2px;
+  font-size: 10px;
+  line-height: 12px;
+}
 
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
-
+.c-customeBtn{
+  border: 0;
+  outline: none;
+  display: inline-block;
+  padding: 3px 10px 3px 30px;
+  margin-right: 5px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #fff !important;
+  background-color: #6dace6;
+  height: auto;
+  line-height: 19px;
+  position: relative;
+  text-decoration: none !important;
+  letter-spacing: 0.5px;
+  border-radius: 0;
+}
+.c-customeBtn .icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: #597ea0;
+  height: 25px;
+  width: 25px;
+  padding: 6px 5px;
+}
+.c-customeBtn.xs{
+  padding: 4px 5px 4px 25px;
+  font-size: 9px;
+  line-height: 12px;
+}
+.c-customeBtn.xs .icon{
+  font-size: 14px;
+  line-height: 14px;
+  height: 19px;
+  width: 19px;
+  padding: 3px 2px 3px;
+}
+.c-customeBtn.red{
+  background-color: #dc3545;
+}
+.c-customeBtn.red .icon{
+  background-color: #a9323d;
+}
 .c-link,
 .c-link > * {
   border: 0;
@@ -3385,7 +3438,7 @@ ul.c-search-tabs .nav-link.active {
   color: #333;
   display: inline-block;
   margin-right: 3px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 @media (max-width: 768px) {
