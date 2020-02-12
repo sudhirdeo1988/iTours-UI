@@ -387,7 +387,10 @@
                     <!-- *** Check Out Date *** -->
                     <div class="col-md-3 col-sm-6 col-12">
                       <div class="form-group">
-                        <label>Check Out Date</label>
+                        <label>
+                          Check Out Date
+                          <span class="nytCount">2 Nights</span>
+                        </label>
                         <div class="datepicker-wrap">
                           <input
                             type="text"
@@ -401,7 +404,7 @@
                     <!-- *** Check Out Date End *** -->
 
                     <!-- *** Hotel Star *** -->
-                    <div class="col-md-4 col-sm-6 col-12">
+                    <div class="col-md-3 col-sm-6 col-12">
                       <div class="form-group clearfix">
                         <label>Hotel Star Catagory</label>
 
@@ -480,6 +483,22 @@
                       </div>
                     </div>
                     <!-- *** Hotel Star End *** -->
+
+                    <!-- *** Add Rooms *** -->
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="form-group">
+                        <label>Add Rooms</label>
+                        <div class="c-addRoom">
+                          <button class="roomInfo" data-toggle="modal" data-target="#addRoom">
+                            <strong>2</strong> Persons in
+                            <strong>1</strong> Room
+                          </button>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- *** Add Rooms End *** -->
+
                   </div>
                   <!-- ***** Hotel Search Form End ***** -->
 
@@ -2055,6 +2074,28 @@
       </footer>
       <!-- ********** Component :: Footer End ********** -->
     </div>
+
+    <!-- ***** Add Room Modal ***** -->
+    <div class="modal fade c-modal" id="addRoom" tabindex="-1" role="dialog" aria-labelledby="addRoomLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addRoomLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Add Room Modal End ***** -->
 
     <!-- Javascript -->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>

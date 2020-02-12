@@ -3193,6 +3193,78 @@ ul.c-search-tabs .nav-link.active {
   color: #fff;
 }
 
+.c-addRoom{
+  display: block;
+  position: relative;
+}
+.c-addRoom .roomInfo{
+  background-color: #f5f5f5;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: left;
+  color: #838383;
+  height: 34px;
+  display: block;
+  position: relative;
+  padding: 8px 30px 8px 10px;
+  line-height: 18px;
+  width: 100%;
+  outline: none;
+  border-radius: 0;
+}
+.c-addRoom .roomInfo::before {
+  background-color: #fdb714;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 34px;
+  width: 24px;
+}
+.c-addRoom .roomInfo::after {
+  position: absolute;
+  right: 8px;
+  top: 15px;
+  border-color: #fff transparent transparent transparent;
+  border-style: solid;
+  border-width: 5px 4px 0 4px;
+  content: "";
+}
+.nytCount{
+  float: right;
+  padding: 2px 5px;
+  font-size: 11px;
+  background: #6dace6;
+  color: #fff;
+  font-weight: 600;
+  line-height: 12px;
+  border-radius: 3px;
+  position: relative;
+  top: 2px;
+}
+
+/* ----------------------------------------------
+    Component :: Modal
+------------------------------------------------- */
+.c-modal .modal-header{
+  border-bottom: 0;
+  background-color: #fdb714;
+  padding: 10px;
+}
+.c-modal .modal-header .modal-title{
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  font-family: "Saira Condensed", sans-serif;
+}
+.c-modal .modal-header .close{
+  padding: 13px;
+}
 
 /* ----------------------------------------------
     Component :: Utilities
