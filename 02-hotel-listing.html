@@ -340,9 +340,59 @@
       </div>
       <!-- ********** Component :: Page Title End ********** -->
 
+
       <!-- ********** Component :: Hotel Listing  ********** -->
       <div class="c-containerDark">
         <div class="container">
+
+            <!-- ********** Component :: Modify Filter  ********** -->
+              <div class="row c-modifyFilter">
+                <div class="col">
+
+                      <!-- ***** Rating Filter ***** -->
+                      <div class="accordion c-accordion" id="modifySearch">
+                        <div class="card">
+
+                          <div class="card-header" id="headingThree">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#jsModifySearch" aria-expanded="false" aria-controls="jsModifySearch">
+                              Modify Search
+                            </button>
+                          </div>
+
+                          <div id="jsModifySearch" class="collapse" aria-labelledby="jsModifySearch" data-parent="#modifySearch">
+                            <div class="card-body">
+                              <form method="post">
+                                <div class="form-group">
+                                    <label>destination</label>
+                                    <input type="text" class="input-text full-width" placeholder="" value="Paris" />
+                                </div>
+                                <div class="form-group">
+                                    <label>check in</label>
+                                    <div class="datepicker-wrap">
+                                        <input type="text" name="date_from" class="input-text full-width" placeholder="mm/dd/yy" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>check out</label>
+                                    <div class="datepicker-wrap">
+                                        <input type="text" name="date_to" class="input-text full-width" placeholder="mm/dd/yy" />
+                                    </div>
+                                </div>
+                                <br />
+                                <button class="btn-medium icon-check uppercase full-width">search again</button>
+                            </form>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        <!-- ***** Rating Filter End ***** -->
+
+                </div>
+              </div>
+              <!-- **********  Component :: Modify Filter End  ********** -->
+
+
+
           <div class="row">
             <!-- ***** Hotel Listing Filter ***** -->
             <div class="col-md-3 col-sm-12">
@@ -415,15 +465,16 @@
                       <div class="card-body">
                             <div  class="c-priceRange">
                               <div class="priceRangeSlider">
-                                <div id="price-range"></div>
+                                <div id="price-range" data-maxValue='1000'></div>
                               </div>
                               <div class="priceRangeValues">
-                                <span class="min-price pull-left">$0</span>
-                                <span class="max-price pull-right">$1000</span>
+                                <input type="text" readonly class="min-price" value="0" />
+                                <input type="text" readonly class="max-price" value="1000" />
                               </div>
                             </div>
                       </div>
                     </div>
+
                   </div>
                   </div>
                   <!-- ***** Price Filter End ***** -->
@@ -579,38 +630,30 @@
                         </div>
 
 
-                        <!-- <div class="c-aminityList">
-                          <ul>
-                            <li role="button" data-toggle="tooltip" data-placement="top" title="Free WiFi">
-                              <i class="icon soap-icon-wifi"></i>
-                            </li>
-                            <li role="button" data-toggle="tooltip" data-placement="top" title="Free Breakfast">
-                              <i class="icon soap-icon-fork"></i>
-                            </li>
-                            <li role="button" data-toggle="tooltip" data-placement="top" title="TV in room">
-                              <i class="icon soap-icon-television"></i>
-                            </li>
-                          </ul>
-                        </div> -->
-
                         <div class="c-aminityListBlock">
                           <ul>
                             <li>
                               <div class="amenity">
                                 <img src="./images/svg/amenity-wifi.svg" alt=""  />
-                                <span>WIFI</span>
+                                <span>Free WIFI</span>
                               </div>
                             </li>
                             <li>
                               <div class="amenity">
                                 <img src="./images/svg/amenity-roomServ.svg" alt=""  />
-                                <span>Service</span>
+                                <span>Room Service</span>
                               </div>
                             </li>
                             <li>
                               <div class="amenity">
                                 <img src="./images/svg/amenity-swim.svg" alt=""  />
-                                <span>Swimming</span>
+                                <span>Swimming Pool</span>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="amenity st-last">
+                                <span class="num">+13</span>
+                                <span class="txt">more</span>
                               </div>
                             </li>
                           </ul>
@@ -619,11 +662,18 @@
                       </div>
 
                       <div class="divider s2">
-                        <span class="priceTag">
-                          <span class="price_sub">$455.00</span>
-                          <span class="price_main">INR 455.00</span class="price_main">
-                          <small>per / Night</small>
-                        </span>
+                        <div class="priceTag">
+                          <div class="p-old">
+                            <span class="o_lbl">Old Price</span>
+                            <span class="o_price">INR 2000</span>
+                          </div>
+                          <div class="p-old">
+                            <span class="o_lbl">New Price</span>
+                            <span class="price_main">INR 455.00</span>
+                            <small>per / Night</small>
+                          </div>
+
+                        </div>
                         <div class="c-starRating r-3p5">
                           <span class="stars"></span>
                           <p class="rating">200 Rating</p>
@@ -737,14 +787,14 @@
                                       <div class="infoCard c-aminityList sm">
                                         <ul>
                                           <li role="button" data-toggle="tooltip" data-placement="top" title="Free WiFi">
-                                            <i class="icon soap-icon-wifi"></i>
+                                            <i class="icon itours-coffee"></i>
                                           </li>
                                           <li role="button">
-                                            <i class="icon soap-icon-fork" data-toggle="tooltip" data-placement="top" title="Free Breakfast"></i>
+                                            <i class="icon itours-coffee" data-toggle="tooltip" data-placement="top" title="Free Breakfast"></i>
                                           </li>
                                           <li role="button" data-toggle="tooltip" data-placement="top" title="TV in room">
                                             <i
-                                              class="icon soap-icon-television"
+                                              class="icon itours-coffee"
                                             ></i>
                                           </li>
                                         </ul>
@@ -829,14 +879,14 @@
                                       <div class="infoCard c-aminityList sm">
                                         <ul>
                                           <li role="“button”">
-                                            <i class="icon soap-icon-wifi"></i>
+                                            <i class="icon itours-coffee"></i>
                                           </li>
                                           <li role="“button”">
-                                            <i class="icon soap-icon-fork"></i>
+                                            <i class="icon itours-coffee"></i>
                                           </li>
                                           <li role="“button”">
                                             <i
-                                              class="icon soap-icon-television"
+                                              class="icon itours-coffee"
                                             ></i>
                                           </li>
                                         </ul>
@@ -921,14 +971,14 @@
                                       <div class="infoCard c-aminityList sm">
                                         <ul>
                                           <li role="“button”">
-                                            <i class="icon soap-icon-wifi"></i>
+                                            <i class="icon itours-coffee"></i>
                                           </li>
                                           <li role="“button”">
-                                            <i class="icon soap-icon-fork"></i>
+                                            <i class="icon itours-coffee"></i>
                                           </li>
                                           <li role="“button”">
                                             <i
-                                              class="icon soap-icon-television"
+                                              class="icon itours-coffee"
                                             ></i>
                                           </li>
                                         </ul>
@@ -1054,36 +1104,36 @@
                               <ul class="row c-amenitiesType2">
                                 <li class="col-md-4 col-sm-6 col-12">
                                   <div class="amenitiesList">
-                                    <i class="soap-icon-wifi icon"></i>WI_FI
+                                    <i class="itours-coffee icon"></i>WI_FI
                                   </div>
                                 </li>
                                 <li class="col-md-4 col-sm-6 col-12">
                                   <div class="amenitiesList">
-                                    <i class="soap-icon-swimming icon"></i
+                                    <i class="itours-coffee icon"></i
                                     >swimming pool
                                   </div>
                                 </li>
                                 <li class="col-md-4 col-sm-6 col-12">
                                   <div class="amenitiesList">
-                                    <i class="soap-icon-television icon"></i
+                                    <i class="itours-coffee icon"></i
                                     >television
                                   </div>
                                 </li>
                                 <li class="col-md-4 col-sm-6 col-12">
                                   <div class="amenitiesList">
-                                    <i class="soap-icon-breakfast icon"></i
+                                    <i class="itours-coffee icon"></i
                                     >complimentary breakfast
                                   </div>
                                 </li>
                                 <li class="col-md-4 col-sm-6 col-12">
                                   <div class="amenitiesList">
-                                    <i class="soap-icon-pickanddrop icon"></i
+                                    <i class="itours-coffee icon"></i
                                     >pick and drop
                                   </div>
                                 </li>
                                 <li class="col-md-4 col-sm-6 col-12">
                                   <div class="amenitiesList">
-                                    <i class="soap-icon-television icon"></i
+                                    <i class="itours-coffee icon"></i
                                     >television
                                   </div>
                                 </li>
@@ -1309,7 +1359,6 @@
 
       <!-- ********** Component :: Footer ********** -->
       <footer class="c-footer">
-
         <div class="footer-wrapper">
           <div class="container">
             <div class="row">
@@ -1418,15 +1467,13 @@
                 <br />
                 <address class="contact-details">
                   <span class="contact-phone">
-                    <i class="soap-icon-phone"></i> 1-800-123-HELLO
+                    <i class="itours-phone"></i> 1-800-123-HELLO
                   </span>
                   <br />
                   <a href="javascript:void(0);" class="contact-email"
                     >help@iTours.com</a
                   >
                 </address>
-
-
               </div>
             </div>
           </div>
@@ -1434,9 +1481,7 @@
 
         <div class="c-bottom">
           <div class="container">
-
             <div class="row">
-
               <div class="col-sm-6 col-12">
                 <div class="c-footerLogos">
                   <ul>
@@ -1451,51 +1496,23 @@
                 <div class="c-footerSocial clearfix">
                   <ul class="social-icons">
                     <li class="twitter">
-                      <a
-                        title="twitter"
-                        href="javascript:void(0);"
-                        ><i class="soap-icon-twitter"></i
-                      ></a>
-                    </li>
-                    <li class="googleplus">
-                      <a
-                        title="googleplus"
-                        href="javascript:void(0);"
-                        ><i class="soap-icon-googleplus"></i
+                      <a title="twitter" href="javascript:void(0);"
+                        ><i class="icon itours-twitter"></i
                       ></a>
                     </li>
                     <li class="facebook">
-                      <a
-                        title="facebook"
-                        href="javascript:void(0);"
-                        ><i class="soap-icon-facebook"></i
+                      <a title="facebook" href="javascript:void(0);"
+                        ><i class="icon itours-facebook"></i
                       ></a>
                     </li>
                     <li class="twitter">
-                      <a
-                        title="twitter"
-                        href="javascript:void(0);"
-                        ><i class="soap-icon-twitter"></i
-                      ></a>
-                    </li>
-                    <li class="googleplus">
-                      <a
-                        title="googleplus"
-                        href="javascript:void(0);"
-                        ><i class="soap-icon-googleplus"></i
-                      ></a>
-                    </li>
-                    <li class="facebook">
-                      <a
-                        title="facebook"
-                        href="javascript:void(0);"
-                        ><i class="soap-icon-facebook"></i
+                      <a title="twitter" href="javascript:void(0);"
+                        ><i class="icon itours-google-plus"></i
                       ></a>
                     </li>
                   </ul>
                 </div>
               </div>
-
             </div>
 
             <div class="row">
@@ -1503,9 +1520,6 @@
                 <span>© 2019 iTours</span>
               </div>
             </div>
-
-
-
           </div>
         </div>
       </footer>

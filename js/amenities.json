@@ -1,0 +1,12 @@
+amenities = [
+  {
+    "name": "Wifi",
+    "image": "amenity-wifi.svg",
+    "icon": "itours-exclamation-circle"
+  },
+  {
+    "name": "Air Conditioner",
+    "image": "amenity-ac.svg",
+    "icon": "itours-exclamation-circle"
+  }
+];

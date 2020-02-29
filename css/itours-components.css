@@ -218,6 +218,33 @@ font-family: 'Lato', sans-serif;
 .itours-star-1:before {
   content: "\35";
 }
+.itours-plus-circled:before {
+  content: "\36";
+}
+.itours-sun-umbrella:before {
+  content: "\37";
+}
+.itours-love:before {
+  content: "\38";
+}
+.itours-climbing-sport:before {
+  content: "\39";
+}
+.itours-balloon:before {
+  content: "\21";
+}
+.itours-phone:before {
+  content: "\22";
+}
+.itours-twitter:before {
+  content: "\23";
+}
+.itours-facebook:before {
+  content: "\24";
+}
+.itours-google-plus:before {
+  content: "\25";
+}
 :root {
   --blue: #6dace6;
   --indigo: #6610f2;
@@ -343,7 +370,7 @@ font-family: 'Lato', sans-serif;
   content: "\6e \6e \6e \6e \6e";
 }
 .c-starRating.cust.s7 .stars::before {
-  content: "\6e \6e \6e \6e \6e \6e \6e \6e";
+  content: "\6e \6e \6e \6e \6e \6e \6e";
 }
 
 .c-amenitiesType2 {
@@ -507,6 +534,7 @@ font-family: 'Lato', sans-serif;
 ------------------------------------------------- */
 .c-button,
 .c-buttonBorder {
+  border: 0;
   background-color: #fdb714;
   display: inline-block;
   padding: 5px 20px;
@@ -537,6 +565,10 @@ font-family: 'Lato', sans-serif;
   line-height: 13px;
 }
 .c-button.lg {
+  line-height: 20px;
+  height: 32px;
+  box-sizing: border-box;
+  padding: 6px 20px;
   display: block;
   width: 100%;
 }
@@ -556,6 +588,17 @@ font-family: 'Lato', sans-serif;
   border-right: 4px solid transparent;
   border-bottom: 0;
   border-left: 4px solid transparent;
+}
+.c-button .icon{
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 13px;
+  margin-right: 5px;
+}
+.c-button.colGrn{
+  background-color: #98ce44;
 }
 
 .c-tag {
@@ -694,6 +737,7 @@ font-family: 'Lato', sans-serif;
   display: inline-block;
 }
 .searchHeading .sortSection .dropdown .btn-dd {
+  color: #fff;
   display: inline-block;
   padding: 1px 5px;
   height: auto;
@@ -1754,7 +1798,6 @@ ul.c-search-tabs .nav-link.active {
 }
 .c-cardListTable .cardList-info {
   display: table-cell;
-  padding: 10px 15px;
   box-sizing: border-box;
   vertical-align: middle;
 }
@@ -1764,11 +1807,11 @@ ul.c-search-tabs .nav-link.active {
   border-bottom: 1px solid #f5f5f5;
 }
 .cardList-info .dividerSection .divider.s1 {
-  padding-right: 10px;
+  padding: 10px;
 }
 .cardList-info .dividerSection .divider.s2 {
   text-align: center;
-  padding: 0 0 0 10px;
+  padding: 10px;
   border-left: 1px solid #f5f5f5;
 }
 .cardList-info .cardTitle {
@@ -1790,7 +1833,7 @@ ul.c-search-tabs .nav-link.active {
   padding-left: 18px;
   font-family: "Saira Condensed", sans-serif;
   letter-spacing: 0.5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   line-height: 14px;
 }
 .cardList-info .cardInfoLine:not(.cust)::before {
@@ -1843,6 +1886,34 @@ ul.c-search-tabs .nav-link.active {
   vertical-align: middle;
   margin-right: 6px;
 }
+
+.cardList-info .priceTag .p-old{
+  display: block;
+  margin-bottom: 8px;
+}
+.cardList-info .priceTag .p-old .o_lbl{
+  background-color: #f5f5f5;
+  display: block;
+  padding: 2px 5px 1px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
+  line-height: 11px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.cardList-info .priceTag .p-old .o_price{
+  display: block;
+  padding: 2px 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #E01933;
+  line-height: 14px;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+
 .cardList-info .hotelInfo {
   display: block;
   color: #adadad;
@@ -1870,7 +1941,7 @@ ul.c-search-tabs .nav-link.active {
 }
 
 .c-cardList.type-hotel .cardList-info .cardTitle {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 .c-cardList.type-hotel .infoSection .cardInfoLine {
   display: inline-block;
@@ -1879,7 +1950,7 @@ ul.c-search-tabs .nav-link.active {
   border-right: 2px solid #eee;
 }
 .c-cardList.type-hotel .infoSection {
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 .c-cardList.type-hotel .infoSection .cardInfoLine:last-child {
   border: 0;
@@ -1906,7 +1977,7 @@ ul.c-search-tabs .nav-link.active {
 
 .c-tagSection {
   display: block;
-  margin: 0 0 15px;
+  margin: 0 0 10px;
 }
 .c-tagSection .tag {
   color: #333;
@@ -2012,8 +2083,19 @@ ul.c-search-tabs .nav-link.active {
 }
 .c-aminityListBlock ul li .amenity {
   height: auto;
-  min-width: 60px;
+  width: 70px;
   background-color: #fff;
+}
+.c-aminityListBlock ul li .amenity.st-last{
+  width: 40px;
+}
+.c-aminityListBlock ul li .amenity.st-last .num{
+  color: #6dace6;
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 5px 0;
 }
 .c-aminityListBlock ul li img {
   display: block;
@@ -2022,6 +2104,9 @@ ul.c-search-tabs .nav-link.active {
   width: 22px;
 }
 .c-aminityListBlock ul li span {
+  padding: 0 4px;
+  box-sizing: border-box;
+  word-wrap: break-word;
   display: block;
   text-align: center;
   font-size: 10px;
@@ -2032,9 +2117,6 @@ ul.c-search-tabs .nav-link.active {
   font-family: "Saira Condensed", sans-serif;
 }
 
-.cardList-info .c-starRating {
-  margin: 10px 0 0;
-}
 .cardList-info .c-starRating .rating {
   color: #adadad;
   text-align: center;
@@ -2799,7 +2881,7 @@ ul.c-search-tabs .nav-link.active {
 }
 .c-priceRange .priceRangeSlider {
   height: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .c-priceRange .priceRangeValues {
   height: auto;
@@ -2808,6 +2890,19 @@ ul.c-search-tabs .nav-link.active {
 .c-priceRange .ui-slider.ui-slider-horizontal {
   width: calc(100% - 10px);
   margin-left: 5px;
+}
+.priceRangeValues .min-price,
+.priceRangeValues .max-price {
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+  border: 0;
+  width: 100px;
+  float: left;
+}
+.priceRangeValues .max-price {
+  float: right;
+  text-align: right;
 }
 
 /* 5.1.2. Filters */
@@ -3133,18 +3228,18 @@ ul.c-search-tabs .nav-link.active {
   b {
   border-color: transparent transparent #ffffff transparent;
 }
-.select2-container--open .select2-dropdown--below{
+.select2-container--open .select2-dropdown--below {
   border: 1px solid #eee;
   box-sizing: border-box;
   border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
 }
-.select2-container--default .select2-results__option[aria-selected=true]{
+.select2-container--default .select2-results__option[aria-selected="true"] {
   background-color: #fdb714;
   color: #fff;
 }
-.select2-container--default .select2-search--dropdown .select2-search__field{
+.select2-container--default .select2-search--dropdown .select2-search__field {
   border: 1px solid #e2e2e2;
   padding: 8px;
   line-height: 18px;
@@ -3156,22 +3251,21 @@ ul.c-search-tabs .nav-link.active {
   -webkit-border-radius: 5px;
 }
 
-
 /* ----------------------------------------------
     Component :: Checkbox Group
 ------------------------------------------------- */
-.c-checkGroup{
+.c-checkGroup {
   position: relative;
   height: 30px;
   min-width: 38px;
   float: left;
   margin-right: 2px;
 }
-.c-checkGroup .form-check-inline .form-check-input{
+.c-checkGroup .form-check-inline .form-check-input {
   position: relative;
   z-index: 1;
 }
-.c-checkGroup .form-check-label{
+.c-checkGroup .form-check-label {
   cursor: pointer;
   color: #999;
   display: block;
@@ -3185,19 +3279,19 @@ ul.c-search-tabs .nav-link.active {
   font-weight: 600;
 }
 
-.c-checkGroup .form-check-input:checked ~ .form-check-label{
+.c-checkGroup .form-check-input:checked ~ .form-check-label {
   background-color: #fdb714;
   color: #fff;
 }
-.c-checkGroup .form-check-input:checked ~ .form-check-label .icon-star{
+.c-checkGroup .form-check-input:checked ~ .form-check-label .icon-star {
   color: #fff;
 }
 
-.c-addRoom{
+.c-addRoom {
   display: block;
   position: relative;
 }
-.c-addRoom .roomInfo{
+.c-addRoom .roomInfo {
   background-color: #f5f5f5;
   border: 0;
   box-sizing: border-box;
@@ -3216,7 +3310,7 @@ ul.c-search-tabs .nav-link.active {
 }
 .c-addRoom .roomInfo::before {
   background-color: #fdb714;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -3232,7 +3326,7 @@ ul.c-search-tabs .nav-link.active {
   border-width: 5px 4px 0 4px;
   content: "";
 }
-.nytCount{
+.nytCount {
   float: right;
   padding: 2px 5px;
   font-size: 11px;
@@ -3248,12 +3342,12 @@ ul.c-search-tabs .nav-link.active {
 /* ----------------------------------------------
     Component :: Modal
 ------------------------------------------------- */
-.c-modal .modal-header{
+.c-modal .modal-header {
   border-bottom: 0;
   background-color: #fdb714;
   padding: 10px;
 }
-.c-modal .modal-header .modal-title{
+.c-modal .modal-header .modal-title {
   color: #fff;
   display: block;
   font-size: 14px;
@@ -3262,21 +3356,44 @@ ul.c-search-tabs .nav-link.active {
   letter-spacing: 0.5px;
   font-family: "Saira Condensed", sans-serif;
 }
-.c-modal .modal-header .close{
+.c-modal .modal-header .close {
   padding: 13px;
 }
-.c-modal .modal-footer{padding: 10px;}
-.c-modal .c-lineDiv .form-group{margin-bottom: 10px;}
-.c-modal .c-lineDiv .form-group label{
+.c-modal .modal-footer {
+  padding: 10px;
+}
+.c-modal .c-lineDiv .form-group {
+  margin-bottom: 10px;
+}
+.c-modal .c-lineDiv .form-group label {
   margin-bottom: 2px;
   font-size: 10px;
   line-height: 12px;
 }
 
+.c-modifyFilter {
+  margin-bottom: 10px;
+}
+.c-modifyFilter .c-accordion .card,
+.c-modifyFilter .c-accordion .card .btn-link {
+  background-color: #6dace6;
+  color: #fff;
+  position: relative;
+}
+.c-modifyFilter .c-accordion .card {
+  padding: 1px;
+}
+.c-modifyFilter .c-accordion .card .btn-link::before {
+  color: #fff;
+}
+.c-modifyFilter .c-accordion .card .card-body{
+  background-color: #fff;
+}
+
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
-.c-customeBtn{
+.c-customeBtn {
   border: 0;
   outline: none;
   display: inline-block;
@@ -3293,7 +3410,7 @@ ul.c-search-tabs .nav-link.active {
   letter-spacing: 0.5px;
   border-radius: 0;
 }
-.c-customeBtn .icon{
+.c-customeBtn .icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -3305,24 +3422,46 @@ ul.c-search-tabs .nav-link.active {
   width: 25px;
   padding: 6px 5px;
 }
-.c-customeBtn.xs{
+.c-customeBtn.xs {
   padding: 4px 5px 4px 25px;
   font-size: 9px;
   line-height: 12px;
 }
-.c-customeBtn.xs .icon{
+.c-customeBtn.xs .icon {
   font-size: 14px;
   line-height: 14px;
   height: 19px;
   width: 19px;
   padding: 3px 2px 3px;
 }
-.c-customeBtn.red{
+.c-customeBtn.red {
   background-color: #dc3545;
 }
-.c-customeBtn.red .icon{
+.c-customeBtn.red .icon {
   background-color: #a9323d;
 }
+
+.form-group .errorMsg{
+  background-color: #ffebed;
+  color: #a9323d;
+  display: block;
+  font-size: 10px;
+  line-height: 11px;
+  position: relative;
+  padding-left: 16px;
+  margin-top: 3px;
+}
+.form-group .errorMsg::before{
+  color: #a9323d;
+  font-family: "itours";
+  content: "\61";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 11px;
+  line-height: 12px;
+}
+
 .c-link,
 .c-link > * {
   border: 0;
