@@ -245,6 +245,76 @@ font-family: 'Lato', sans-serif;
 .itours-google-plus:before {
   content: "\25";
 }
+.itours-circle:before {
+  content: "\26";
+}
+.itours-checkmark-circled:before {
+  content: "\27";
+}
+.itours-signal:before {
+  content: "\28";
+}
+.itours-swimming:before {
+  content: "\29";
+}
+.itours-icon-ac:before {
+  content: "\2a";
+}
+.itours-cigarette:before {
+  content: "\2b";
+}
+.itours-conference:before {
+  content: "\2c";
+}
+.itours-doctor:before {
+  content: "\2d";
+}
+.itours-doorman:before {
+  content: "\2e";
+}
+.itours-event:before {
+  content: "\2f";
+}
+.itours-fireplace:before {
+  content: "\3a";
+}
+.itours-fitness:before {
+  content: "\3b";
+}
+.itours-wheelchair:before {
+  content: "\3c";
+}
+.itours-vault:before {
+  content: "\3d";
+}
+.itours-tv:before {
+  content: "\3e";
+}
+.itours-taxi:before {
+  content: "\3f";
+}
+.itours-playarea:before {
+  content: "\40";
+}
+.itours-pet:before {
+  content: "\5b";
+}
+.itours-parking:before {
+  content: "\5d";
+}
+.itours-laundry:before {
+  content: "\5e";
+}
+.itours-hottub:before {
+  content: "\5f";
+}
+.itours-fridge:before {
+  content: "\60";
+}
+.itours-wine:before {
+  content: "\7b";
+}
+
 :root {
   --blue: #6dace6;
   --indigo: #6610f2;
@@ -1797,7 +1867,7 @@ ul.c-search-tabs .nav-link.active {
   width: 270px;
 }
 .c-cardListTable .cardList-info {
-  display: table-cell;
+  /* display: table-cell; */
   box-sizing: border-box;
   vertical-align: middle;
 }
@@ -2269,21 +2339,61 @@ ul.c-search-tabs .nav-link.active {
     Component :: Hotel List Section
 ------------------------------------------------- */
 .c-cardListHolder {
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
   border-bottom: 1px solid #eee;
 }
 .c-cardListTable.type-2 {
-  background-color: #fbfbfb;
+  cursor: pointer;
+  background-color: #f9f9f9;
   box-shadow: none;
+}
+.c-cardListTable.type-2 .btn-radio{
+  position: absolute;
+  opacity: 0;
+}
+.c-cardListTable.type-2 .btn-radio:checked ~ .cardList-info {
+  border-color: #7db921;
 }
 .c-cardListTable.type-2 .cardList-image,
 .c-cardListTable.type-2 .cardList-image img {
   width: 140px;
 }
 .c-cardListTable.type-2 .cardList-info {
-  padding: 6px 10px 0;
-  vertical-align: top;
+  display: block;
+  position: relative;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  padding: 7px 10px 7px 40px;
+  margin-bottom: 0;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+}
+.c-cardListTable.type-2:hover .cardList-info {
+  border-color: #7db921;
+}
+.c-cardListHolder:last-child {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.c-cardListTable.type-2 .cardList-info::before {
+  font-family: "itours";
+  content: "\26";
+  position: absolute;
+  font-size: 24px;
+  top: 3px;
+  left: 3px;
+  color: #d6d6d6;
+  line-height: 24px;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+}
+.c-cardListTable.type-2 .btn-radio:checked ~ .cardList-info::before{
+  color: #7db921;
+  content: "\27";
 }
 .c-cardListTable.type-2 .cardList-info .cardTitle {
   font-size: 14px;
@@ -2351,7 +2461,7 @@ ul.c-search-tabs .nav-link.active {
   font-size: 15px;
   line-height: 18px;
   color: #808080;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 0;
   text-transform: none;
 }
@@ -2392,6 +2502,8 @@ ul.c-search-tabs .nav-link.active {
   text-align: center;
   letter-spacing: 0.4px;
   text-transform: uppercase;
+  position: relative;
+  top: -1px;
   border-radius: 20px;
 }
 .infoCard .infoCard_notifi.type-2 {
@@ -2429,7 +2541,11 @@ ul.c-search-tabs .nav-link.active {
     display: none;
     width: 100%;
   }
-  .c-cardListHolder .c-cardListTable .cardList-info,
+  .c-cardListHolder .c-cardListTable .cardList-info{
+    padding: 0 0 0 30px;
+    display: block;
+    width: 100%;
+  }
   .c-cardListHolder .flexGrid,
   .c-cardListHolder .flexGrid .gridItem {
     display: block;
@@ -2439,8 +2555,7 @@ ul.c-search-tabs .nav-link.active {
     overflow: hidden;
   }
   .c-cardListHolder .flexGrid {
-    padding: 12px;
-    border: 1px solid #f5f5f5;
+    padding: 6px;
     box-sizing: border-box;
   }
   .c-cardListHolder .flexGrid .gridItem {
@@ -2454,19 +2569,37 @@ ul.c-search-tabs .nav-link.active {
   .c-cardListHolder .infoCard {
     margin-bottom: 10px;
   }
-  .c-cardListHolder .styleForMobile .infoCard,
-  .c-cardListHolder .M-infoCard,
-  .c-cardListHolder .M-policyLink {
-    width: 50%;
-    float: left;
+  .c-cardListHolder .M-infoCard{
+    width: 100%;
   }
-  .c-cardListHolder .styleForMobile .c-halfText,
+  .c-cardListHolder .styleForMobile .infoCard,
+  .c-cardListHolder .M-policyLink {
+    width: 100%;
+  }
   .c-cardListHolder .M-policyLink {
     text-align: right;
   }
 }
 
 @media (max-width: 560px) {
+  .c-cardListTable .cardList-info,
+  .cardList-info .dividerSection .divider.s1,
+  .cardList-info .dividerSection .divider.s2{
+    display: block;
+    width: 100%;
+  }
+  .cardList-info .dividerSection .divider.s1{padding-bottom: 0;}
+  .cardList-info .dividerSection .divider.s2{padding: 10px;}
+  .cardList-info .priceTag{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .cardList-info .dividerSection .divider.s2 .c-starRating{display: none;}
+  .cardList-info .priceTag .p-old{
+    width: 50%;
+    padding: 0 2px;
+  }
   .c-cardListHolder {
     border: 0;
     display: block;
@@ -3492,7 +3625,7 @@ ul.c-search-tabs .nav-link.active {
   padding-top: 20px;
 }
 .m0 {
-  margin: 0;
+  margin: 0 !important;
 }
 .m20-top {
   margin-top: 20px;

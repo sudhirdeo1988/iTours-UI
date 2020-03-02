@@ -764,15 +764,10 @@
                         >
                           <!-- ***** Hotel List Card ***** -->
                           <div class="c-cardListHolder">
-                            <div class="c-cardListTable type-2">
-                              <!-- *** Hotel Card image *** -->
-                              <div class="cardList-image">
-                                <img src="http://placehold.it/270x160" alt="" />
-                              </div>
-                              <!-- *** Hotel Card image End *** -->
-
+                            <div class="c-cardListTable type-2" role="button">
+                              <input type="radio" name="room" id="room1" class="btn-radio" />
                               <!-- *** Hotel Card Info *** -->
-                              <div class="cardList-info">
+                              <label class="cardList-info" for="room1" role="button">
                                 <div class="flexGrid">
                                   <div class="gridItem">
                                     <div class="infoCard">
@@ -784,6 +779,34 @@
                                       </span>
                                     </div>
                                     <div class="styleForMobile">
+                                      <div class="infoCard c-halfText m0">
+                                        <span class="sect">Max Guests:</span>
+                                        <span class="sect s2">2 Persons</span>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="gridItem">
+                                    <div class="infoCard m0">
+                                      <div class="M-infoCard">
+                                        <span class="infoCard_label"
+                                          >Charge PER/NIGHT</span
+                                        >
+                                        <span class="infoCard_price"
+                                          >$230.00</span
+                                        >
+                                        <span class="infoCard_priceTax"
+                                          >(inclusive of all taxes)</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="gridItem styleForMobile M-m0">
+                                    <div class="infoCard m5-btm">
+                                      <span class="infoCard_label"
+                                      >Amenities</span
+                                    >
                                       <div class="infoCard c-aminityList sm">
                                         <ul>
                                           <li role="button" data-toggle="tooltip" data-placement="top" title="Free WiFi">
@@ -799,6 +822,33 @@
                                           </li>
                                         </ul>
                                       </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </label>
+                              <!-- *** Hotel Card Info End *** -->
+                            </div>
+                          </div>
+                          <!-- ***** Hotel List Card End ***** -->
+
+
+                          <!-- ***** Hotel List Card ***** -->
+                          <div class="c-cardListHolder">
+                            <div class="c-cardListTable type-2" role="button">
+                              <input type="radio" name="room" id="room2" class="btn-radio" />
+                              <!-- *** Hotel Card Info *** -->
+                              <label class="cardList-info" for="room2" role="button">
+                                <div class="flexGrid">
+                                  <div class="gridItem">
+                                    <div class="infoCard">
+                                      <span class="infoCard_data">
+                                        Single Bed Room
+                                        <span class="infoCard_notifi type-2 m5-l"
+                                          >Full</span
+                                        >
+                                      </span>
+                                    </div>
+                                    <div class="styleForMobile">
                                       <div class="infoCard c-halfText m0">
                                         <span class="sect">Max Guests:</span>
                                         <span class="sect s2">2 Persons</span>
@@ -819,223 +869,38 @@
                                           >(inclusive of all taxes)</span
                                         >
                                       </div>
-
-                                      <div class="clearfix M-policyLink">
-                                        <button class="policyLink">
-                                          Booking Policy
-                                        </button>
-                                      </div>
                                     </div>
                                   </div>
 
                                   <div class="gridItem styleForMobile M-m0">
-                                    <div class="infoCard">
-                                      <div class="selector">
-                                        <select class="full-width">
-                                          <option value="1"
-                                            >Select Room Type</option
-                                          >
-                                          <option value="1">anytime</option>
-                                          <option value="2">morning</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="infoCard text-right">
-                                      <button class="c-buttonBorder">
-                                        Book Now
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- *** Hotel Card Info End *** -->
-                            </div>
-                          </div>
-                          <!-- ***** Hotel List Card End ***** -->
-
-                          <!-- ***** Hotel List Card ***** -->
-                          <div class="c-cardListHolder">
-                            <div class="c-cardListTable type-2">
-                              <!-- *** Hotel Card image *** -->
-                              <div class="cardList-image">
-                                <img src="http://placehold.it/270x160" alt="" />
-                              </div>
-                              <!-- *** Hotel Card image End *** -->
-
-                              <!-- *** Hotel Card Info *** -->
-                              <div class="cardList-info">
-                                <div class="flexGrid">
-                                  <div class="gridItem">
-                                    <div class="infoCard">
-                                      <span class="infoCard_data">
-                                        Deluxe Single Room
-                                        <span
-                                          class="infoCard_notifi type-2 m5-l"
-                                          >Full</span
-                                        >
-                                      </span>
-                                    </div>
-                                    <div class="styleForMobile">
+                                    <div class="infoCard m5-btm">
+                                      <span class="infoCard_label"
+                                      >Amenities</span
+                                    >
                                       <div class="infoCard c-aminityList sm">
                                         <ul>
-                                          <li role="“button”">
+                                          <li role="button" data-toggle="tooltip" data-placement="top" title="Free WiFi">
                                             <i class="icon itours-coffee"></i>
                                           </li>
-                                          <li role="“button”">
-                                            <i class="icon itours-coffee"></i>
+                                          <li role="button">
+                                            <i class="icon itours-coffee" data-toggle="tooltip" data-placement="top" title="Free Breakfast"></i>
                                           </li>
-                                          <li role="“button”">
+                                          <li role="button" data-toggle="tooltip" data-placement="top" title="TV in room">
                                             <i
                                               class="icon itours-coffee"
                                             ></i>
                                           </li>
                                         </ul>
                                       </div>
-                                      <div class="infoCard c-halfText m0">
-                                        <span class="sect">Max Guests:</span>
-                                        <span class="sect s2">2 Persons</span>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="gridItem">
-                                    <div class="infoCard m0">
-                                      <div class="M-infoCard">
-                                        <span class="infoCard_label"
-                                          >Charge PER/NIGHT</span
-                                        >
-                                        <span class="infoCard_price"
-                                          >$230.00</span
-                                        >
-                                        <span class="infoCard_priceTax"
-                                          >(inclusive of all taxes)</span
-                                        >
-                                      </div>
-
-                                      <div class="clearfix M-policyLink">
-                                        <button class="policyLink">
-                                          Booking Policy
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="gridItem styleForMobile M-m0">
-                                    <div class="infoCard">
-                                      <div class="selector">
-                                        <select class="full-width">
-                                          <option value="1"
-                                            >Select Room Type</option
-                                          >
-                                          <option value="1">anytime</option>
-                                          <option value="2">morning</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="infoCard text-right">
-                                      <button class="c-buttonBorder">
-                                        Book Now
-                                      </button>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </label>
                               <!-- *** Hotel Card Info End *** -->
                             </div>
                           </div>
                           <!-- ***** Hotel List Card End ***** -->
 
-                          <!-- ***** Hotel List Card ***** -->
-                          <div class="c-cardListHolder">
-                            <div class="c-cardListTable type-2">
-                              <!-- *** Hotel Card image *** -->
-                              <div class="cardList-image">
-                                <img src="http://placehold.it/270x160" alt="" />
-                              </div>
-                              <!-- *** Hotel Card image End *** -->
-
-                              <!-- *** Hotel Card Info *** -->
-                              <div class="cardList-info">
-                                <div class="flexGrid">
-                                  <div class="gridItem">
-                                    <div class="infoCard">
-                                      <span class="infoCard_data">
-                                        Superior Double Room
-                                        <span
-                                          class="infoCard_notifi type-2 m5-l"
-                                          >Full</span
-                                        >
-                                      </span>
-                                    </div>
-                                    <div class="styleForMobile">
-                                      <div class="infoCard c-aminityList sm">
-                                        <ul>
-                                          <li role="“button”">
-                                            <i class="icon itours-coffee"></i>
-                                          </li>
-                                          <li role="“button”">
-                                            <i class="icon itours-coffee"></i>
-                                          </li>
-                                          <li role="“button”">
-                                            <i
-                                              class="icon itours-coffee"
-                                            ></i>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="infoCard c-halfText m0">
-                                        <span class="sect">Max Guests:</span>
-                                        <span class="sect s2">6 Persons</span>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="gridItem">
-                                    <div class="infoCard m0">
-                                      <div class="M-infoCard">
-                                        <span class="infoCard_label"
-                                          >Charge PER/NIGHT</span
-                                        >
-                                        <span class="infoCard_price"
-                                          >$230.00</span
-                                        >
-                                        <span class="infoCard_priceTax"
-                                          >(inclusive of all taxes)</span
-                                        >
-                                      </div>
-
-                                      <div class="clearfix M-policyLink">
-                                        <button class="policyLink">
-                                          Booking Policy
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="gridItem styleForMobile M-m0">
-                                    <div class="infoCard">
-                                      <div class="selector">
-                                        <select class="full-width">
-                                          <option value="1"
-                                            >Select Room Type</option
-                                          >
-                                          <option value="1">anytime</option>
-                                          <option value="2">morning</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="infoCard text-right">
-                                      <button class="c-buttonBorder">
-                                        Book Now
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- *** Hotel Card Info End *** -->
-                            </div>
-                          </div>
-                          <!-- ***** Hotel List Card End ***** -->
                         </div>
                         <!-- **** Tab Hotel Listing End **** -->
 
