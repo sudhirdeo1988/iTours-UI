@@ -314,6 +314,15 @@ font-family: 'Lato', sans-serif;
 .itours-wine:before {
   content: "\7b";
 }
+.itours-roomservice:before {
+  content: "\7c";
+}
+.itours-lift:before {
+  content: "\7d";
+}
+.itours-entertaintment:before {
+  content: "\7e";
+}
 
 :root {
   --blue: #6dace6;
