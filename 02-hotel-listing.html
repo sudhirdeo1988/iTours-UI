@@ -453,29 +453,28 @@
 
                   <!-- ***** Price Filter ***** -->
                   <div class="accordion c-accordion" id="filterPrice">
-                  <div class="card">
-
-                    <div class="card-header">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#jsFilterPrice" aria-expanded="false" aria-controls="jsFilterPrice">
-                          Price
-                        </button>
-                    </div>
-
-                    <div id="jsFilterPrice" class="collapse" aria-labelledby="jsFilterPrice" data-parent="#filterPrice">
-                      <div class="card-body">
-                            <div  class="c-priceRange">
-                              <div class="priceRangeSlider">
-                                <div id="price-range" data-maxValue='1000'></div>
-                              </div>
-                              <div class="priceRangeValues">
-                                <input type="text" readonly class="min-price" value="0" />
-                                <input type="text" readonly class="max-price" value="1000" />
-                              </div>
-                            </div>
+                    <div class="card">
+                      <div class="card-header">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#jsFilterPrice" aria-expanded="false" aria-controls="jsFilterPrice">
+                            Price
+                          </button>
                       </div>
-                    </div>
 
-                  </div>
+                      <div id="jsFilterPrice" class="collapse" aria-labelledby="jsFilterPrice" data-parent="#filterPrice">
+                        <div class="card-body">
+                          <div  class="c-priceRange">
+                            <input type="hidden"
+                            class="slider-input"
+                            data-step="100"
+                            data-min="0"
+                            data-max="5000"
+                            value="0, 5000"
+                            onchange="passSliderValue()" />
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
                   </div>
                   <!-- ***** Price Filter End ***** -->
 
@@ -1399,6 +1398,7 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-4.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/jquery.range.min.js"></script>
     <script type="text/javascript" src="js/theme-scripts.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>

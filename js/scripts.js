@@ -1,17 +1,5 @@
 $(document).ready(function() {
-  if ($("#price-range").length > 0) {
-
-    $("#price-range").slider({
-      range: true,
-      min: 0,
-      max: 1000,
-      values: [0, 1000],
-      slide: function(event, ui) {
-        $(".min-price").val("$" + ui.values[0]);
-        $(".max-price").val("$" + ui.values[1]);
-      }
-    });
-  }
+  initilizeDropdown();
 
   if ($(".js-cardSlider").length > 0) {
     $(".js-cardSlider").owlCarousel({
@@ -82,97 +70,39 @@ $(document).ready(function() {
     }
   });
 
-  $(".js-roomCount").on("change", function() {
-    var roomCount = $(this).val();
-    var html =
-      '<div class="c-lineDiv">' +
-      '<span class="c-midHeading">Room' +
-      parseInt(i) +
-      "</span>" +
-      '<div class="row">' +
-      '<div class="col-md-6 col-sm-6 col-12">' +
-      '<div class="form-group">' +
-      "<label>Adults</label>" +
-      '<div class="selector">' +
-      '<select class="full-width">' +
-      '<option value="1">01</option>' +
-      '<option value="2">02</option>' +
-      '<option value="3">03</option>' +
-      '<option value="4">04</option>' +
-      "</select>" +
-      "</div>" +
-      "</div>" +
-      "</div>" +
-      '<div class="col-md-6 col-sm-6 col-12">' +
-      '<div class="form-group">' +
-      "<label>Childrens</label>" +
-      '<div class="selector">' +
-      '<select class="full-width">' +
-      '<option value="1">01</option>' +
-      '<option value="2">02</option>' +
-      '<option value="3">03</option>' +
-      '<option value="4">04</option>' +
-      "</select>" +
-      "</div>" +
-      "</div>" +
-      "</div>" +
-      '<div class="col-12 c-childSection">' +
-      '<div class="row">' +
-      '<div class="col-md-4 col-sm-6 col-12">' +
-      '<div class="form-group">' +
-      "<label>Child 1 Age</label>" +
-      '<div class="selector">' +
-      '<select class="full-width">' +
-      '<option value="1">01</option>' +
-      '<option value="2">02</option>' +
-      '<option value="3">03</option>' +
-      '<option value="4">04</option>' +
-      "</select>" +
-      "</div>" +
-      "</div>" +
-      "</div>" +
-      '<div class="col-md-4 col-sm-6 col-12">' +
-      '<div class="form-group">' +
-      "<label>Child 2 Age</label>" +
-      '<div class="selector">' +
-      '<select class="full-width">' +
-      '<option value="1">01</option>' +
-      '<option value="2">02</option>' +
-      '<option value="3">03</option>' +
-      '<option value="4">04</option>' +
-      "</select>" +
-      "</div>" +
-      "</div>" +
-      "</div>" +
-      '<div class="col-md-4 col-sm-6 col-12">' +
-      '<div class="form-group">' +
-      "<label>Child 3 Age</label>" +
-      '<div class="selector">' +
-      '<select class="full-width">' +
-      '<option value="1">01</option>' +
-      '<option value="2">02</option>' +
-      '<option value="3">03</option>' +
-      '<option value="4">04</option>' +
-      "</select>" +
-      "</div>" +
-      "</div>" +
-      "</div>" +
-      "</div>" +
-      "</div>" +
-      "</div>" +
-      "</div>";
-
-    for (var i = 0; i < roomCount; i++) {
-      $(".c-roomListing").append(html);
-    }
-    initilizeDropdown();
-  });
-
-  // $('.c-select2DD select').select2({
-  //   minimumInputLength: 2
-  // });
-
   if ($(".c-select2DD").length > 0) {
     $(".c-select2DD select").select2();
   }
+
+  if ($(".slider-input").length) {
+    var rangeMinValue = $(".slider-input").data("min");
+    var rangeMaxValue = $(".slider-input").data("max");
+    var rangeStep = $(".slider-input").data("step");
+    $(".slider-input").jRange({
+      from: rangeMinValue,
+      to: rangeMaxValue,
+      step: rangeStep,
+      showLabels: true,
+      isRange: true,
+      width: 230,
+      showScale: false
+    });
+  }
 });
+
+// Debounce function for range slider
+function getSliderValue() {
+  console.log($(".slider-input").val());
+}
+const setSliderValue = function(fun) {
+  let timer;
+  return function() {
+    let context = this;
+    args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fun.apply(context, arguments);
+    }, 400);
+  };
+};
+const passSliderValue = setSliderValue(getSliderValue);
