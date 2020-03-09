@@ -323,12 +323,11 @@ font-family: 'Lato', sans-serif;
 .itours-entertaintment:before {
   content: "\7e";
 }
-
-:root {
-  --blue: #6dace6;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
+.itours-pin-alt:before {
+  content: "\5c";
+}
+.itours-load:before {
+  content: "\e000";
 }
 
 /* ----------------------------------------------
@@ -643,6 +642,12 @@ font-family: 'Lato', sans-serif;
   padding: 3px 20px;
   line-height: 13px;
 }
+.c-button.md {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 20px;
+  line-height: 20px;
+}
 .c-button.lg {
   line-height: 20px;
   height: 32px;
@@ -672,7 +677,7 @@ font-family: 'Lato', sans-serif;
   color: #fff;
   display: inline-block;
   vertical-align: middle;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 13px;
   margin-right: 5px;
 }
@@ -1870,12 +1875,43 @@ ul.c-search-tabs .nav-link.active {
   display: table-cell;
   vertical-align: top;
   width: 270px;
+  height: 160px;
+  position: relative;
 }
 .c-cardListTable .cardList-image img {
   display: block;
   width: 270px;
-  max-height: 160px;
+  height: 160px;
 }
+
+.c-cardListTable .cardList-image .hotelType{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: inline-block;
+  font-size: 11px;
+  color: #6dace6;
+  line-height: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Saira Condensed", sans-serif;
+  background: #fff;
+  padding: 4px 10px 2px;
+  z-index: 3;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+.c-cardListTable .cardList-image .hotelType .icon{
+  color: #6dace6;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 11px;
+  vertical-align: middle;
+  position: relative;
+  top: 0px;
+  margin-right: 2px;
+}
+
 .c-cardListTable .cardList-info {
   /* display: table-cell; */
   box-sizing: border-box;
@@ -1918,13 +1954,13 @@ ul.c-search-tabs .nav-link.active {
 }
 .cardList-info .cardInfoLine:not(.cust)::before {
   color: #fdb714;
-  font-size: 16px;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 16px;
   position: absolute;
   left: 0;
   top: -2px;
-  font-family: "soap-icons";
-  content: "\e85d";
+  font-family: "itours";
+  content: "\5c";
 }
 .cardList-info .cardInfoLine.cust .icon {
   color: #fdb714;
@@ -2058,6 +2094,7 @@ ul.c-search-tabs .nav-link.active {
 .c-tagSection {
   display: block;
   margin: 0 0 10px;
+  min-height: 24px;
 }
 .c-tagSection .tag {
   color: #333;
@@ -2067,7 +2104,7 @@ ul.c-search-tabs .nav-link.active {
   font-size: 11px;
   line-height: 21px;
   background-color: rgb(204, 234, 231);
-  padding: 0px 15px;
+  padding: 0 12px;
   font-family: "Saira Condensed", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -3571,6 +3608,36 @@ ul.c-search-tabs .nav-link.active {
 .slider-container.slider-readonly .clickable-dummy,
 .slider-container.slider-readonly .pointer {
   cursor: auto;
+}
+
+
+.loadMoreContainer{
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+.loadMoreContainer .loadBtn{
+  background-color: #fdb714;
+  border: 0;
+  display: inline-block;
+  color: #fff;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  outline: none;
+  border-radius: 50px;
+}
+.loadMoreContainer .loadBtn .icon{
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
 /* ----------------------------------------------
