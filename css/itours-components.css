@@ -3458,7 +3458,7 @@ ul.c-search-tabs .nav-link.active {
   font-size: 12px;
   font-weight: normal;
   text-align: left;
-  color: #838383;
+  color: #838383 !important;
   height: 34px;
   display: block;
   position: relative;
@@ -3710,6 +3710,31 @@ ul.c-search-tabs .nav-link.active {
   left: 0;
   font-size: 11px;
   line-height: 12px;
+}
+
+.c-emptyList{
+  display: block;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.c-emptyList .imageDiv{
+  height: 150px;
+  width: 150px;
+  margin:0 auto 50px;
+}
+.c-emptyList .imageDiv img{
+  display: block;
+  height: 150px;
+  width: 150px;
+}
+.c-emptyList .infoDiv{
+  font-family: "Saira Condensed", sans-serif;
+  color: #2d3e52;
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 32px;
 }
 
 .c-link,

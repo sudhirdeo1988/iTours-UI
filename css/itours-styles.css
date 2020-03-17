@@ -96,6 +96,7 @@ select option {
   line-height: 30px;
 }
 .selector span.c-custom-select {
+  color: #999;
   display: inline-block;
   line-height: 32px;
   padding: 0 10px;
