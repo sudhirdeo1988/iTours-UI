@@ -888,3 +888,26 @@ input.input-text:focus, textarea:focus, .selector select:focus + .c-custom-selec
   border: 1px solid #01b7f2;
   box-shadow: 0 0 8px rgba(1, 183, 242, 0.6);
 }
+.column-5-no-margin > *{
+  float: left;
+}
+.column-5-no-margin:after{
+  clear: both;
+  content: "";
+  display: table;
+}
+.column-5-no-margin > *:nth-child(5n+1) {
+  clear: both;
+}
+.column-5-no-margin > * {
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+.column-5-no-margin > * {
+  width: 50%; }
+  .column-5-no-margin > *:nth-child(5n+1) {
+    clear: none; }
+  .column-5-no-margin > *:nth-child(2n+1) {
+    clear: both; }
+  }
