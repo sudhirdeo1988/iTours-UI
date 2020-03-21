@@ -456,7 +456,7 @@
                     <div class="card">
                       <div class="card-header">
                           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#jsFilterPrice" aria-expanded="false" aria-controls="jsFilterPrice">
-                            Price
+                            Price (₹)
                           </button>
                       </div>
 
@@ -583,7 +583,7 @@
 
               <!-- ***** No Records ***** -->
               <div class="c-emptyList">
-                <div class="imageDiv">
+                <div class="imgDiv">
                   <img src="./images/search_illustration.svg" alt="" />
                 </div>
                 <span class="infoDiv">
@@ -676,11 +676,17 @@
                         <div class="priceTag">
                           <div class="p-old">
                             <span class="o_lbl">Old Price</span>
-                            <span class="o_price">INR 2000</span>
+                            <span class="o_price">
+                              <span class="p_currency">₹</span>
+                              <span class="p_cost">455.00</span>
+                            </span>
                           </div>
                           <div class="p-old">
                             <span class="o_lbl">New Price</span>
-                            <span class="price_main">INR 455.00</span>
+                            <span class="price_main">
+                              <span class="p_currency">₹</span>
+                              <span class="p_cost">455.00</span>
+                            </span>
                             <small>per / Night</small>
                           </div>
 
@@ -741,10 +747,10 @@
                         </li>
                         <li class="nav-item">
                           <a
-                            class="nav-link"
-                            id="gallery-tab"
+                            class="nav-link js-gallery"
+                            id="galleryTab-012"
                             data-toggle="tab"
-                            href="#gallery"
+                            href="#gallery-012"
                             role="tab"
                             aria-controls="gallery"
                             aria-selected="true"
@@ -1104,14 +1110,14 @@
                         <!-- **** Tab Gallery **** -->
                         <div
                           class="tab-pane fade"
-                          id="gallery"
+                          id="gallery-012"
                           role="tabpanel"
                           aria-labelledby="gallery-tab"
                         >
                           <!-- **** photo List **** -->
                           <div class="clearfix">
                             <div
-                              class="c-photoGallery"
+                              class="c-photoGallery js-dynamicLoad"
                             >
                               <div class="js-photoGallery owl-carousel">
                                 <div class="item">

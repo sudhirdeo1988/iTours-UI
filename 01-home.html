@@ -93,27 +93,12 @@
               </li>
 
               <li class="ribbon currency">
-                <a href="javascript:void(0);" title="">
-                  <span>USD</span>
-                  <i class="icon it itours-caret-down"></i>
-                </a>
-                <ul class="menu mini">
-                  <li><a href="javascript:void(0);" title="AUD">AUD</a></li>
-                  <li><a href="javascript:void(0);" title="BRL">BRL</a></li>
-                  <li class="active">
-                    <a href="javascript:void(0);" title="USD">USD</a>
-                  </li>
-                  <li><a href="javascript:void(0);" title="CAD">CAD</a></li>
-                  <li><a href="javascript:void(0);" title="CHF">CHF</a></li>
-                  <li><a href="javascript:void(0);" title="CNY">CNY</a></li>
-                  <li><a href="javascript:void(0);" title="CZK">CZK</a></li>
-                  <li><a href="javascript:void(0);" title="DKK">DKK</a></li>
-                  <li><a href="javascript:void(0);" title="EUR">EUR</a></li>
-                  <li><a href="javascript:void(0);" title="GBP">GBP</a></li>
-                  <li><a href="javascript:void(0);" title="HKD">HKD</a></li>
-                  <li><a href="javascript:void(0);" title="HUF">HUF</a></li>
-                  <li><a href="javascript:void(0);" title="IDR">IDR</a></li>
-                </ul>
+                <div class="c-select2DD st-clear">
+                  <select name="state">
+                    <option value="AL">Alabama</option>
+                    <option value="WY">Wyoming</option>
+                  </select>
+                </div>
               </li>
             </ul>
           </div>
@@ -416,7 +401,11 @@
                             id="c1"
                             value="1"
                           />
-                          <label class="form-check-label" role="button" for="c1">
+                          <label
+                            class="form-check-label"
+                            role="button"
+                            for="c1"
+                          >
                             1 <i class="icon-star"></i>
                           </label>
                         </div>
@@ -428,7 +417,11 @@
                             id="c2"
                             value="option2"
                           />
-                          <label class="form-check-label" role="button" for="c2">
+                          <label
+                            class="form-check-label"
+                            role="button"
+                            for="c2"
+                          >
                             2 <i class="icon-star"></i>
                           </label>
                         </div>
@@ -440,7 +433,11 @@
                             id="c3"
                             value="3"
                           />
-                          <label class="form-check-label" role="button" for="c3">
+                          <label
+                            class="form-check-label"
+                            role="button"
+                            for="c3"
+                          >
                             3 <i class="icon-star"></i>
                           </label>
                         </div>
@@ -452,7 +449,11 @@
                             id="c4"
                             value="1"
                           />
-                          <label class="form-check-label" role="button" for="c4">
+                          <label
+                            class="form-check-label"
+                            role="button"
+                            for="c4"
+                          >
                             4 <i class="icon-star"></i>
                           </label>
                         </div>
@@ -464,7 +465,11 @@
                             id="c5"
                             value="option2"
                           />
-                          <label class="form-check-label" role="button" for="c5">
+                          <label
+                            class="form-check-label"
+                            role="button"
+                            for="c5"
+                          >
                             5 <i class="icon-star"></i>
                           </label>
                         </div>
@@ -476,11 +481,14 @@
                             id="c7"
                             value="3"
                           />
-                          <label class="form-check-label" role="button" for="c7">
+                          <label
+                            class="form-check-label"
+                            role="button"
+                            for="c7"
+                          >
                             7 <i class="icon-star"></i>
                           </label>
                         </div>
-
                       </div>
                     </div>
                     <!-- *** Hotel Star End *** -->
@@ -490,13 +498,16 @@
                       <div class="form-group">
                         <label>Add Rooms</label>
                         <div class="c-addRoom">
-                          <button class="roomInfo" data-toggle="modal" data-target="#addRoom">
+                          <button
+                            class="roomInfo"
+                            data-toggle="modal"
+                            data-target="#addRoom"
+                          >
                             <strong>2</strong> Persons in
                             <strong>1</strong> Room
                           </button>
                         </div>
                       </div>
-
                     </div>
                     <!-- *** Add Rooms End *** -->
 
@@ -511,7 +522,6 @@
                           </select>
                         </div>
                       </div>
-
                     </div>
                     <!-- *** Nationality End *** -->
 
@@ -522,10 +532,8 @@
                       </button>
                     </div>
                     <!-- *** Add Rooms End *** -->
-
                   </div>
                   <!-- ***** Hotel Search Form End ***** -->
-
                 </form>
               </div>
               <!-- ***** Tab Hotel End ****** -->
@@ -1784,108 +1792,125 @@
     </div>
 
     <!-- ***** Add Room Modal ***** -->
-    <div class="modal fade c-modal" id="addRoom" tabindex="-1" role="dialog" aria-labelledby="addRoomLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm" role="document">
+    <div
+      class="modal fade c-modal"
+      id="addRoom"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="addRoomLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
+        role="document"
+      >
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="addRoomLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-              <!-- ***** Room 1 Section ***** -->
-              <div class="clearfix">
-                <div class="row">
-
-                  <div class="col-12">
-                    <!-- ***** Room Listing ***** -->
-                    <div class="c-roomListing">
-
-                      <div class="clearfix text-right m10-btm">
-                        <a href="javascript:void(0);" class="c-customeBtn xs"><i class="icon it itours-android-add-circle"></i>Add Room</a>
-                      </div>
-
-                      <!-- ***** Room 1 Section ***** -->
-                      <div class="c-lineDiv">
-                        <span class="c-midHeading">Room 1</span>
-                        <div class="row">
-                          <div class="col-md-6 col-sm-6 col-12">
-                            <div class="form-group">
-                              <label>Adults</label>
-                              <div class="selector">
-                                <select class="full-width">
-                                  <option value="1">01</option>
-                                  <option value="2">02</option>
-                                  <option value="3">03</option>
-                                  <option value="4">04</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-6 col-sm-6 col-12">
-                            <div class="form-group">
-                              <label>Childrens</label>
-                              <div class="selector">
-                                <select class="full-width">
-                                  <option value="1">01</option>
-                                  <option value="2">02</option>
-                                  <option value="3">03</option>
-                                  <option value="4">04</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- *** Room 1 - Child Section *** -->
-                          <div class="col-12 c-childSection">
-                            <div class="row">
-                              <div class="col">
-                                <div class="form-group">
-                                  <label>Child 1 Age</label>
-                                  <div class="selector">
-                                    <select class="full-width">
-                                      <option value="1">01</option>
-                                      <option value="2">02</option>
-                                      <option value="3">03</option>
-                                      <option value="4">04</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-group">
-                                  <label>Child 2 Age</label>
-                                  <div class="selector">
-                                    <select class="full-width">
-                                      <option value="1">01</option>
-                                      <option value="2">02</option>
-                                      <option value="3">03</option>
-                                      <option value="4">04</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-
-                            </div>
-                          </div>
-                          <!-- *** Room 1 - Child Section End *** -->
-                        </div>
-                      </div>
-                      <!-- ***** Room 1 Section End ***** -->
-
-                      <div class="clearfix text-right">
-                        <a href="javascript:void(0);" class="c-customeBtn xs"><i class="icon it itours-android-remove-circle"></i>Remove Room</a>
-                      </div>
-
+            <!-- ***** Room 1 Section ***** -->
+            <div class="clearfix">
+              <div class="row">
+                <div class="col-12">
+                  <!-- ***** Room Listing ***** -->
+                  <div class="c-roomListing">
+                    <div class="clearfix text-right m10-btm">
+                      <a href="javascript:void(0);" class="c-customeBtn xs"
+                        ><i class="icon it itours-android-add-circle"></i>Add
+                        Room</a
+                      >
                     </div>
-                    <!-- ***** Room Listing End ***** -->
+
+                    <!-- ***** Room 1 Section ***** -->
+                    <div class="c-lineDiv">
+                      <span class="c-midHeading">Room 1</span>
+                      <div class="row">
+                        <div class="col-md-6 col-sm-6 col-12">
+                          <div class="form-group">
+                            <label>Adults</label>
+                            <div class="selector">
+                              <select class="full-width">
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-12">
+                          <div class="form-group">
+                            <label>Childrens</label>
+                            <div class="selector">
+                              <select class="full-width">
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- *** Room 1 - Child Section *** -->
+                        <div class="col-12 c-childSection">
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <label>Child 1 Age</label>
+                                <div class="selector">
+                                  <select class="full-width">
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col">
+                              <div class="form-group">
+                                <label>Child 2 Age</label>
+                                <div class="selector">
+                                  <select class="full-width">
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- *** Room 1 - Child Section End *** -->
+                      </div>
+                    </div>
+                    <!-- ***** Room 1 Section End ***** -->
+
+                    <div class="clearfix text-right">
+                      <a href="javascript:void(0);" class="c-customeBtn xs"
+                        ><i class="icon it itours-android-remove-circle"></i
+                        >Remove Room</a
+                      >
+                    </div>
                   </div>
+                  <!-- ***** Room Listing End ***** -->
                 </div>
               </div>
-              <!-- ***** Room 1 Section End ***** -->
+            </div>
+            <!-- ***** Room 1 Section End ***** -->
           </div>
           <div class="modal-footer">
             <button type="button" class="c-button colGrn">Save</button>

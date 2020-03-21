@@ -88,6 +88,22 @@ $(document).ready(function() {
       showScale: false
     });
   }
+
+  // ------ Function to load gallery after inirialize
+  $("body").delegate(".js-gallery", "click", function() {
+    const tabID = $(this).attr("id");
+    const galleryID = $("#gallery-" + tabID.split("-")[1]);
+    if (galleryID.hasClass("loaded")) {
+      return;
+    } else {
+      galleryID.prepend('<div class="galleryLoader"></div>');
+      setTimeout(function() {
+        galleryID.children(".galleryLoader").remove();
+        galleryID.find(".c-photoGallery").removeClass("js-dynamicLoad");
+        galleryID.addClass("loaded");
+      }, 1500);
+    }
+  });
 });
 
 // Debounce function for range slider
