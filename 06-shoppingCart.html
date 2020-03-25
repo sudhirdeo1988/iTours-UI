@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Page Title -->
+    <title>iTours : Shopping Cart</title>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML5 Template" />
+    <meta
+      name="description"
+      content="iTours - Travel, Tour Booking HTML5 Template"
+    />
+    <meta name="author" content="iTours" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="css/bootstrap-4.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link id="main-style" rel="stylesheet" href="css/itours-styles.css" />
+    <link id="main-style" rel="stylesheet" href="css/itours-components.css" />
+
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Javascript Page Loader -->
+  </head>
+  <body>
+    <div class="c-pageWrapper">
+
+      <!-- ********** Component :: Header ********** -->
+      <header class="c-header">
+        <!-- **** Header :: Top Strip ***** -->
+        <div class="topnav hidden-xs">
+          <div class="container">
+            <ul class="quick-menu pull-left">
+              <li><a href="javascript:void(0);" class="c-link">Helpline</a></li>
+            </ul>
+            <ul class="quick-menu pull-right">
+              <li>
+                <a href="javascript:void(0);" class="soap-popupbox">LOGIN</a>
+              </li>
+
+              <li class="ribbon">
+                <a href="javascript:void(0);" class="c-link">
+                  <span>English</span>
+                  <i class="icon it itours-caret-down"></i>
+                </a>
+                <ul class="menu mini">
+                  <li><a href="javascript:void(0);" title="Dansk">Dansk</a></li>
+                  <li>
+                    <a href="javascript:void(0);" title="Deutsch">Deutsch</a>
+                  </li>
+                  <li class="active">
+                    <a href="javascript:void(0);" title="English">English</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Español">Español</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Français">Français</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Italiano">Italiano</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Magyar">Magyar</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Nederlands"
+                      >Nederlands</a
+                    >
+                  </li>
+                  <li><a href="javascript:void(0);" title="Norsk">Norsk</a></li>
+                  <li>
+                    <a href="javascript:void(0);" title="Polski">Polski</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Português"
+                      >Português</a
+                    >
+                  </li>
+                  <li><a href="javascript:void(0);" title="Suomi">Suomi</a></li>
+                  <li>
+                    <a href="javascript:void(0);" title="Svenska">Svenska</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="ribbon currency">
+                <a href="javascript:void(0);" title="">
+                  <span>USD</span>
+                  <i class="icon it itours-caret-down"></i>
+                </a>
+                <ul class="menu mini">
+                  <li><a href="javascript:void(0);" title="AUD">AUD</a></li>
+                  <li><a href="javascript:void(0);" title="BRL">BRL</a></li>
+                  <li class="active">
+                    <a href="javascript:void(0);" title="USD">USD</a>
+                  </li>
+                  <li><a href="javascript:void(0);" title="CAD">CAD</a></li>
+                  <li><a href="javascript:void(0);" title="CHF">CHF</a></li>
+                  <li><a href="javascript:void(0);" title="CNY">CNY</a></li>
+                  <li><a href="javascript:void(0);" title="CZK">CZK</a></li>
+                  <li><a href="javascript:void(0);" title="DKK">DKK</a></li>
+                  <li><a href="javascript:void(0);" title="EUR">EUR</a></li>
+                  <li><a href="javascript:void(0);" title="GBP">GBP</a></li>
+                  <li><a href="javascript:void(0);" title="HKD">HKD</a></li>
+                  <li><a href="javascript:void(0);" title="HUF">HUF</a></li>
+                  <li><a href="javascript:void(0);" title="IDR">IDR</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- **** Header :: Top Strip End ***** -->
+
+        <!-- **** Header :: Top Nav ***** -->
+        <div class="main-header">
+
+
+          <div class="container">
+            <a
+            href="#st-openMenu"
+            data-toggle="collapse"
+            class="mobile-menu-toggle"
+          >
+            Mobile Menu Toggle
+          </a>
+            <h1 class="logo navbar-brand">
+              <a href="javascript: void(0);" title="iTours - home">
+                <img src="images/logo.png" alt="iTours HTML5 Template" />
+              </a>
+            </h1>
+
+            <div class="c-shoppingCart dropdown">
+              <button
+                class="cartBtn" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              >
+                <i class="icon it itours-shopping-cart"></i>
+                <span class="notify">2</span>
+              </button>
+              <ul class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
+                ...
+              </ul>
+            </div>
+
+            <!-- **** Header :: Top Nav For Desktop ***** -->
+            <nav class="main-menu" role="navigation">
+              <ul class="menu">
+                <li class="active">
+                  <a href="javascript: void(0);">Link 1</a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">Link 2</a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">Link 3</a>
+                </li>
+                <li>
+                  <a href="javascript: void(0);">Link 4</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- **** Header :: Top Nav For Desktop End ***** -->
+          </div>
+
+          <!-- **** Header :: Top Nav For Mobile ***** -->
+          <nav id="st-openMenu" class="mobile-menu collapse">
+            <ul class="menu">
+              <li><a href="javascript: void(0);">Link 1</a></li>
+              <li><a href="javascript: void(0);">Link 2</a></li>
+              <li><a href="javascript: void(0);">Link 3</a></li>
+            </ul>
+
+            <ul class="mobile-topnav container">
+              <li>
+                <a href="javascript:void(0);" class="c-link">MY ACCOUNT</a>
+              </li>
+
+              <li>
+                <a href="javascript:void(0);" class="soap-popupbox">LOGIN</a>
+              </li>
+
+              <li class="ribbon language menu-color-skin">
+                <a href="javascript:void(0);" data-toggle="collapse">ENGLISH</a>
+                <ul class="menu mini">
+                  <li><a href="javascript:void(0);" title="Dansk">Dansk</a></li>
+                  <li>
+                    <a href="javascript:void(0);" title="Deutsch">Deutsch</a>
+                  </li>
+                  <li class="active">
+                    <a href="javascript:void(0);" title="English">English</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Español">Español</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Français">Français</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Italiano">Italiano</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Magyar">Magyar</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Nederlands"
+                      >Nederlands</a
+                    >
+                  </li>
+                  <li><a href="javascript:void(0);" title="Norsk">Norsk</a></li>
+                  <li>
+                    <a href="javascript:void(0);" title="Polski">Polski</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" title="Português"
+                      >Português</a
+                    >
+                  </li>
+                  <li><a href="javascript:void(0);" title="Suomi">Suomi</a></li>
+                  <li>
+                    <a href="javascript:void(0);" title="Svenska">Svenska</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="ribbon currency menu-color-skin">
+                <a href="javascript:void(0);" class="c-link">USD</a>
+                <ul class="menu mini">
+                  <li><a href="javascript:void(0);" title="AUD">AUD</a></li>
+                  <li><a href="javascript:void(0);" title="BRL">BRL</a></li>
+                  <li class="active">
+                    <a href="javascript:void(0);" title="USD">USD</a>
+                  </li>
+                  <li><a href="javascript:void(0);" title="CAD">CAD</a></li>
+                  <li><a href="javascript:void(0);" title="CHF">CHF</a></li>
+                  <li><a href="javascript:void(0);" title="CNY">CNY</a></li>
+                  <li><a href="javascript:void(0);" title="CZK">CZK</a></li>
+                  <li><a href="javascript:void(0);" title="DKK">DKK</a></li>
+                  <li><a href="javascript:void(0);" title="EUR">EUR</a></li>
+                  <li><a href="javascript:void(0);" title="GBP">GBP</a></li>
+                  <li><a href="javascript:void(0);" title="HKD">HKD</a></li>
+                  <li><a href="javascript:void(0);" title="HUF">HUF</a></li>
+                  <li><a href="javascript:void(0);" title="IDR">IDR</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- **** Header :: Top Nav For Mobile End ***** -->
+        </div>
+        <!-- **** Header :: Top Nav End ***** -->
+      </header>
+      <!-- ********** Component :: Header End ********** -->
+
+      <!-- ********** Component :: Page Title ********** -->
+      <div class="c-pageTitleSect">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-12">
+
+              <!-- *** Search Head **** -->
+              <div class="searchHeading">
+                <span class="pageTitle m0">Shopping Cart</span>
+              </div>
+              <!-- *** Search Head End **** -->
+
+            </div>
+
+            <div class="col-md-5 col-12 c-breadcrumbs">
+              <ul>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li class="st-active">
+                  <a href="#">Shopping Cart</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- ********** Component :: Page Title End ********** -->
+
+
+      <!-- ********** Component :: Hotel Listing  ********** -->
+      <div class="c-containerDark">
+        <div class="container">
+
+          <div class="row">
+
+            <!-- ***** Hotel Listing ***** -->
+            <div class="col-md-8 col-sm-12">
+              <div class="c-cartContainer">
+                <div class="cartHeading">Hotel Details</div>
+                <div class="cartBody">
+                  <!-- **** Shopping Cart Item ****  -->
+                  <div class="cartItem">
+                    <div class="row">
+
+                      <!-- **** Cart Image ****  -->
+                      <div class="col-3">
+                        <div class="cartImage"><img src="./images/16-9.jpg" /></div>
+                      </div>
+                      <!-- **** Cart Image End ****  -->
+
+                      <!-- **** Cart Data ****  -->
+                      <div class="col-9 p0-left">
+                        <div class="cartInfo">
+
+                          <!-- **** Cart Header ****  -->
+                          <div class="cartHeader">
+                            <span class="itemTitle">Hotel Title</span>
+                            <button class="deleteHotel"></button>
+
+                            <div class="infoSection">
+                              <span class="cardInfoLine cust">
+                                <i class="icon it itours-calendar"></i>
+                                Check In:
+                                <strong>23/03/2020</strong>
+                              </span>
+                              <span class="cardInfoLine cust">
+                                <i class="icon it itours-calendar"></i>
+                                Check Out:
+                                <strong>23/03/2020</strong>
+                              </span>
+                            </div>
+
+                          </div>
+                          <!-- **** Cart Header End ****  -->
+
+                          <!-- **** Hotel Room Item ****  -->
+                          <div class="roomType">
+                            <div class="rHeading">Room 1</div>
+                            <div class="roomTitle clearfix">
+                              <span class="s1">STANDARD ROOM-RO</span>
+                              <span class="s2">AED78.75</span>
+                            </div>
+                            <div class="rData">
+                                <div class="infoSection">
+                                  <span class="cardInfoLine noicon">
+                                    Amount:
+                                    <strong>AED 78.75</strong>
+                                  </span>
+                                  <span class="cardInfoLine noicon">
+                                    Tax:
+                                    <strong>AED 10.00</strong>
+                                  </span>
+                                </div>
+                            </div>
+                          </div>
+                          <!-- **** Hotel Room Item End ****  -->
+
+                          <!-- **** Hotel Room Item ****  -->
+                          <div class="roomType">
+                            <div class="rHeading">Room 2</div>
+                            <div class="roomTitle clearfix">
+                              <span class="s1">STANDARD ROOM-RO</span>
+                              <span class="s2">AED78.75</span>
+                            </div>
+                            <div class="rData">
+                                <div class="infoSection">
+                                  <span class="cardInfoLine noicon">
+                                    Amount:
+                                    <strong>AED 78.75</strong>
+                                  </span>
+                                  <span class="cardInfoLine noicon">
+                                    Tax:
+                                    <strong>AED 10.00</strong>
+                                  </span>
+                                </div>
+                            </div>
+                          </div>
+                          <!-- **** Hotel Room Item End ****  -->
+
+                        </div>
+                      </div>
+                      <!-- **** Cart Data End ****  -->
+
+                    </div>
+                  </div>
+                  <!-- **** Shopping Cart Item End ****  -->
+                </div>
+              </div>
+            </div>
+            <!-- ***** Hotel Listing End ***** -->
+
+            <!-- ***** Hotel Listing Filter ***** -->
+            <div class="col-md-4 col-sm-12">
+              <div class="c-cartContainer cartPricing">
+                <div class="sTitle">Final Pricing</div>
+              </div>
+            </div>
+            <!-- ***** Hotel Listing Filter End ***** -->
+
+          </div>
+        </div>
+      </div>
+      <!-- ********** Component :: Hotel Listing End ********** -->
+
+
+      <!-- ********** Component :: Footer ********** -->
+      <footer class="c-footer">
+        <div class="footer-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <h2 class="c-heading">Discover</h2>
+                <div class="row">
+                  <div class="col-6">
+                    <ul class="c-footerLink">
+                      <li><a href="javascript:void(0);">Safety</a></li>
+                      <li><a href="javascript:void(0);">Travelo Picks</a></li>
+                      <li><a href="javascript:void(0);">Why Host</a></li>
+                      <li><a href="javascript:void(0);">Blog Posts</a></li>
+                      <li><a href="javascript:void(0);">Social Connect</a></li>
+                      <li><a href="javascript:void(0);">Help Topics</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="c-footerLink">
+                      <li><a href="javascript:void(0);">Travelo Picks</a></li>
+                      <li><a href="javascript:void(0);">Why Host</a></li>
+                      <li><a href="javascript:void(0);">Blog Posts</a></li>
+                      <li><a href="javascript:void(0);">Social Connect</a></li>
+                      <li><a href="javascript:void(0);">Help Topics</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <h2 class="c-heading">Travel News</h2>
+                <ul class="travel-news">
+                  <li>
+                    <div class="thumb">
+                      <a href="javascript:void(0);" class="c-link">
+                        <img
+                          src="http://placehold.it/63x63"
+                          alt=""
+                          width="63"
+                          height="63"
+                        />
+                      </a>
+                    </div>
+
+                    <div class="description">
+                      <h5 class="s-title">
+                        <a href="javascript:void(0);" class="c-link"
+                          >Amazing Places</a
+                        >
+                      </h5>
+                      <p>
+                        Purus ac congue arcu cursus ut vitae pulvinar massaidp.
+                      </p>
+                      <span class="date">25 Sep, 2013</span>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="thumb">
+                      <a href="javascript:void(0);" class="c-link">
+                        <img
+                          src="http://placehold.it/63x63"
+                          alt=""
+                          width="63"
+                          height="63"
+                        />
+                      </a>
+                    </div>
+                    <div class="description">
+                      <h5 class="s-title">
+                        <a href="javascript:void(0);" class="c-link"
+                          >Travel Insurance</a
+                        >
+                      </h5>
+                      <p>
+                        Purus ac congue arcu cursus ut vitae pulvinar massaidp.
+                      </p>
+                      <span class="date">24 Sep, 2013</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <h2 class="c-heading">Mailing List</h2>
+                <p>
+                  Sign up for our mailing list to get latest updates and offers.
+                </p>
+                <br />
+                <div class="icon-check">
+                  <input
+                    type="text"
+                    class="input-text full-width"
+                    placeholder="your email"
+                  />
+                </div>
+                <br />
+                <span>We respect your privacy</span>
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <h2 class="c-heading">About iTours</h2>
+                <p>
+                  Nunc cursus libero purus ac congue arcu cursus ut sed vitae
+                  pulvinar massaidp nequetiam lore elerisque.
+                </p>
+                <br />
+                <address class="contact-details">
+                  <span class="contact-phone">
+                    <i class="itours-phone"></i> 1-800-123-HELLO
+                  </span>
+                  <br />
+                  <a href="javascript:void(0);" class="contact-email"
+                    >help@iTours.com</a
+                  >
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-12">
+                <div class="c-footerLogos">
+                  <ul>
+                    <li><img src="./images/svg/american-express.svg" /></li>
+                    <li><img src="./images/svg/visa.svg" /></li>
+                    <li><img src="./images/svg/mastercard.svg" /></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <div class="c-footerSocial clearfix">
+                  <ul class="social-icons">
+                    <li class="twitter">
+                      <a title="twitter" href="javascript:void(0);"
+                        ><i class="icon itours-twitter"></i
+                      ></a>
+                    </li>
+                    <li class="facebook">
+                      <a title="facebook" href="javascript:void(0);"
+                        ><i class="icon itours-facebook"></i
+                      ></a>
+                    </li>
+                    <li class="twitter">
+                      <a title="twitter" href="javascript:void(0);"
+                        ><i class="icon itours-google-plus"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 c-footerText">
+                <span>© 2019 iTours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- ********** Component :: Footer End ********** -->
+
+    </div>
+
+    <!-- Javascript -->
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.1.10.4.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-4.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/jquery.range.min.js"></script>
+    <script type="text/javascript" src="js/theme-scripts.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>

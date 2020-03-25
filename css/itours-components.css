@@ -329,6 +329,9 @@ font-family: 'Lato', sans-serif;
 .itours-load:before {
   content: "\e000";
 }
+.itours-delete-trash:before {
+  content: "\e001";
+}
 
 /* ----------------------------------------------
     Component :: Star Rating
@@ -940,7 +943,11 @@ section.dataContainer:after {
     Component :: Header
 ------------------------------------------------- */
 .c-header {
-  position: relative;
+  background-color: #fff;
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  top: 0; /* required */
   z-index: 999;
 }
 .c-header .topnav {
@@ -1932,7 +1939,8 @@ ul.c-search-tabs .nav-link.active {
   padding: 10px;
   border-left: 1px solid #f5f5f5;
 }
-.cardList-info .cardTitle {
+.cardList-info .cardTitle,
+.cartItem .itemTitle {
   display: block;
   font-size: 18px;
   line-height: 22px;
@@ -1942,7 +1950,8 @@ ul.c-search-tabs .nav-link.active {
   font-family: "Saira Condensed", sans-serif;
   letter-spacing: 0.5px;
 }
-.cardList-info .cardInfoLine {
+.cardList-info .cardInfoLine,
+.cartInfo .cardInfoLine {
   position: relative;
   display: block;
   font-size: 11px;
@@ -1954,7 +1963,8 @@ ul.c-search-tabs .nav-link.active {
   margin-bottom: 5px;
   line-height: 14px;
 }
-.cardList-info .cardInfoLine:not(.cust)::before {
+.cardList-info .cardInfoLine:not(.cust)::before,
+.cartInfo .cardInfoLine:not(.cust)::before {
   color: #fdb714;
   font-size: 12px;
   line-height: 16px;
@@ -2099,7 +2109,9 @@ ul.c-search-tabs .nav-link.active {
   padding-right: 2px;
 }
 .c-cardList.type-hotel .priceTag .price_main .p_currency,
-.c-cardList.type-hotel .priceTag .price_main .p_cost{display: inline-block;}
+.c-cardList.type-hotel .priceTag .price_main .p_cost,
+.infoCard .infoCard_price .p_currency,
+.infoCard .infoCard_price .p_cost{display: inline-block;}
 .c-cardList.type-hotel .priceTag .price_sub {
   display: block;
   color: #999;
@@ -2314,9 +2326,6 @@ ul.c-search-tabs .nav-link.active {
 }
 
 /* -- Car -- */
-.c-cardList.car {
-}
-
 @media (max-width: 990px) {
   .c-cardListTable .cardList-image,
   .c-cardListTable .cardList-image img,
@@ -3688,6 +3697,126 @@ ul.c-search-tabs .nav-link.active {
 }
 
 /* ----------------------------------------------
+    Component :: Shopping Cart Page
+------------------------------------------------- */
+.c-cartContainer{
+  background-color: #fff;
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  font-family: "Saira Condensed", sans-serif;
+}
+.c-cartContainer .cartHeading{
+  display: block;
+  background-color: #6dace6;
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.c-cartContainer .cartBody{
+  display: block;
+  background-color: #fff;
+  text-align: left;
+}
+.c-cartContainer .cartBody .cartItem{
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px;
+}
+.cartItem .cartImage{
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+}
+.cartItem .cartImage img{width: 100%;}
+.cartItem .itemTitle{
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 6px;
+}
+.cartItem .cardInfoLine{display: inline-block; margin-right: 10px;}
+
+.cartItem .roomType{
+  background-color: #f5f5f5;
+  padding: 15px 10px 5px;
+  margin: 10px 0 5px;
+  position: relative;
+}
+.cartItem .roomType .rHeading{
+  position: absolute;
+  background-color: #999;
+  padding: 2px 4px;
+  color: #fff;
+  font-size: 10px;
+  top: -5px;
+  left: 10px;
+  line-height: 10px;
+  border-radius: 3px;
+}
+
+.cartItem .roomType .roomTitle{
+  display: block;
+  margin-bottom: 4px;
+}
+.cartItem .roomType .roomTitle .s1,
+.cartItem .roomType .roomTitle .s2{
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  float: left;
+}
+.cartItem .roomType .roomTitle .s2{
+  color: #6dace6;
+  float: right;
+}
+.cartItem .cartHeader{
+  display: block;
+  position: relative;
+  padding-right: 50px;
+}
+.cartItem .cartHeader .deleteHotel{
+  position: absolute;
+  background-color: #e6e6e6;
+  padding: 3px 2px 3px 3px;
+  border: 0;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  height: 28px;
+  width: 28px;
+  border-radius: 20px;
+  text-align: center;
+}
+.cartItem .cartHeader .deleteHotel:before{
+  font-family: "itours";
+  content: "\e001";
+  display: inline-block;
+  font-size: 15px;
+  line-height: 23px;
+  color: #333;
+}
+
+.c-cartContainer.cartPricing{
+  display: block;
+  padding: 10px;
+  background-color: #2d3e52;
+}
+.c-cartContainer.cartPricing .sTitle{
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  display: block;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
 .c-customeBtn {
@@ -3784,6 +3913,20 @@ ul.c-search-tabs .nav-link.active {
   line-height: 32px;
 }
 
+.infoSection .cardInfoLine.cust .icon{
+  color: #fdb714;
+  font-size: 12px;
+  line-height: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.infoSection .cardInfoLine.noicon{
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.infoSection .cardInfoLine.noicon:before{content: '';}
+
 .c-link,
 .c-link > * {
   border: 0;
@@ -3806,6 +3949,9 @@ ul.c-search-tabs .nav-link.active {
 }
 .pad0 {
   padding: 0 !important;
+}
+.p0-left{
+  padding-left: 0;
 }
 .pad0-btm {
   padding-bottom: 0 !important;
