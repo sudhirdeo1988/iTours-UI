@@ -3815,7 +3815,100 @@ ul.c-search-tabs .nav-link.active {
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
+.c-cartContainer.cartPricing .sBlock{
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+  padding: 15px 10px 10px;
+  margin: 15px 0 30px;
+  position: relative;
+}
+.c-cartContainer.cartPricing .sBlock .sBlock_title{
+  position: absolute;
+  background-color: #fff;
+  padding: 2px 4px;
+  color: #2d3e52;
+  font-size: 10px;
+  top: -7px;
+  left: 10px;
+  line-height: 10px;
+  border-radius: 1px;
+}
+.c-cartContainer.cartPricing .sBlock .sBlock_price{
+  margin-bottom: 10px;
+}
+.c-cartContainer.cartPricing .sBlock .sBlock_price .pLabel{
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.c-cartContainer.cartPricing .sBlock .sBlock_price .pLabel.cost{
+  text-align: right;
+  color: #6dace6;
+}
+.c-cartContainer.cartPricing .sBlock .sBlock_price .pLabel.cost.colWhite{color: #fff;}
+.c-cartContainer.cartPricing .sBlock .sBlock_price.cDivider{
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+.c-cartContainer.cartPricing .sBlock.gTotal{padding-top: 10px;}
+.c-cartContainer.cartPricing .sBlock.gTotal .sBlock_price{margin-bottom: 0;}
+.c-cartContainer.cartPricing .sBlock.gTotal .pLabel{
+  font-size: 20px;
+  line-height: 22px;
+}
 
+.c-cartContainer.cartPricing .sPromocode{
+  display: block;
+  margin-bottom: 20px;
+}
+.c-cartContainer.cartPricing .sPromocode .sLabel{
+  display: block;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+.c-cartContainer.cartPricing .sPromocode .promoTxt{
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none !important;
+  padding: 10px;
+  line-height: 20px;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 100%;
+}
+.c-cartContainer.cartPricing .sPromocode .promoBtn,
+.c-cartContainer.cartPricing .btnCheckout{
+  background-color: #6dace6;
+  border: 0;
+  display: block;
+  padding: 10px;
+  line-height: 20px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+  width: 100%;
+  outline: none !important;
+}
+
+.c-cartContainer.cartPricing .btnCheckout{
+  background-color: #7db921;
+}
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
