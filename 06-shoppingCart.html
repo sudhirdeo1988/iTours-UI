@@ -19,7 +19,6 @@
     <!-- Theme Styles -->
     <link rel="stylesheet" href="css/bootstrap-4.min.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link id="main-style" rel="stylesheet" href="css/itours-styles.css" />
     <link id="main-style" rel="stylesheet" href="css/itours-components.css" />
 
@@ -30,7 +29,6 @@
   </head>
   <body>
     <div class="c-pageWrapper">
-
       <!-- ********** Component :: Header ********** -->
       <header class="c-header">
         <!-- **** Header :: Top Strip ***** -->
@@ -120,16 +118,14 @@
 
         <!-- **** Header :: Top Nav ***** -->
         <div class="main-header">
-
-
           <div class="container">
             <a
-            href="#st-openMenu"
-            data-toggle="collapse"
-            class="mobile-menu-toggle"
-          >
-            Mobile Menu Toggle
-          </a>
+              href="#st-openMenu"
+              data-toggle="collapse"
+              class="mobile-menu-toggle"
+            >
+              Mobile Menu Toggle
+            </a>
             <h1 class="logo navbar-brand">
               <a href="javascript: void(0);" title="iTours - home">
                 <img src="images/logo.png" alt="iTours HTML5 Template" />
@@ -138,15 +134,14 @@
 
             <div class="c-shoppingCart dropdown">
               <button
-                class="cartBtn" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                class="cartBtn"
+                type="button"
+                data-toggle="modal"
+                data-target=".bd-example-modal-sm"
               >
                 <i class="icon it itours-shopping-cart"></i>
                 <span class="notify">2</span>
               </button>
-              <ul class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
-                ...
-              </ul>
             </div>
 
             <!-- **** Header :: Top Nav For Desktop ***** -->
@@ -262,13 +257,11 @@
         <div class="container">
           <div class="row">
             <div class="col-md-7 col-12">
-
               <!-- *** Search Head **** -->
               <div class="searchHeading">
                 <span class="pageTitle m0">Shopping Cart</span>
               </div>
               <!-- *** Search Head End **** -->
-
             </div>
 
             <div class="col-md-5 col-12 c-breadcrumbs">
@@ -281,19 +274,15 @@
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
       </div>
       <!-- ********** Component :: Page Title End ********** -->
 
-
       <!-- ********** Component :: Hotel Listing  ********** -->
       <div class="c-containerDark">
         <div class="container">
-
           <div class="row">
-
             <!-- ***** Hotel Listing ***** -->
             <div class="col-md-8 col-sm-12">
               <div class="c-cartContainer">
@@ -302,17 +291,17 @@
                   <!-- **** Shopping Cart Item ****  -->
                   <div class="cartItem">
                     <div class="row">
-
                       <!-- **** Cart Image ****  -->
                       <div class="col-3">
-                        <div class="cartImage"><img src="./images/16-9.jpg" /></div>
+                        <div class="cartImage">
+                          <img src="./images/16-9.jpg" />
+                        </div>
                       </div>
                       <!-- **** Cart Image End ****  -->
 
                       <!-- **** Cart Data ****  -->
                       <div class="col-9 p0-left">
                         <div class="cartInfo">
-
                           <!-- **** Cart Header ****  -->
                           <div class="cartHeader">
                             <span class="itemTitle">Hotel Title</span>
@@ -330,7 +319,6 @@
                                 <strong>23/03/2020</strong>
                               </span>
                             </div>
-
                           </div>
                           <!-- **** Cart Header End ****  -->
 
@@ -342,16 +330,16 @@
                               <span class="s2">AED78.75</span>
                             </div>
                             <div class="rData">
-                                <div class="infoSection">
-                                  <span class="cardInfoLine noicon">
-                                    Amount:
-                                    <strong>AED 78.75</strong>
-                                  </span>
-                                  <span class="cardInfoLine noicon">
-                                    Tax:
-                                    <strong>AED 10.00</strong>
-                                  </span>
-                                </div>
+                              <div class="infoSection">
+                                <span class="cardInfoLine noicon">
+                                  Amount:
+                                  <strong>AED 78.75</strong>
+                                </span>
+                                <span class="cardInfoLine noicon">
+                                  Tax:
+                                  <strong>AED 10.00</strong>
+                                </span>
+                              </div>
                             </div>
                           </div>
                           <!-- **** Hotel Room Item End ****  -->
@@ -364,24 +352,22 @@
                               <span class="s2">AED78.75</span>
                             </div>
                             <div class="rData">
-                                <div class="infoSection">
-                                  <span class="cardInfoLine noicon">
-                                    Amount:
-                                    <strong>AED 78.75</strong>
-                                  </span>
-                                  <span class="cardInfoLine noicon">
-                                    Tax:
-                                    <strong>AED 10.00</strong>
-                                  </span>
-                                </div>
+                              <div class="infoSection">
+                                <span class="cardInfoLine noicon">
+                                  Amount:
+                                  <strong>AED 78.75</strong>
+                                </span>
+                                <span class="cardInfoLine noicon">
+                                  Tax:
+                                  <strong>AED 10.00</strong>
+                                </span>
+                              </div>
                             </div>
                           </div>
                           <!-- **** Hotel Room Item End ****  -->
-
                         </div>
                       </div>
                       <!-- **** Cart Data End ****  -->
-
                     </div>
                   </div>
                   <!-- **** Shopping Cart Item End ****  -->
@@ -473,7 +459,11 @@
                   <span class="sLabel">Have promo code.?</span>
                   <div class="row">
                     <div class="col-8">
-                      <input type="text" class="promoTxt" placeholder="Enter Promocode" />
+                      <input
+                        type="text"
+                        class="promoTxt"
+                        placeholder="Enter Promocode"
+                      />
                     </div>
                     <div class="col-4">
                       <button class="promoBtn">Apply</button>
@@ -483,16 +473,13 @@
                 <!-- **** Promo Code Block End **** -->
 
                 <button class="btnCheckout">Proceed to Checkout</button>
-
               </div>
             </div>
             <!-- ***** Hotel Listing Filter End ***** -->
-
           </div>
         </div>
       </div>
       <!-- ********** Component :: Hotel Listing End ********** -->
-
 
       <!-- ********** Component :: Footer ********** -->
       <footer class="c-footer">
@@ -661,7 +648,63 @@
         </div>
       </footer>
       <!-- ********** Component :: Footer End ********** -->
+    </div>
 
+    <div
+      class="modal fade bd-example-modal-sm shoppingCartModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- ***** Cart Item ****** -->
+            <div class="c-cartItem">
+              <i class="icon it itours-skyline"></i>
+              <div class="clearfix ci-header">
+                <span class="ci-title">Hotel Name Here</span>
+                <div class="ci-btnRemove">
+                  <button></button>
+                </div>
+              </div>
+
+              <!-- **** Room Type **** -->
+              <div class="clearfix ci-body">
+                <span class="ci-subtitle">Room Type Here</span>
+                <div class="ci-cost">1</div>
+              </div>
+              <!-- **** Room Type End **** -->
+
+              <!-- **** Room Type **** -->
+              <div class="clearfix ci-body">
+                <span class="ci-subtitle">Room Type Here</span>
+                <div class="ci-cost">1</div>
+              </div>
+              <!-- **** Room Type End **** -->
+
+              <!-- **** Room Type **** -->
+              <div class="clearfix ci-body">
+                <span class="ci-subtitle">Room Type Here</span>
+                <div class="ci-cost">1</div>
+              </div>
+              <!-- **** Room Type End **** -->
+            </div>
+            <!-- ***** Cart Item End ****** -->
+
+            <div class="clearfix text-right">
+              <button class="c-button md">Proceed To Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Javascript -->
@@ -670,8 +713,6 @@
     <script type="text/javascript" src="js/jquery-ui.1.10.4.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-4.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="js/jquery.range.min.js"></script>
     <script type="text/javascript" src="js/theme-scripts.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>

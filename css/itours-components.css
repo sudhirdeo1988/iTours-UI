@@ -3909,6 +3909,102 @@ ul.c-search-tabs .nav-link.active {
 .c-cartContainer.cartPricing .btnCheckout{
   background-color: #7db921;
 }
+
+/* ----------------------------------------------
+    Component :: Shopping Cart Modal
+------------------------------------------------- */
+.shoppingCartModal.modal .modal-dialog{
+  max-width: 450px;
+}
+.shoppingCartModal.modal .modal-body{background: #f9f9f9;}
+.c-cartItem{
+  background-color: #fff;
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  display: block;
+  padding: 15px 10px 15px 60px;
+  min-height: 50px;
+  position: relative;
+  font-family: "Saira Condensed", sans-serif;
+  margin-bottom: 10px;
+}
+.c-cartItem:last-child{border: 0;}
+.c-cartItem .icon{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-color: #6dace6;
+  left: 7px;
+  top: 15px;
+  display: inline-block;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+}
+.c-cartItem .icon:before{
+  position: relative;
+  top: 12px;
+  left: 11px;
+  font-size: 22px;
+  color: #fff;
+}
+.c-cartItem .ci-title,
+.ci-body .ci-subtitle{
+  color: #333333;
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+.ci-body .ci-subtitle{
+  float: left;
+  color: #999999;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 0;
+}
+.ci-body{
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 5px;
+}
+.ci-body .ci-cost{
+  color: #6dace6;
+  float: right;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.ci-header .ci-title{float: left;}
+.ci-header .ci-btnRemove{float: right;}
+.ci-header .ci-btnRemove button{
+  display: block;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  position: relative;
+  top: -10px;
+  right: -5px;
+  line-height: 6px;
+  outline: none !important;
+  border-radius: 20px;
+  height: 22px;
+  width: 22px;
+}
+.ci-header .ci-btnRemove button::before{
+  color: #6dace6;
+  content: "\79";
+  font-family: "itours";
+  font-size: 16px;
+  line-height: 14px;
+  position: relative;
+  display: inline-block;
+  left: 0;
+  top: 0;
+}
+
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
