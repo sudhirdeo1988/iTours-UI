@@ -3910,6 +3910,51 @@ ul.c-search-tabs .nav-link.active {
   background-color: #7db921;
 }
 
+.c-travellerDtls{
+  padding: 10px;
+  display: block;
+  position: relative;
+}
+.c-travellerDtls .section{
+  margin: 20px 0;
+  padding: 20px 10px 10px;
+  display: block;
+  position: relative;
+  border: 1px solid #eee;
+}
+.c-travellerDtls .section .title{
+  position: absolute;
+  padding: 3px 10px 2px;
+  font-size: 12px;
+  color: #fff;
+  top: -8px;
+  left: 10px;
+  font-weight: 600;
+  background-color: #6dace6;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+.c-travellerDtls .c-infoRow label{
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #999999;
+  margin: 8px 0 0;
+}
+.c-travellerDtls .c-infoRow{margin-bottom: 10px;}
+.c-travellerDtls .c-infoRow .infoRow_txtbox{
+  border: 1px solid #ccc;
+  display: block;
+  padding: 7px 10px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  width: 100%;
+  outline: none;
+  height: 34px;
+  border-radius: 4px;
+}
+
 /* ----------------------------------------------
     Component :: Shopping Cart Modal
 ------------------------------------------------- */
@@ -4237,6 +4282,25 @@ ul.c-search-tabs .nav-link.active {
   font-size: 15px;
 }
 
+.selector.st-clean{
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+}
+.selector.st-clean span.c-custom-select{height: 32px; outline: none !important;}
+.selector.st-clean span.c-custom-select{
+  background-color: #fff;
+  border: 0;
+  border-radius: 4px;
+}
+.selector.st-clean span.c-custom-select:before{
+  color: #999;
+  background-color: #fff;
+}
+.selector.st-clean span.c-custom-select:after{
+  border-color: #999 transparent transparent transparent;
+}
+
 @media (max-width: 768px) {
   .onlyForMobile {
     display: block !important;
@@ -4337,3 +4401,4 @@ ul.c-search-tabs .nav-link.active {
   height: 0;
   opacity: 0;
 }
+
