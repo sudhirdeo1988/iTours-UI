@@ -1016,9 +1016,11 @@ section.dataContainer:after {
   font-size: 0.8333em;
 }
 .c-header .main-header {
+  background-color: #fff;
   height: 70px;
   position: relative;
   width: 100%;
+  box-shadow: 1px 1px 3px #b9b9b9;
 }
 .c-header .main-header .container {
   position: relative;
@@ -3955,6 +3957,13 @@ ul.c-search-tabs .nav-link.active {
   border-radius: 4px;
 }
 
+@media (max-width: 768px) {
+  .c-travellerDtls .c-infoRow .infoRow_txtbox,
+  .c-travellerDtls .c-infoRow .selector.st-clean{
+    margin-bottom: 10px;
+  }
+}
+
 /* ----------------------------------------------
     Component :: Shopping Cart Modal
 ------------------------------------------------- */
@@ -4050,6 +4059,67 @@ ul.c-search-tabs .nav-link.active {
   top: 0;
 }
 
+/* ----------------------------
+Promo Code
+------------------------------- */
+.c-promoNotify{
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+  padding: 5px 60px 5px 30px;
+  border: 1px solid rgba(195, 230, 203, 0.7);
+  background-color: rgba(195, 230, 203, 0.5);
+  font-size: 14px;
+  color: #b0f9c1;
+  line-height: 18px;
+}
+.p_code{
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+.c-promoNotify::before{
+  font-family: "itours";
+  content: "\27";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  color: #b0f9c1;
+  top: 7px;
+  left: 5px;
+  line-height: 15px;
+  font-size: 16px;
+}
+.c-promoNotify .removePromo{
+  border: 0;
+  color: #333;
+  position: absolute;
+  background-color: #fff;
+  top: 7px;
+  right: 5px;
+  line-height: 8px;
+  font-size: 10px;
+  padding: 3px 7px;
+  border-radius: 10px;
+}
+.c-promoNotify.st-success{
+  border: 1px solid rgba(195, 230, 203, 0.7);
+  background-color: rgba(195, 230, 203, 0.5);
+  color: #b0f9c1;
+}
+.c-promoNotify.st-success::before{
+  content: "\27";
+  color: #b0f9c1;
+}
+.c-promoNotify.st-fail{
+  border: 1px solid rgba(245, 198, 203, 0.7);
+  background-color: rgba(245, 198, 203, 0.5);
+  color: #fdbdc3;
+}
+.c-promoNotify.st-fail::before{
+  content: "\61";
+  color: #fdbdc3;
+}
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
