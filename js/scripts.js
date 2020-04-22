@@ -1,6 +1,10 @@
 $(document).ready(function() {
   initilizeDropdown();
 
+  $('.mobile_hamb, .closeSidebar').on('click',function(){
+    $('body').toggleClass('st-sidebarOpen');
+  });
+
   if ($(".js-cardSlider").length > 0) {
     $(".js-cardSlider").owlCarousel({
       loop: false,
