@@ -4195,6 +4195,22 @@ Promo Code
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
+
+.c-alert{
+  width: 600px;
+  position: fixed;
+  top: 16px;
+  z-index: 110;
+  left: 50%;
+  margin-left: -300px;
+  padding: 20px;
+  font-size: 15px;
+}
+.c-alert.alert-dismissible .close{
+  padding: 18px 6px;
+  outline: none !important;
+}
+
 .c-customeBtn {
   border: 0;
   outline: none;
@@ -4461,6 +4477,11 @@ Promo Code
   }
   .M-m0 {
     margin: 0 !important;
+  }
+  .c-alert {
+    font-size: 13px;
+    width: 300px;
+    margin-left: -150px;
   }
 }
 

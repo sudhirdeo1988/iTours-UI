@@ -1,6 +1,14 @@
 $(document).ready(function() {
   initilizeDropdown();
 
+
+  // if ($(".c-alert").length > 0) {
+  //   setTimeout(function(){
+  //     $('.c-alert').alert('close');
+  //   },5000);
+  // }
+
+
   $('.mobile_hamb, .closeSidebar').on('click',function(){
     $('body').toggleClass('st-sidebarOpen');
   });
