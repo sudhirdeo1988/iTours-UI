@@ -4192,6 +4192,82 @@ Promo Code
   content: "\61";
   color: #fdbdc3;
 }
+
+
+/* ----------------------------------------------
+    Component :: User Profile
+------------------------------------------------- */
+.c-userBlock{
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  font-family: "Saira Condensed", sans-serif;
+  box-shadow: 0 0 13px 0 rgba(82,63,105,.05);
+  border-radius: 4px;
+}
+.c-userBlock .u_pInfo{
+  display: block;
+  position: relative;
+  min-height: 80px;
+  padding-left: 90px;
+  margin-bottom: 15px;
+}
+.c-userBlock .u_pInfo img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 75px;
+  width: 75px;
+}
+.c-userBlock .u_pInfo .c-heading{
+  color: #48465b;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.c-userBlock .u_pInfo .c-heading.sm{
+  font-weight: 500;
+  color: #74788d;
+  margin-top: 5px;
+  line-height: 16px;
+}
+.c-userBlock .u_pInfo .btnContainer{
+  display: block;
+  margin-top: 5px;
+  text-align: left;
+}
+.c-userBlock .u_pInfo .btnContainer .c-btn{
+  display: inline-block;
+  background-color: #5578eb;
+  border:0;
+  color: #fff;
+  font-weight: 600;
+  padding: .3rem 1rem;
+  outline: 0!important;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+.c-userBlock .u_pData{margin: 0 -15px; padding: 0 15px; background-color: #f5f5f5;}
+.c-userBlock .u_pData .infoRow{
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+.c-userBlock .u_pData .infoRow:last-child{border: 0;}
+.c-userBlock .u_pData .infoRow .lbl_sm,
+.c-userBlock .u_pData .infoRow .lbl_md{
+  color: #000;
+  display: block;
+  padding: 3px 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+}
+.c-userBlock .u_pData .infoRow .lbl_md{
+  color: #999999;
+}
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
