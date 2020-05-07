@@ -8,6 +8,21 @@ $(document).ready(function() {
   //   },5000);
   // }
 
+  if ($(".st-dataTable").length > 0) {
+  $('.st-dataTable .table').DataTable();
+  }
+
+  $('body').delegate('.c-userBlock .st-editProfile', 'click', function(){
+    var thidParent = $(this).parents('.tabDetails');
+    if(!thidParent.hasClass('st-editable')){
+      thidParent.addClass('st-editable');
+      thidParent.find('.formField').find('.txtBox').prop('readonly', false);
+    }else{
+      thidParent.removeClass('st-editable');
+      thidParent.find('.formField').find('.txtBox').prop('readonly', true);
+    }
+  })
+
 
   $('.mobile_hamb, .closeSidebar').on('click',function(){
     $('body').toggleClass('st-sidebarOpen');

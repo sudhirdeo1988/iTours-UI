@@ -17,7 +17,7 @@
   <!-- Theme Styles -->
   <link rel="stylesheet" href="css/bootstrap-4.min.css" />
   <link rel="stylesheet" href="css/animate.min.css" />
-  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/datatables.min.css" />
   <link id="main-style" rel="stylesheet" href="css/itours-styles.css" />
   <link id="main-style" rel="stylesheet" href="css/itours-components.css" />
 
@@ -62,7 +62,6 @@
         <div class="row">
           <div class="col-4">
 
-
             <div class="c-userBlock">
 
               <!-- User Block -->
@@ -70,9 +69,6 @@
                 <img src="./images/user.svg" alt="" />
                 <h2 class="c-heading">Sudhir Deolalikar</h2>
                 <h4 class="c-heading sm">Head of Development</h4>
-                <div class="btnContainer">
-                  <button class="c-btn">Edit Profile</button>
-                </div>
               </div>
               <!-- User Block End -->
 
@@ -93,12 +89,352 @@
               </div>
               <!-- User Info End -->
 
+              <div class="clearfix u_links nav" id="myTab" role="tablist">
+                <button class="u_tab" id="tab-1" data-toggle="tab" href="#home1" role="tab">
+                  <i class="icon itours-student-card"></i>
+                  Profile
+                </button>
+                <button class="u_tab" id="tab-2" data-toggle="tab" href="#home2" role="tab">
+                  <i class="icon itours-user-1"></i>
+                  Booking Summery
+                </button>
+                <button class="u_tab" id="tab-3" data-toggle="tab" href="#home3" role="tab">
+                  <i class="icon itours-financial"></i>
+                  Account Ledger
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- ** User Profile Details ** -->
+          <div class="col-8">
+
+            <div class="c-userBlock st-details  tab-content">
+
+              <!-- Tab 1 -->
+              <div class="tabDetails tab-pane fade show active" id="home1" role="tabpanel">
+                <h2 class="c-heading">
+                  Ajent Profile
+                  <button class="btnEdit st-editProfile">Edit</button>
+                </h2>
+
+
+                <div class="accordion c-userProfileAccord" id="accordionExample">
+                  <!-- ** Accord 1 ** -->
+                  <div class="card">
+                    <div class="card-header" id="headingProfileOverview">
+                      <button class="btn" type="button" data-toggle="collapse" data-target="#collapseProfileOverview"
+                        aria-expanded="true" aria-controls="collapseProfileOverview">
+                        PROFILE OVERVIEW
+                      </button>
+                    </div>
+                    <div id="collapseProfileOverview" class="collapse show" aria-labelledby="headingProfileOverview"
+                      data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Company Name</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Accounting Name</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>IATA Status</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>IATA Number</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Nature of Business</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Preferred Currency</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Telephone</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Turnover Slab</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Skype ID</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Website</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ** Accord 1 ** -->
+
+                  <!-- ** Accord 2 ** -->
+                  <div class="card">
+                    <div class="card-header" id="headingAddressInformation">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseAddressInformation" aria-expanded="false" aria-controls="collapseAddressInformation">
+                        Address Information
+                      </button>
+                    </div>
+                    <div id="collapseAddressInformation" class="collapse" aria-labelledby="headingAddressInformation" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Country</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>City</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Pincode</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-12">
+                            <div class="formField">
+                              <label>Address Line 1</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-12">
+                            <div class="formField">
+                              <label>Address Line 2</label>
+                              <input type="text" class="txtBox" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ** Accord 2 End ** -->
+
+                  <!-- ** Accord 3 ** -->
+                  <div class="card">
+                    <div class="card-header" id="headingPersonalInformaiton">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapsePersonalInformaiton" aria-expanded="false" aria-controls="collapsePersonalInformaiton">
+                        Personal Informaiton
+                      </button>
+                    </div>
+                    <div id="collapsePersonalInformaiton" class="collapse" aria-labelledby="headingPersonalInformaiton"
+                      data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>First Name</label>
+                              <input type="text" class="txtBox" placeholder="First Name" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Last Name</label>
+                              <input type="text" class="txtBox" placeholder="Last Name" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Email ID</label>
+                              <input type="email" class="txtBox" placeholder="Email ID" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Contact Number</label>
+                              <input type="number" class="txtBox" placeholder="Contact Number" value="Sudhir"
+                                readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Designation</label>
+                              <input type="number" class="txtBox" placeholder="Designation" value="Sudhir" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>PAN Card No.</label>
+                              <input type="number" class="txtBox" placeholder="PAN Card No." value="Sudhir" readonly />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ** Accord 3 End ** -->
+
+                  <!-- ** Accord 4 ** -->
+                  <div class="card">
+                    <div class="card-header" id="headingAccountInformaiton">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseAccountInformaiton" aria-expanded="false" aria-controls="collapseAccountInformaiton">
+                        Account Informaiton
+                      </button>
+                    </div>
+                    <div id="collapseAccountInformaiton" class="collapse" aria-labelledby="headingAccountInformaiton"
+                      data-parent="#accordionExample">
+                      <div class="card-body">
+
+                          <div class="row">
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <div class="formField">
+                                <label>Bank Name</label>
+                                <input type="text" class="txtBox" placeholder="Bank Name" value="Bank Name" readonly />
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <div class="formField">
+                                <label>Bank Account Name</label>
+                                <input type="text" class="txtBox" placeholder="Bank Account Name" value="Bank Account Name"
+                                  readonly />
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <div class="formField">
+                                <label>Bank Account Number</label>
+                                <input type="text" class="txtBox" placeholder="Bank Account Number" value="Bank Account Number"
+                                  readonly />
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <div class="formField">
+                                <label>Branch Name</label>
+                                <input type="text" class="txtBox" placeholder="Branch Name" value="Branch Name" readonly />
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <div class="formField">
+                                <label>IFSC Code</label>
+                                <input type="text" class="txtBox" placeholder="IFSC Code" value="IFSC Code" readonly />
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ** Accord 4 End ** -->
+
+                </div>
+
+                <div class="clearfix conditionalDiv text-right">
+                    <button class="c-button st-editProfile">Cancel</button>
+                </div>
+
+
+
+              </div>
+              <!-- Tab 1 End -->
+
+              <!-- Tab 2 -->
+              <div class="tabDetails tab-pane fade" id="home2" role="tabpanel">
+                <h2 class="c-heading">
+                  Booking Summery
+                </h2>
+                <div class="clearfix c-table st-dataTable">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th  style="width: 7%;">Sr. No.</th>
+                        <th  style="width: 15%;">Booking ID</th>
+                        <th  style="width: 15%;">Booking Date</th>
+                        <th  style="width: 14%;">Total Amount</th>
+                        <th  style="width: 14%;">Cancel Amount</th>
+                        <th  style="width: 14%;">Net Amount</th>
+                        <th  style="width: 14%;">Paid Amount</th>
+                        <th  style="width: 7%;">View</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>BOOK#2318</td>
+                        <td>24/05/2020</td>
+                        <td>INR 34000</td>
+                        <td>INR 34000</td>
+                        <td>INR 34000</td>
+                        <td>INR 34000</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>BOOK#2318</td>
+                        <td>24/05/2020</td>
+                        <td>INR 34000</td>
+                        <td>INR 44000</td>
+                        <td>INR 44000</td>
+                        <td>INR 34000</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- Tab 2 End -->
+
+              <!-- Tab 3 -->
+              <div class="tabDetails tab-pane fade" id="home3" role="tabpanel">
+                <h2 class="c-heading">
+                  Account Ledger
+                  <button class="btnEdit">Edit</button>
+                </h2>
+              </div>
+              <!-- Tab 3 End -->
+
+              <!-- Tab 4 -->
+              <div class="tabDetails tab-pane fade" id="home4" role="tabpanel">
+                <h2 class="c-heading">
+                  Prof Information
+                  <button class="btnEdit">Edit</button>
+                </h2>
+              </div>
+              <!-- Tab 4 End -->
+
             </div>
 
 
-
           </div>
-          <div class="col-8">8</div>
+          <!-- ** User Profile Details End ** -->
+
+
         </div>
       </div>
     </div>
@@ -254,8 +590,7 @@
   <script type="text/javascript" src="js/jquery-ui.1.10.4.min.js"></script>
   <script type="text/javascript" src="js/popper.min.js"></script>
   <script type="text/javascript" src="js/bootstrap-4.min.js"></script>
-  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-  <script type="text/javascript" src="js/jquery.range.min.js"></script>
+  <script type="text/javascript" src="js/datatables.min.js"></script>
   <script type="text/javascript" src="js/theme-scripts.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
 </body>
