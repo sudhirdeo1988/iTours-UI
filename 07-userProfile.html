@@ -90,7 +90,7 @@
               <!-- User Info End -->
 
               <div class="clearfix u_links nav" id="myTab" role="tablist">
-                <button class="u_tab" id="tab-1" data-toggle="tab" href="#home1" role="tab">
+                <button class="u_tab active" id="tab-1" data-toggle="tab" href="#home1" role="tab">
                   <i class="icon itours-student-card"></i>
                   Profile
                 </button>
@@ -117,7 +117,6 @@
               <div class="tabDetails tab-pane fade show active" id="home1" role="tabpanel">
                 <h2 class="c-heading">
                   Ajent Profile
-                  <button class="btnEdit st-editProfile">Edit</button>
                 </h2>
 
 
@@ -125,9 +124,10 @@
                   <!-- ** Accord 1 ** -->
                   <div class="card">
                     <div class="card-header" id="headingProfileOverview">
-                      <button class="btn" type="button" data-toggle="collapse" data-target="#collapseProfileOverview"
-                        aria-expanded="true" aria-controls="collapseProfileOverview">
-                        PROFILE OVERVIEW
+                      <button class="btnShow" type="button" data-toggle="collapse"
+                        data-target="#collapseProfileOverview" aria-expanded="true"
+                        aria-controls="collapseProfileOverview">
+                        <span>PROFILE OVERVIEW</span>
                       </button>
                     </div>
                     <div id="collapseProfileOverview" class="collapse show" aria-labelledby="headingProfileOverview"
@@ -194,6 +194,11 @@
                               <input type="text" class="txtBox" value="Sudhir" readonly />
                             </div>
                           </div>
+                          <div class="col-12 text-center">
+                            <button class="c-button st-editProfile">Edit</button>
+                            <button class="c-button colGrn saveProfile">Save</button>
+                            <button class="c-button st-editProfile st-cancleEdit">Cancel</button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -203,12 +208,14 @@
                   <!-- ** Accord 2 ** -->
                   <div class="card">
                     <div class="card-header" id="headingAddressInformation">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseAddressInformation" aria-expanded="false" aria-controls="collapseAddressInformation">
-                        Address Information
+                      <button class="btnShow collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseAddressInformation" aria-expanded="false"
+                        aria-controls="collapseAddressInformation">
+                        <span>Address Information</span>
                       </button>
                     </div>
-                    <div id="collapseAddressInformation" class="collapse" aria-labelledby="headingAddressInformation" data-parent="#accordionExample">
+                    <div id="collapseAddressInformation" class="collapse" aria-labelledby="headingAddressInformation"
+                      data-parent="#accordionExample">
                       <div class="card-body">
                         <div class="row">
                           <div class="col-md-4 col-sm-6 col-12">
@@ -241,6 +248,11 @@
                               <input type="text" class="txtBox" value="Sudhir" readonly />
                             </div>
                           </div>
+                          <div class="col-12 text-center">
+                            <button class="c-button st-editProfile">Edit</button>
+                            <button class="c-button colGrn saveProfile">Save</button>
+                            <button class="c-button st-editProfile st-cancleEdit">Cancel</button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -250,9 +262,10 @@
                   <!-- ** Accord 3 ** -->
                   <div class="card">
                     <div class="card-header" id="headingPersonalInformaiton">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapsePersonalInformaiton" aria-expanded="false" aria-controls="collapsePersonalInformaiton">
-                        Personal Informaiton
+                      <button class="btnShow collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapsePersonalInformaiton" aria-expanded="false"
+                        aria-controls="collapsePersonalInformaiton">
+                        <span>Personal Informaiton</span>
                       </button>
                     </div>
                     <div id="collapsePersonalInformaiton" class="collapse" aria-labelledby="headingPersonalInformaiton"
@@ -296,6 +309,11 @@
                               <input type="number" class="txtBox" placeholder="PAN Card No." value="Sudhir" readonly />
                             </div>
                           </div>
+                          <div class="col-12 text-center">
+                            <button class="c-button st-editProfile">Edit</button>
+                            <button class="c-button colGrn saveProfile">Save</button>
+                            <button class="c-button st-editProfile st-cancleEdit">Cancel</button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -305,60 +323,107 @@
                   <!-- ** Accord 4 ** -->
                   <div class="card">
                     <div class="card-header" id="headingAccountInformaiton">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseAccountInformaiton" aria-expanded="false" aria-controls="collapseAccountInformaiton">
-                        Account Informaiton
+                      <button class="btnShow collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseAccountInformaiton" aria-expanded="false"
+                        aria-controls="collapseAccountInformaiton">
+                        <span>Account Informaiton</span>
                       </button>
                     </div>
                     <div id="collapseAccountInformaiton" class="collapse" aria-labelledby="headingAccountInformaiton"
                       data-parent="#accordionExample">
                       <div class="card-body">
 
-                          <div class="row">
-                            <div class="col-md-4 col-sm-6 col-12">
-                              <div class="formField">
-                                <label>Bank Name</label>
-                                <input type="text" class="txtBox" placeholder="Bank Name" value="Bank Name" readonly />
-                              </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                              <div class="formField">
-                                <label>Bank Account Name</label>
-                                <input type="text" class="txtBox" placeholder="Bank Account Name" value="Bank Account Name"
-                                  readonly />
-                              </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                              <div class="formField">
-                                <label>Bank Account Number</label>
-                                <input type="text" class="txtBox" placeholder="Bank Account Number" value="Bank Account Number"
-                                  readonly />
-                              </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                              <div class="formField">
-                                <label>Branch Name</label>
-                                <input type="text" class="txtBox" placeholder="Branch Name" value="Branch Name" readonly />
-                              </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                              <div class="formField">
-                                <label>IFSC Code</label>
-                                <input type="text" class="txtBox" placeholder="IFSC Code" value="IFSC Code" readonly />
-                              </div>
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Bank Name</label>
+                              <input type="text" class="txtBox" placeholder="Bank Name" value="Bank Name" readonly />
                             </div>
                           </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Bank Account Name</label>
+                              <input type="text" class="txtBox" placeholder="Bank Account Name"
+                                value="Bank Account Name" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Bank Account Number</label>
+                              <input type="text" class="txtBox" placeholder="Bank Account Number"
+                                value="Bank Account Number" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Branch Name</label>
+                              <input type="text" class="txtBox" placeholder="Branch Name" value="Branch Name"
+                                readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>IFSC Code</label>
+                              <input type="text" class="txtBox" placeholder="IFSC Code" value="IFSC Code" readonly />
+                            </div>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button class="c-button st-editProfile">Edit</button>
+                            <button class="c-button colGrn saveProfile">Save</button>
+                            <button class="c-button st-editProfile st-cancleEdit">Cancel</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ** Accord 4 End ** -->
+
+                  <!-- ** Accord 4 ** -->
+                  <div class="card">
+                    <div class="card-header" id="headingChangePassword">
+                      <button class="btnShow collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseChangePassword" aria-expanded="false"
+                        aria-controls="collapseChangePassword">
+                        <span>Change Password</span>
+                      </button>
+                    </div>
+                    <div id="collapseChangePassword" class="collapse" aria-labelledby="headingChangePassword"
+                      data-parent="#accordionExample">
+                      <div class="card-body">
+
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>User Name</label>
+                              <input type="text" class="txtBox" placeholder="Bank Name" value="Bank Name" disabled />
+                            </div>
+                            <div class="formField">
+                              <label>Enter Old Password</label>
+                              <input type="Password" class="txtBox" placeholder="Old Password" readonly />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-12">
+                            <div class="formField">
+                              <label>Enter New Password</label>
+                              <input type="Password" class="txtBox" placeholder="New Password" readonly />
+                            </div>
+                            <div class="formField">
+                              <label>Retype New Password</label>
+                              <input type="Password" class="txtBox" placeholder="Retype Password" readonly />
+                            </div>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button class="c-button st-editProfile">Edit</button>
+                            <button class="c-button colGrn saveProfile">Save</button>
+                            <button class="c-button st-editProfile st-cancleEdit">Cancel</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <!-- ** Accord 4 End ** -->
 
                 </div>
-
-                <div class="clearfix conditionalDiv text-right">
-                    <button class="c-button st-editProfile">Cancel</button>
-                </div>
-
 
 
               </div>
@@ -369,44 +434,98 @@
                 <h2 class="c-heading">
                   Booking Summery
                 </h2>
+
+                <!-- Table -->
                 <div class="clearfix c-table st-dataTable">
+                  <div class="clearfix">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="formField datepicker-wrap">
+                          <label>Search By Date</label>
+                          <input type="text" class="txtBox d-inline-block wAuto" placeholder="From Date" />
+                          <input type="text" class="txtBox d-inline-block wAuto" placeholder="To Date" />
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="formField">
+                          <label>Search By Booking ID</label>
+                          <input type="text" class="txtBox customeSearchInput" placeholder="Booking ID" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <table class="table">
                     <thead>
                       <tr>
-                        <th  style="width: 7%;">Sr. No.</th>
-                        <th  style="width: 15%;">Booking ID</th>
-                        <th  style="width: 15%;">Booking Date</th>
-                        <th  style="width: 14%;">Total Amount</th>
-                        <th  style="width: 14%;">Cancel Amount</th>
-                        <th  style="width: 14%;">Net Amount</th>
-                        <th  style="width: 14%;">Paid Amount</th>
-                        <th  style="width: 7%;">View</th>
+                        <th style="width: 10%;">Sr. No.</th>
+                        <th style="width: 20%;">Booking ID</th>
+                        <th style="width: 20%;">Booking Date</th>
+                        <th style="width: 20%;">Booking Amount</th>
+                        <th style="width: 20%;">Paid Amount</th>
+                        <th style="width: 10%;">View</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>BOOK#2318</td>
+                        <td>BOOK#6718</td>
                         <td>24/05/2020</td>
                         <td>INR 34000</td>
                         <td>INR 34000</td>
-                        <td>INR 34000</td>
-                        <td>INR 34000</td>
-                        <td>@mdo</td>
+                        <td>
+                          <button class="tableBtn" data-toggle="modal" data-target="#exampleModal">
+                            <i class="icon itours-search"></i>
+                          </button>
+                        </td>
                       </tr>
                       <tr>
                         <td>2</td>
                         <td>BOOK#2318</td>
                         <td>24/05/2020</td>
                         <td>INR 34000</td>
-                        <td>INR 44000</td>
-                        <td>INR 44000</td>
                         <td>INR 34000</td>
-                        <td>@mdo</td>
+                        <td>
+                          <button class="tableBtn" data-toggle="modal" data-target="#exampleModal">
+                            <i class="icon itours-search"></i>
+                          </button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+                <!-- Table End -->
+
+                <!-- Colum totals -->
+                <div class="c-tableINfo">
+                  <div class="row">
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="infoCard">
+                        <span class="lbl">Total Amount</span>
+                        <span class="info">INR 34,00,000</span>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="infoCard">
+                        <span class="lbl">Total CANCEL AMOUNT</span>
+                        <span class="info">INR 34,00,000</span>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="infoCard">
+                        <span class="lbl">Total Net Amount</span>
+                        <span class="info">INR 34,00,000</span>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="infoCard">
+                        <span class="lbl">Total Paid Amount</span>
+                        <span class="info">INR 34,00,000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Colum totals End -->
+
               </div>
               <!-- Tab 2 End -->
 
@@ -414,8 +533,80 @@
               <div class="tabDetails tab-pane fade" id="home3" role="tabpanel">
                 <h2 class="c-heading">
                   Account Ledger
-                  <button class="btnEdit">Edit</button>
                 </h2>
+
+                <!-- Table -->
+                <div class="clearfix c-table st-dataTable">
+                  <div class="clearfix">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="formField datepicker-wrap">
+                          <label>Search By Date</label>
+                          <input type="text" class="txtBox" placeholder="From Date" />
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="formField">
+                          <label>Search By Keyword</label>
+                          <input type="text" class="txtBox customeSearchInput" placeholder="Enter search keyword" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th style="width: 10%">Sr. No.</th>
+                        <th style="width: 20%">Date</th>
+                        <th style="width: 30%">Perticular</th>
+                        <th style="width: 20%">Debit</th>
+                        <th style="width: 20%">Credit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>24/05/2020</td>
+                        <td>A 1D array of options which will be used</td>
+                        <td>INR 34000</td>
+                        <td>INR 34000</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>24/05/2020</td>
+                        <td>A 1D array of options which will be used</td>
+                        <td>INR 34000</td>
+                        <td>INR 34000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- Table End -->
+
+                <!-- Colum totals -->
+                <div class="c-tableINfo">
+                  <div class="row">
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="infoCard">
+                        <span class="lbl">Total Debit</span>
+                        <span class="info">INR 34,00,000</span>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="infoCard">
+                        <span class="lbl">Total Credit</span>
+                        <span class="info">INR 34,00,000</span>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                      <div class="infoCard">
+                        <span class="lbl">Total Balance</span>
+                        <span class="info">INR 34,00,000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Colum totals End -->
               </div>
               <!-- Tab 3 End -->
 
@@ -423,7 +614,6 @@
               <div class="tabDetails tab-pane fade" id="home4" role="tabpanel">
                 <h2 class="c-heading">
                   Prof Information
-                  <button class="btnEdit">Edit</button>
                 </h2>
               </div>
               <!-- Tab 4 End -->
@@ -440,147 +630,60 @@
     </div>
     <!-- ********** Component :: User Profile End ********** -->
 
-    <!-- ********** Component :: Footer ********** -->
-    <footer class="c-footer">
-      <div class="footer-wrapper">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-3">
-              <h2 class="c-heading">Discover</h2>
-              <div class="row">
-                <div class="col-6">
-                  <ul class="c-footerLink">
-                    <li><a href="javascript:void(0);">Safety</a></li>
-                    <li><a href="javascript:void(0);">Travelo Picks</a></li>
-                    <li><a href="javascript:void(0);">Why Host</a></li>
-                    <li><a href="javascript:void(0);">Blog Posts</a></li>
-                    <li><a href="javascript:void(0);">Social Connect</a></li>
-                    <li><a href="javascript:void(0);">Help Topics</a></li>
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <ul class="c-footerLink">
-                    <li><a href="javascript:void(0);">Travelo Picks</a></li>
-                    <li><a href="javascript:void(0);">Why Host</a></li>
-                    <li><a href="javascript:void(0);">Blog Posts</a></li>
-                    <li><a href="javascript:void(0);">Social Connect</a></li>
-                    <li><a href="javascript:void(0);">Help Topics</a></li>
-                  </ul>
+
+    <div class="modal fade c-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Booking ID: #BOOK987</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="readOnly_info">
+                  <span class="lbl">Booking ID</span>
+                  <span class="info">#book9876</span>
                 </div>
               </div>
-            </div>
-
-            <div class="col-sm-6 col-md-3">
-              <h2 class="c-heading">Travel News</h2>
-              <ul class="travel-news">
-                <li>
-                  <div class="thumb">
-                    <a href="javascript:void(0);" class="c-link">
-                      <img src="http://placehold.it/63x63" alt="" width="63" height="63" />
-                    </a>
-                  </div>
-
-                  <div class="description">
-                    <h5 class="s-title">
-                      <a href="javascript:void(0);" class="c-link">Amazing Places</a>
-                    </h5>
-                    <p>
-                      Purus ac congue arcu cursus ut vitae pulvinar massaidp.
-                    </p>
-                    <span class="date">25 Sep, 2013</span>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="thumb">
-                    <a href="javascript:void(0);" class="c-link">
-                      <img src="http://placehold.it/63x63" alt="" width="63" height="63" />
-                    </a>
-                  </div>
-                  <div class="description">
-                    <h5 class="s-title">
-                      <a href="javascript:void(0);" class="c-link">Travel Insurance</a>
-                    </h5>
-                    <p>
-                      Purus ac congue arcu cursus ut vitae pulvinar massaidp.
-                    </p>
-                    <span class="date">24 Sep, 2013</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-sm-6 col-md-3">
-              <h2 class="c-heading">Mailing List</h2>
-              <p>
-                Sign up for our mailing list to get latest updates and offers.
-              </p>
-              <br />
-              <div class="icon-check">
-                <input type="text" class="input-text full-width" placeholder="your email" />
+              <div class="col-md-6 col-12">
+                <div class="readOnly_info">
+                  <span class="lbl">BOOKING DATE</span>
+                  <span class="info">10/04/2020</span>
+                </div>
               </div>
-              <br />
-              <span>We respect your privacy</span>
-            </div>
-
-            <div class="col-sm-6 col-md-3">
-              <h2 class="c-heading">About iTours</h2>
-              <p>
-                Nunc cursus libero purus ac congue arcu cursus ut sed vitae
-                pulvinar massaidp nequetiam lore elerisque.
-              </p>
-              <br />
-              <address class="contact-details">
-                <span class="contact-phone">
-                  <i class="itours-phone"></i> 1-800-123-HELLO
-                </span>
-                <br />
-                <a href="javascript:void(0);" class="contact-email">help@iTours.com</a>
-              </address>
+              <div class="col-md-6 col-12">
+                <div class="readOnly_info">
+                  <span class="lbl">TOTAL AMOUNT</span>
+                  <span class="info">INR 45,000</span>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="readOnly_info">
+                  <span class="lbl">CANCEL AMOUNT</span>
+                  <span class="info">INR 45,000</span>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="readOnly_info">
+                  <span class="lbl">NET AMOUNT</span>
+                  <span class="info">INR 45,000</span>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="readOnly_info">
+                  <span class="lbl">PAID AMOUNT</span>
+                  <span class="info">INR 45,000</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="c-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-12">
-              <div class="c-footerLogos">
-                <ul>
-                  <li><img src="./images/svg/american-express.svg" /></li>
-                  <li><img src="./images/svg/visa.svg" /></li>
-                  <li><img src="./images/svg/mastercard.svg" /></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-12">
-              <div class="c-footerSocial clearfix">
-                <ul class="social-icons">
-                  <li class="twitter">
-                    <a title="twitter" href="javascript:void(0);"><i class="icon itours-twitter"></i></a>
-                  </li>
-                  <li class="facebook">
-                    <a title="facebook" href="javascript:void(0);"><i class="icon itours-facebook"></i></a>
-                  </li>
-                  <li class="twitter">
-                    <a title="twitter" href="javascript:void(0);"><i class="icon itours-google-plus"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 c-footerText">
-              <span>© 2019 iTours</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- ********** Component :: Footer End ********** -->
+    </div>
 
   </div>
 

@@ -9,11 +9,19 @@ $(document).ready(function() {
   // }
 
   if ($(".st-dataTable").length > 0) {
-  $('.st-dataTable .table').DataTable();
+  var searchCustome = $('.st-dataTable .table').DataTable({
+    "info":     false,
+    "lengthChange": false,
+    "pageLength": 20
+  });
+  $('.customeSearchInput').keyup(function(){
+    searchCustome.search( this.value ).draw();;
+  })
   }
 
-  $('body').delegate('.c-userBlock .st-editProfile', 'click', function(){
-    var thidParent = $(this).parents('.tabDetails');
+
+  $('body').delegate('.c-userBlock .card .st-editProfile', 'click', function(){
+    var thidParent = $(this).parents('.card');
     if(!thidParent.hasClass('st-editable')){
       thidParent.addClass('st-editable');
       thidParent.find('.formField').find('.txtBox').prop('readonly', false);
