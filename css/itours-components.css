@@ -383,7 +383,6 @@ font-family: 'Lato', sans-serif;
 .itours-financial:before {
   content: "\e012";
 }
-
 /* ----------------------------------------------
     Component :: Star Rating
 ------------------------------------------------- */
@@ -668,6 +667,7 @@ font-family: 'Lato', sans-serif;
 .c-buttonBorder {
   border: 0;
   background-color: #fdb714;
+  cursor: pointer;
   display: inline-block;
   padding: 5px 20px;
   height: auto;
@@ -676,7 +676,7 @@ font-family: 'Lato', sans-serif;
   text-decoration: none !important;
   text-transform: uppercase;
   font-size: 12px;
-  color: #fff;
+  color: #fff !important;
   outline: 0 !important;
   box-sizing: border-box;
   letter-spacing: 0.5px;
@@ -708,7 +708,8 @@ font-family: 'Lato', sans-serif;
   box-sizing: border-box;
   padding: 6px 20px;
   display: block;
-  width: 100%;
+  width: 100%;  
+  cursor: pointer;
 }
 .c-button[aria-expanded] {
   position: relative;
@@ -1834,6 +1835,7 @@ ul.c-search-tabs .nav-link.active {
   line-height: 18px;
   color: #999;
   text-decoration: none;
+  cursor: pointer;
   transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
   -webkit-transition: all ease 0.3s;
@@ -3704,9 +3706,6 @@ ul.c-search-tabs .nav-link.active {
   font-size: 10px;
   line-height: 12px;
 }
-.c-modal .modal-md{
-  max-width: 400px;
-}
 
 .c-modifyFilter {
   margin-bottom: 10px;
@@ -4063,7 +4062,8 @@ ul.c-search-tabs .nav-link.active {
   color: #999999;
   margin: 8px 0 0;
 }
-.c-travellerDtls .c-infoRow{margin-bottom: 10px;}
+.c-travellerDtls .c-infoRow,
+.c-travellerDtls .c-infoRow .formField{margin-bottom: 10px;}
 .c-travellerDtls .c-infoRow .infoRow_txtbox{
   border: 1px solid #ccc;
   display: block;
@@ -4232,10 +4232,8 @@ Promo Code
   content: "\61";
   color: #fdbdc3;
 }
-
-
 /* ----------------------------------------------
-    Component :: User Profile
+Component :: User Profile
 ------------------------------------------------- */
 .c-userBlock{
   display: block;
@@ -4245,38 +4243,38 @@ Promo Code
   font-family: "Saira Condensed", sans-serif;
   box-shadow: 0 0 13px 0 rgba(82,63,105,.05);
   border-radius: 4px;
-}
-.c-userBlock .u_pInfo{
+  }
+  .c-userBlock .u_pInfo{
   display: block;
   position: relative;
   min-height: 80px;
   padding-left: 90px;
   margin-bottom: 15px;
-}
-.c-userBlock .u_pInfo img{
+  }
+  .c-userBlock .u_pInfo img{
   position: absolute;
   top: 0;
   left: 0;
   height: 75px;
   width: 75px;
-}
-.c-userBlock .u_pInfo .c-heading{
+  }
+  .c-userBlock .u_pInfo .c-heading{
   color: #48465b;
   margin-bottom: 0;
   font-weight: 700;
-}
-.c-userBlock .u_pInfo .c-heading.sm{
+  }
+  .c-userBlock .u_pInfo .c-heading.sm{
   font-weight: 500;
   color: #74788d;
   margin-top: 5px;
   line-height: 16px;
-}
-.c-userBlock .u_pInfo .btnContainer{
+  }
+  .c-userBlock .u_pInfo .btnContainer{
   display: block;
   margin-top: 5px;
   text-align: left;
-}
-.c-userBlock .u_pInfo .btnContainer .c-btn{
+  }
+  .c-userBlock .u_pInfo .btnContainer .c-btn{
   display: inline-block;
   background-color: #5578eb;
   border:0;
@@ -4288,32 +4286,32 @@ Promo Code
   font-size: 12px;
   line-height: 12px;
   text-transform: uppercase;
-}
-
-.c-userBlock .u_pData{margin: 0 -15px; padding: 0 15px; background-color: #f5f5f5;}
-.c-userBlock .u_pData .infoRow{
+  }
+  
+  .c-userBlock .u_pData{margin: 0 -15px; padding: 0 15px; background-color: #f5f5f5;}
+  .c-userBlock .u_pData .infoRow{
   padding: 5px 0;
   border-bottom: 1px solid #eee;
-}
-.c-userBlock .u_pData .infoRow:last-child{border: 0;}
-.c-userBlock .u_pData .infoRow .lbl_sm,
-.c-userBlock .u_pData .infoRow .lbl_md{
+  }
+  .c-userBlock .u_pData .infoRow:last-child{border: 0;}
+  .c-userBlock .u_pData .infoRow .lbl_sm,
+  .c-userBlock .u_pData .infoRow .lbl_md{
   color: #000;
   display: block;
   padding: 3px 0;
   font-size: 12px;
   font-weight: 600;
   line-height: 14px;
-}
-.c-userBlock .u_pData .infoRow .lbl_md{
+  }
+  .c-userBlock .u_pData .infoRow .lbl_md{
   color: #999999;
-}
-
-.c-userBlock .u_links{
+  }
+  
+  .c-userBlock .u_links{
   display: block;
   padding: 20px 0;
-}
-.c-userBlock .u_links .u_tab{
+  }
+  .c-userBlock .u_links .u_tab{
   border: 0;
   background-color: #f9f9f9;
   display: block;
@@ -4331,8 +4329,8 @@ Promo Code
   outline: none;
   border-radius: 5px;
   transition: all ease 0.3s;
-}
-.c-userBlock .u_links .u_tab .icon{
+  }
+  .c-userBlock .u_links .u_tab .icon{
   display: inline-block;
   position: absolute;
   top: 0;
@@ -4347,17 +4345,17 @@ Promo Code
   line-height: 38px;
   border-radius: 4px;
   transition: all ease 0.3s;
-}
-.c-userBlock .u_links .u_tab:hover,
-.c-userBlock .u_links .u_tab.active{background-color: #eeeeee;}
-.c-userBlock .u_links .u_tab:hover .icon,
-.c-userBlock .u_links .u_tab.active .icon{
+  }
+  .c-userBlock .u_links .u_tab:hover,
+  .c-userBlock .u_links .u_tab.active{background-color: #eeeeee;}
+  .c-userBlock .u_links .u_tab:hover .icon,
+  .c-userBlock .u_links .u_tab.active .icon{
   background-color: #6dace6;
   color: #ffffff;
-}
-
-
-.c-userBlock.st-details .c-heading{
+  }
+  
+  
+  .c-userBlock.st-details .c-heading{
   border-bottom: 1px solid #6dace6;
   display: block;
   padding: 0 70px 10px 0;
@@ -4365,8 +4363,8 @@ Promo Code
   position: relative;
   font-size: 18px;
   font-weight: 700;
-}
-.c-userBlock.st-details .c-subHeading{
+  }
+  .c-userBlock.st-details .c-subHeading{
   background: #f3f3f3;
   border-bottom: 1px solid #e7e7e7;
   display: block;
@@ -4377,19 +4375,19 @@ Promo Code
   font-weight: 700;
   color: #333;
   text-transform: uppercase;
-}
-.c-userBlock.st-details .st-cancleEdit,
-.c-userBlock.st-details .saveProfile,
-.c-userBlock.st-details .st-editable .st-editProfile{display: none;}
-.c-userBlock.st-details .st-editable .st-cancleEdit,
-.c-userBlock.st-details .st-editable .saveProfile{display: inline-block;}
-
-.c-userBlock.st-details .formField{
+  }
+  .c-userBlock.st-details .st-cancleEdit,
+  .c-userBlock.st-details .saveProfile,
+  .c-userBlock.st-details .st-editable .st-editProfile{display: none;}
+  .c-userBlock.st-details .st-editable .st-cancleEdit,
+  .c-userBlock.st-details .st-editable .saveProfile{display: inline-block;}
+  
+  .c-userBlock.st-details .formField{
   display: block;
   margin-bottom: 15px;
   font-family: "Saira Condensed", sans-serif;
-}
-.c-userBlock.st-details .formField label{
+  }
+  .c-userBlock.st-details .formField label{
   font-family: "Saira Condensed", sans-serif;
   display: block;
   font-size: 12px;
@@ -4398,8 +4396,8 @@ Promo Code
   color: #999;
   margin-bottom: 4px;
   text-transform: uppercase;
-}
-.c-userBlock.st-details .formField .txtBox{
+  }
+  .c-userBlock.st-details .formField .txtBox{
   background-color: #fff;
   color: #464e5f;
   border: 1px solid #eeeeee;
@@ -4411,31 +4409,31 @@ Promo Code
   font-weight: 600;
   outline: none;
   width: 100%;
-}
-.c-userBlock.st-details .formField .txtBox[readonly]{
+  }
+  .c-userBlock.st-details .formField .txtBox[readonly]{
   background-color: #f9f9f9;
   border: 0;
   padding: 0;
-}
-.c-userBlock.st-details .conditionalDiv{
+  }
+  .c-userBlock.st-details .conditionalDiv{
   display: none;
-}
-.c-userBlock.st-details .st-editable .conditionalDiv{
+  }
+  .c-userBlock.st-details .st-editable .conditionalDiv{
   display: block;
-}
-
-.c-userProfileAccord .card{
+  }
+  
+  .c-userProfileAccord .card{
   margin-bottom: 15px;
   border: 0 !important;
   border-radius: 0;
-}
-.c-userProfileAccord .card-header{
+  }
+  .c-userProfileAccord .card-header{
   padding: 0;
   border: 1px solid #eee;
   margin: 0 !important;
   border-radius: 0;
-}
-.c-userProfileAccord .card-header .btnShow{
+  }
+  .c-userProfileAccord .card-header .btnShow{
   border: 0;
   background-color: transparent;
   display: block;
@@ -4447,16 +4445,16 @@ Promo Code
   width: 100%;
   border-radius: 0;
   box-shadow: none;
-}
-.c-userProfileAccord .card-header .btnShow > span{
+  }
+  .c-userProfileAccord .card-header .btnShow > span{
   display: inline-block;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
   color: #333;
   letter-spacing: 0.1px;
-}
-.c-userProfileAccord .card-header .btnShow::before{
+  }
+  .c-userProfileAccord .card-header .btnShow::before{
   font-family: "itours" !important;
   content: "\71";
   position: absolute;
@@ -4465,29 +4463,37 @@ Promo Code
   font-size: 14px;
   line-height: 14px;
   color: #999999;
-}
-.c-userProfileAccord .card-body{
+  }
+  .c-userProfileAccord .card-body{
   border: 0;
   padding: 10px 0;
-}
-
-.c-table .table{width: 100%;}
-.c-table .table th{
+  }
+  
+  .c-table .table{width: 100% !important;}
+  .c-table .table th{
   border-bottom: 0;
   background-color: #6dace6;
   line-height: 20px;
   vertical-align: top;
   padding: 7px 5px;
   color: #fff;
-}
-.c-table .table td{
+  }
+  .c-table .table td{
   color: #333333;
   vertical-align: top;
   padding: 7px 5px;
   font-size: 13px;
   font-weight: 500;
-}
-.c-table .dataTables_filter input[type='search']{
+  }
+  .c-table .table tfoot tr td{
+      border-bottom: 0;
+      background-color: #6dace6;
+      line-height: 20px;
+      vertical-align: top;
+      padding: 7px 5px;
+      color: #fff;
+  }
+  .c-table .dataTables_filter input[type='search']{
   background-color: #fff;
   color: #464e5f;
   border: 1px solid #eeeeee;
@@ -4499,17 +4505,17 @@ Promo Code
   font-weight: 400;
   outline: none;
   width: 200px;
-}
-.c-table table.dataTable thead .sorting,
-.c-table table.dataTable thead .sorting_desc,
-.c-table table.dataTable thead .sorting_asc{
+  }
+  .c-table table.dataTable thead .sorting,
+  .c-table table.dataTable thead .sorting_desc,
+  .c-table table.dataTable thead .sorting_asc{
   background-image: none;
   position: relative;
   padding-right: 18px;
-}
-.c-table table.dataTable thead .sorting::before,
-.c-table table.dataTable thead .sorting_desc::before,
-.c-table table.dataTable thead .sorting_asc::before{
+  }
+  .c-table table.dataTable thead .sorting::before,
+  .c-table table.dataTable thead .sorting_desc::before,
+  .c-table table.dataTable thead .sorting_asc::before{
   color:rgba(255,255,255,0.5);
   position: absolute;
   top: 10px;
@@ -4518,14 +4524,14 @@ Promo Code
   line-height: 11px;
   font-family: "itours" !important;
   content: "\6f";
-}
-.c-table table.dataTable thead .sorting_desc::before{
+  }
+  .c-table table.dataTable thead .sorting_desc::before{
   content: "\71";
-}
-.c-table table.dataTable thead .sorting_asc::before{
+  }
+  .c-table table.dataTable thead .sorting_asc::before{
   content: "\70";
-}
-.c-table .tableBtn{
+  }
+  .c-table .tableBtn{
   background-color: #6dace6;
   border: 0;
   box-sizing: border-box;
@@ -4538,8 +4544,8 @@ Promo Code
   text-align: center;
   outline: none;
   border-radius: 2px;
-}
-.c-table .tableBtn .icon{
+  }
+  .c-table .tableBtn .icon{
   font-size: 15px;
   line-height: 15px;
   display: inline-block;
@@ -4547,14 +4553,14 @@ Promo Code
   color: #fff;
   position: relative;
   top: 1px;
-}
-
-.readOnly_info{
+  }
+  
+  .readOnly_info{
   display: block;
   margin-bottom: 15px;
   font-family: "Saira Condensed", sans-serif;
-}
-.readOnly_info .lbl{
+  }
+  .readOnly_info .lbl{
   display: block;
   font-size: 12px;
   line-height: 14px;
@@ -4562,8 +4568,8 @@ Promo Code
   color: #999;
   margin-bottom: 2px;
   text-transform: uppercase;
-}
-.readOnly_info .info{
+  }
+  .readOnly_info .info{
   background-color: #f3f3f3;
   color: #464e5f;
   box-sizing: border-box;
@@ -4573,16 +4579,16 @@ Promo Code
   font-weight: 600;
   outline: none;
   padding: 2px;
-}
-.c-tableINfo{margin-top: 30px;}
-.c-tableINfo .infoCard{
+  }
+  .c-tableINfo{margin-top: 30px;}
+  .c-tableINfo .infoCard{
   display: block;
   background-color: #f3f3f3;
   border: 1px solid #eeeeee;
   padding: 10px;
   border-radius: 4px;
-}
-.c-tableINfo .infoCard .lbl{
+  }
+  .c-tableINfo .infoCard .lbl{
   display: block;
   font-size: 13px;
   line-height: 15px;
@@ -4590,19 +4596,17 @@ Promo Code
   color: #999999;
   margin-bottom: 5px;
   text-transform: uppercase;
-}
-.c-tableINfo .infoCard .info{
+  }
+  .c-tableINfo .infoCard .info{
   display: block;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   color: #6dace6;
   text-transform: uppercase;
-}
-.wAuto{width: auto !important;}
-.c-table.st-dataTable .dataTables_filter{display: none;}
-.c-table.st-dataTable .datepicker-wrap:after{display: none;}
-
+  }
+  .wAuto{width: auto !important;}
+  .c-table.st-dataTable .datepicker-wrap:after{display: none;}
 /* ----------------------------------------------
     Component :: Utilities
 ------------------------------------------------- */
@@ -4610,7 +4614,7 @@ Promo Code
 .c-alert{
   width: 600px;
   position: fixed;
-  top: 16px;
+  top: 50%;
   z-index: 110;
   left: 50%;
   margin-left: -300px;
@@ -4981,3 +4985,176 @@ Promo Code
 .currency-icon{margin-right: 3px;}
 .c-hide{display: none !important;}
 .c-show{display: block !important;}
+.pdf-button-link{
+  background-color: transparent;
+  border: 0;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6dace6;
+  margin-bottom: 10px;
+}
+.div-upload {
+    padding: 4px 13px 4px 40px;
+    background: #fff;
+    color: #fdb714;
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 24px;
+    border-radius: 25px;
+    border: 1px solid  #fdb714;
+    cursor: pointer;
+    box-shadow: none;
+    transition: 0.5s;
+    font-weight: 500;
+}
+.div-upload:hover {
+    background:  #fdb714;
+    color: #fff;
+}
+.div-upload:before {
+    content: "\f093";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    position: absolute;
+    left: 10px;
+}
+.div-upload:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 20px;
+    left: 30px;
+    top: 5px;
+    background:  #fdb714;
+    opacity: 0.5;
+}
+.div-upload:hover:after {
+    background: #fff;
+}
+
+.div-upload ul {
+    margin: 0 !important;
+}
+.div-upload span.btn-text {
+    padding: 0px 15px 0px 40px;
+}
+
+.c-bookingInfo .close{
+	position: absolute !important;
+	top:10px;
+	right: 10px;
+	z-index: 5;
+}
+.c-bookingInfo .tab-pane{
+  padding: 15px 0px;
+}
+.c-bookingInfo .profile_box legend{
+  font-size:16px;
+}
+.c-bookingInfo .serviceTitle{
+  background-color: #ededf3;
+  font-size: 14px;
+  padding: 2px;
+}
+.c-bookingInfo .profile_box{
+  margin-bottom: 20px;
+}
+.c-bookingInfo .boldText{
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  background-color: #6dace6;
+  color: #fff;
+  margin-right: 5px;
+}
+.c-table.st-dataTable .dataTables_length{display: none;}
+
+/* ----- Time Picker ------- */
+
+.ui-timepicker-container {
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 10 !important;
+}
+.ui-timepicker {
+  box-sizing: content-box;
+  display: block;
+  height: 205px;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0 1px;
+  text-align: center;
+}
+
+.ui-timepicker-viewport {
+  box-sizing: content-box;
+  display: block;
+  height: 205px;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  overflow-x: hidden; /* IE */
+}
+.ui-timepicker-standard {
+  background-color: #FFF;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+}
+.ui-timepicker-standard .ui-menu-item {
+  margin: 0;
+  padding: 0;
+}
+.ui-timepicker-standard .ui-menu-item a {
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  color: #222;
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+}
+.ui-timepicker-standard .ui-state-hover {
+  background-color: #DADADA;
+  font-weight: normal;
+  color: #212121;
+}
+.timepicker-wrap{
+  display: block;
+  position: relative;
+  padding-right: 33px;
+  background-color: #f5f5f5;
+  height: 34px;
+}
+.timepicker-wrap .input-text{
+  position: relative;
+  z-index: 9;
+}
+.timepicker-wrap::after{
+  background: #fdb714;
+  font-family: "itours";
+  content: "\41";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 34px;
+  font-size: 16px;
+  width: 33px;
+  text-align: center;
+  line-height: 15px;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 0;
+}

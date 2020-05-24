@@ -32,230 +32,150 @@
     <div class="c-pageWrapper">
 
       <!-- ********** Component :: Header ********** -->
-      <header class="c-header">
-        <!-- **** Header :: Top Strip ***** -->
-        <div class="topnav hidden-xs">
-          <div class="container">
-            <ul class="quick-menu pull-left">
-              <li><a href="javascript:void(0);" class="c-link">Helpline</a></li>
-            </ul>
-            <ul class="quick-menu pull-right">
-              <li>
-                <a href="javascript:void(0);" class="soap-popupbox">LOGIN</a>
-              </li>
+      <div class="clearfix">
+        <!-- **** Top Header ***** -->
+        <div class="c-pageHeaderTop">
+          <div class="pageHeader_top mobileSidebar">
 
-              <li class="ribbon">
-                <a href="javascript:void(0);" class="c-link">
-                  <span>English</span>
-                  <i class="icon it itours-caret-down"></i>
-                </a>
-                <ul class="menu mini">
-                  <li><a href="javascript:void(0);" title="Dansk">Dansk</a></li>
-                  <li>
-                    <a href="javascript:void(0);" title="Deutsch">Deutsch</a>
-                  </li>
-                  <li class="active">
-                    <a href="javascript:void(0);" title="English">English</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Español">Español</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Français">Français</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Italiano">Italiano</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Magyar">Magyar</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Nederlands"
-                      >Nederlands</a
-                    >
-                  </li>
-                  <li><a href="javascript:void(0);" title="Norsk">Norsk</a></li>
-                  <li>
-                    <a href="javascript:void(0);" title="Polski">Polski</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Português"
-                      >Português</a
-                    >
-                  </li>
-                  <li><a href="javascript:void(0);" title="Suomi">Suomi</a></li>
-                  <li>
-                    <a href="javascript:void(0);" title="Svenska">Svenska</a>
-                  </li>
-                </ul>
-              </li>
+            <!-- Menubar close btn for Mobile -->
+            <button class="closeSidebar forMobile"></button>
+            <!-- Menubar close btn for Mobile End -->
 
-              <li class="ribbon currency">
-                <a href="javascript:void(0);" title="">
-                  <span>USD</span>
-                  <i class="icon it itours-caret-down"></i>
-                </a>
-                <ul class="menu mini">
-                  <li><a href="javascript:void(0);" title="AUD">AUD</a></li>
-                  <li><a href="javascript:void(0);" title="BRL">BRL</a></li>
-                  <li class="active">
-                    <a href="javascript:void(0);" title="USD">USD</a>
-                  </li>
-                  <li><a href="javascript:void(0);" title="CAD">CAD</a></li>
-                  <li><a href="javascript:void(0);" title="CHF">CHF</a></li>
-                  <li><a href="javascript:void(0);" title="CNY">CNY</a></li>
-                  <li><a href="javascript:void(0);" title="CZK">CZK</a></li>
-                  <li><a href="javascript:void(0);" title="DKK">DKK</a></li>
-                  <li><a href="javascript:void(0);" title="EUR">EUR</a></li>
-                  <li><a href="javascript:void(0);" title="GBP">GBP</a></li>
-                  <li><a href="javascript:void(0);" title="HKD">HKD</a></li>
-                  <li><a href="javascript:void(0);" title="HUF">HUF</a></li>
-                  <li><a href="javascript:void(0);" title="IDR">IDR</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- **** Header :: Top Strip End ***** -->
+            <div class="container">
+              <div class="row">
 
-        <!-- **** Header :: Top Nav ***** -->
-        <div class="main-header">
+                <div class="col-sm-4 col-12">
+                  <span class="staticText">Helpline</span>
+                </div>
 
+                <div class="col-sm-4 col-12">
+                  <div class="credBalance">
+                    <span class="s1">Credit Balance:</span>
+                    <span class="s2">$. 34564.99</span>
+                  </div>
+                </div>
 
-          <div class="container">
-            <a
-            href="#st-openMenu"
-            data-toggle="collapse"
-            class="mobile-menu-toggle"
-          >
-            Mobile Menu Toggle
-          </a>
-            <h1 class="logo navbar-brand">
-              <a href="javascript: void(0);" title="iTours - home">
-                <img src="images/logo.png" alt="iTours HTML5 Template" />
-              </a>
-            </h1>
+                <div class="col-sm-4 col-12">
+                  <div class="topListing">
+                    <ul>
+                      <li>
+                        <div class="c-select2DD st-clear">
+                          <select name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="c-select2DD st-clear">
+                          <select name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
-            <div class="c-shoppingCart dropdown">
-              <button
-                class="cartBtn" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-              >
-                <i class="icon it itours-shopping-cart"></i>
-                <span class="notify">2</span>
-              </button>
-              <ul class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
-                ...
-              </ul>
+              </div>
             </div>
 
-            <!-- **** Header :: Top Nav For Desktop ***** -->
-            <nav class="main-menu" role="navigation">
-              <ul class="menu">
-                <li class="active">
-                  <a href="javascript: void(0);">Link 1</a>
-                </li>
-                <li>
-                  <a href="javascript: void(0);">Link 2</a>
-                </li>
-                <li>
-                  <a href="javascript: void(0);">Link 3</a>
-                </li>
-                <li>
-                  <a href="javascript: void(0);">Link 4</a>
-                </li>
+            <!-- Menubar for Mobile -->
+            <div class="menuBar forMobile">
+              <ul>
+                <li class="st-active"><a class="menuLink" href="#">Link 1</a></li>
+                <li><a class="menuLink" href="#">Link 1</a></li>
+                <li><a class="menuLink" href="#">Link 1</a></li>
+                <li><a class="menuLink" href="#">Logout</a></li>
               </ul>
-            </nav>
-            <!-- **** Header :: Top Nav For Desktop End ***** -->
+            </div>
+            <!-- Menubar for Mobile End -->
+
           </div>
-
-          <!-- **** Header :: Top Nav For Mobile ***** -->
-          <nav id="st-openMenu" class="mobile-menu collapse">
-            <ul class="menu">
-              <li><a href="javascript: void(0);">Link 1</a></li>
-              <li><a href="javascript: void(0);">Link 2</a></li>
-              <li><a href="javascript: void(0);">Link 3</a></li>
-            </ul>
-
-            <ul class="mobile-topnav container">
-              <li>
-                <a href="javascript:void(0);" class="c-link">MY ACCOUNT</a>
-              </li>
-
-              <li>
-                <a href="javascript:void(0);" class="soap-popupbox">LOGIN</a>
-              </li>
-
-              <li class="ribbon language menu-color-skin">
-                <a href="javascript:void(0);" data-toggle="collapse">ENGLISH</a>
-                <ul class="menu mini">
-                  <li><a href="javascript:void(0);" title="Dansk">Dansk</a></li>
-                  <li>
-                    <a href="javascript:void(0);" title="Deutsch">Deutsch</a>
-                  </li>
-                  <li class="active">
-                    <a href="javascript:void(0);" title="English">English</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Español">Español</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Français">Français</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Italiano">Italiano</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Magyar">Magyar</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Nederlands"
-                      >Nederlands</a
-                    >
-                  </li>
-                  <li><a href="javascript:void(0);" title="Norsk">Norsk</a></li>
-                  <li>
-                    <a href="javascript:void(0);" title="Polski">Polski</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);" title="Português"
-                      >Português</a
-                    >
-                  </li>
-                  <li><a href="javascript:void(0);" title="Suomi">Suomi</a></li>
-                  <li>
-                    <a href="javascript:void(0);" title="Svenska">Svenska</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="ribbon currency menu-color-skin">
-                <a href="javascript:void(0);" class="c-link">USD</a>
-                <ul class="menu mini">
-                  <li><a href="javascript:void(0);" title="AUD">AUD</a></li>
-                  <li><a href="javascript:void(0);" title="BRL">BRL</a></li>
-                  <li class="active">
-                    <a href="javascript:void(0);" title="USD">USD</a>
-                  </li>
-                  <li><a href="javascript:void(0);" title="CAD">CAD</a></li>
-                  <li><a href="javascript:void(0);" title="CHF">CHF</a></li>
-                  <li><a href="javascript:void(0);" title="CNY">CNY</a></li>
-                  <li><a href="javascript:void(0);" title="CZK">CZK</a></li>
-                  <li><a href="javascript:void(0);" title="DKK">DKK</a></li>
-                  <li><a href="javascript:void(0);" title="EUR">EUR</a></li>
-                  <li><a href="javascript:void(0);" title="GBP">GBP</a></li>
-                  <li><a href="javascript:void(0);" title="HKD">HKD</a></li>
-                  <li><a href="javascript:void(0);" title="HUF">HUF</a></li>
-                  <li><a href="javascript:void(0);" title="IDR">IDR</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-          <!-- **** Header :: Top Nav For Mobile End ***** -->
         </div>
-        <!-- **** Header :: Top Nav End ***** -->
-      </header>
-      <!-- ********** Component :: Header End ********** -->
+        <!-- **** Top Header End ***** -->
+
+        <!-- **** Bottom Header ***** -->
+        <div class="c-pageHeader">
+          <div class="pageHeader_btm">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-sm-4 col-7 p0-right">
+
+                  <!-- Menubar Hamb btn for Mobile -->
+                  <button class="mobile_hamb"></button>
+                  <!-- Menubar Hamb btn for Mobile End -->
+
+                  <a href="#" class="btm_logo">
+                    <img src='./images/logo.png' alt="logo" />
+                  </a>
+                </div>
+                <div class="col-sm-8 col-5 text-right p0-left">
+                  <div class="menuBar">
+                    <ul>
+                      <li class="st-active">
+                        <a class="menuLink" href="#">Link 1</a>
+                      </li>
+                      <li>
+                        <a class="menuLink" href="#">Link 1</a>
+                      </li>
+                      <li>
+                        <a class="menuLink" href="#">Link 1</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <button class="btnUtil">
+                    <img src="./images/svg/supermarket.svg" alt="" />
+                    <span class="notify">2</span>
+                  </button>
+
+
+                  <!-- ***** User Profile DD ***** -->
+                  <div class="c-userProf dropdown">
+                    <button class="btnUtil" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="./images/svg/user.svg" alt="" />
+                    </button>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <div class="userHeading">
+                        <div class="profIcon">
+                          <img src="./images/svg/user.svg" alt="" />
+                        </div>
+                        <h4 class="userName">Ajent Name</h4>
+                        <span class="userCode">Ajent Code</span>
+                      </div>
+                      <div class="userNav">
+                        <a href="#" class="userNavLink">
+                          <i class="icon user itours-user"></i>
+                          <span>Ajent Profile</span>
+                        </a>
+                        <a href="#" class="userNavLink">
+                          <i class="icon user itours-shopping-cart"></i>
+                          <span>Booking Summary</span>
+                        </a>
+                        <a href="#" class="userNavLink">
+                          <i class="icon user itours-ledger"></i>
+                          <span>Account Ledger</span>
+                        </a>
+                        <a href="#" class="userNavLink">
+                          <i class="icon user itours-logout"></i>
+                          <span>Logout</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** User Profile DD End ***** -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- **** Bottom Header End ***** -->
+    </div>
+    <!-- ********** Component :: Header End ********** -->
 
       <!-- ********** Component :: Page Title ********** -->
       <div class="c-pageTitleSect">

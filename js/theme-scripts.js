@@ -199,47 +199,6 @@ function changeTraveloElementUI() {
         .addClass("checked");
     }
   });
-
-  // datepicker
-  $(".datepicker-wrap input").each(function() {
-    var minDate = $(this).data("min-date");
-    if (typeof minDate == "undefined") {
-      minDate = 0;
-    }
-    $(this).datepicker({
-      changeYear: false,
-      /*showOtherMonths: true,*/
-      minDate: minDate,
-      dateFormat: "mm/dd/yy",
-      dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
-      onClose: function(selectedDate) {
-        if ($(this).attr("name") == "date_from") {
-          if (
-            $(this)
-              .closest("form")
-              .find('input[name="date_to"]').length > 0
-          ) {
-            $(this)
-              .closest("form")
-              .find('input[name="date_to"]')
-              .datepicker("option", "minDate", selectedDate);
-          }
-        }
-        if ($(this).attr("name") == "date_to") {
-          if (
-            $(this)
-              .closest("form")
-              .find('input[name="date_from"]').length > 0
-          ) {
-            $(this)
-              .closest("form")
-              .find('input[name="date_from"]')
-              .datepicker("option", "maxDate", selectedDate);
-          }
-        }
-      }
-    });
-  });
 }
 
 $(document).ready(function() {

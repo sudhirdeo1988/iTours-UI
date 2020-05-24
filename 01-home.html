@@ -234,7 +234,7 @@
                   role="tab"
                   aria-controls="home"
                   aria-selected="true"
-                  >ACTIVITIES</a
+                  >Transport</a
                 >
               </li>
               <li class="nav-item">
@@ -475,98 +475,145 @@
               </div>
               <!-- ***** Tab Hotel End ****** -->
 
+               <!-- ***** Tab Transport ****** -->
               <div class="tab-pane fade" role="tabpanel" id="activities-tab">
                 <form action="javascript:void(0);" method="post">
                   <div class="row">
-                    <div class="form-group col-md-3 col-sm-6 col-12">
-                      <h4 class="c-heading sm">Where</h4>
-                      <label>Your Destination</label>
-                      <input
-                        type="text"
-                        class="input-text full-width"
-                        placeholder="enter a destination or hotel name"
-                      />
-                    </div>
 
-                    <div class="form-group col-md-4 col-sm-6 col-12">
-                      <h4 class="c-heading sm">When</h4>
+                    <div class="col-md-8 col-sm-6 col-12">
                       <div class="row">
-                        <div class="col-6">
-                          <label>Check In</label>
-                          <div class="datepicker-wrap">
+                        <div class="col-md-5 col-sm-6 col-12">
+                          <div class="form-group">
+                            <label>Pickup Location</label>
                             <input
                               type="text"
-                              name="date_from"
                               class="input-text full-width"
-                              placeholder="mm/dd/yy"
+                              placeholder="enter Pickup location"
                             />
                           </div>
                         </div>
-                        <div class="col-6">
-                          <label>Check Out</label>
-                          <div class="datepicker-wrap">
+                        <div class="col-md-4 col-sm-6 col-12">
+                          <div class="form-group">
+                              <label>Pickup Date</label>
+                              <div class="datepicker-wrap">
+                                <input
+                                  type="text"
+                                  name="date_from"
+                                  class="input-text full-width"
+                                  placeholder="mm/dd/yy"
+                                />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-12">
+                          <div class="form-group">
+                            <label>Pickup Time</label>
+                            <div class="timepicker-wrap">
+                              <input
+                                type="text"
+                                name="date_from"
+                                class="input-text full-width"
+                                placeholder="Time"
+                              />
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-5 col-sm-6 col-12">
+                          <div class="form-group">
+                            <label>Drop Off Location</label>
                             <input
                               type="text"
-                              name="date_to"
                               class="input-text full-width"
-                              placeholder="mm/dd/yy"
+                              placeholder="enter Drop Off Location"
                             />
                           </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                          <div class="form-group">
+                              <label>Drop Off Date</label>
+                              <div class="datepicker-wrap">
+                                <input
+                                  type="text"
+                                  name="date_from"
+                                  class="input-text full-width"
+                                  placeholder="mm/dd/yy"
+                                />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-12">
+                          <div class="form-group">
+                            <label>Drop Off Time</label>
+                              <div class="timepicker-wrap">
+                                <input
+                                  type="text"
+                                  name="date_from"
+                                  class="input-text full-width"
+                                  placeholder="Time"
+                                />
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-12">
+                      <div class="row">
+                        <div class="col-md-6 col-12">
+                          <div class="form-group">
+                            <label>Adults</label>
+                            <div class="selector">
+                              <select class="full-width">
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                          <div class="form-group">
+                            <label>Childs</label>
+                            <div class="selector">
+                              <select class="full-width">
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                          <div class="form-group">
+                            <label>Infants</label>
+                            <div class="selector">
+                              <select class="full-width">
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                          <button class="c-button lg colGrn m20-top">
+                            <i class="icon itours-search"></i> SERACH NOW
+                          </button>
                         </div>
                       </div>
                     </div>
 
-                    <div class="form-group col-md-5 col-sm-6 col-12">
-                      <h4 class="c-heading sm">Who</h4>
-
-                      <div class="row">
-                        <div class="col-4">
-                          <label>Rooms</label>
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="1">01</option>
-                              <option value="2">02</option>
-                              <option value="3">03</option>
-                              <option value="4">04</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-4">
-                          <label>Adults</label>
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="1">01</option>
-                              <option value="2">02</option>
-                              <option value="3">03</option>
-                              <option value="4">04</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-4">
-                          <label>Kids</label>
-                          <div class="selector">
-                            <select class="full-width">
-                              <option value="1">01</option>
-                              <option value="2">02</option>
-                              <option value="3">03</option>
-                              <option value="4">04</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div
-                      class="form-group col-md-3 offset-md-9 col-sm-6 offset-sm-3  col-12"
-                    >
-                      <button type="submit" class="full-width icon-check">
-                        SEARCH NOW
-                      </button>
-                    </div>
                   </div>
                 </form>
               </div>
+              <!-- ***** Tab Transport End ****** -->
 
               <div class="tab-pane fade" role="tabpanel" id="hotels-tab">
                 <form action="javascript:void(0);" method="post">
@@ -1864,6 +1911,7 @@
     <script type="text/javascript" src="js/bootstrap-4.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.timepicker.js"></script>
     <script type="text/javascript" src="js/theme-scripts.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>
