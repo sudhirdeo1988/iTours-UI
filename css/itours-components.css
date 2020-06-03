@@ -383,6 +383,9 @@ font-family: 'Lato', sans-serif;
 .itours-financial:before {
   content: "\e012";
 }
+.itours-exchange:before {
+  content: "\e014";
+}
 /* ----------------------------------------------
     Component :: Star Rating
 ------------------------------------------------- */
@@ -2075,7 +2078,7 @@ ul.c-search-tabs .nav-link.active {
 .cartInfo .cardInfoLine {
   position: relative;
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   color: #838383;
   text-transform: uppercase;
   padding-left: 18px;
@@ -2084,6 +2087,7 @@ ul.c-search-tabs .nav-link.active {
   margin-bottom: 5px;
   line-height: 14px;
 }
+
 .cardList-info .cardInfoLine:not(.cust)::before,
 .cartInfo .cardInfoLine:not(.cust)::before {
   color: #fdb714;
@@ -2194,34 +2198,32 @@ ul.c-search-tabs .nav-link.active {
   padding: 0;
 }
 
-.c-cardList.type-hotel .cardList-info .cardTitle {
-  margin-bottom: 8px;
+.c-cardList .cardList-info .cardTitle,
+.c-cardList .infoSection {
+  margin-bottom: 7px;
 }
-.c-cardList.type-hotel .infoSection .cardInfoLine {
+.c-cardList .infoSection .cardInfoLine {
   display: inline-block;
   margin-right: 10px;
   padding-right: 10px;
   border-right: 2px solid #eee;
 }
-.c-cardList.type-hotel .infoSection {
-  margin-bottom: 7px;
-}
-.c-cardList.type-hotel .infoSection .cardInfoLine:last-child {
+.c-cardList .infoSection .cardInfoLine:last-child {
   border: 0;
   margin-right: 0;
   padding-right: 0;
 }
-.c-cardList.type-hotel .cardList-info {
+.c-cardList.activity .cardList-info {
   vertical-align: top;
 }
-.c-cardList.type-hotel .priceTag .price_main {
+.c-cardList .priceTag .price_main {
   display: block;
   color: #7db921;
   font-size: 22px;
   line-height: 22px;
   font-weight: 600;
 }
-.c-cardList.type-hotel .priceTag .price_main .p_currency{
+.c-cardList .priceTag .price_main .p_currency{
   font-size: 18px;
   line-height: 14px;
   font-weight: normal;
@@ -2229,11 +2231,11 @@ ul.c-search-tabs .nav-link.active {
   top: -2px;
   padding-right: 2px;
 }
-.c-cardList.type-hotel .priceTag .price_main .p_currency,
-.c-cardList.type-hotel .priceTag .price_main .p_cost,
+.c-cardList .priceTag .price_main .p_currency,
+.c-cardList .priceTag .price_main .p_cost,
 .infoCard .infoCard_price .p_currency,
 .infoCard .infoCard_price .p_cost{display: inline-block;}
-.c-cardList.type-hotel .priceTag .price_sub {
+.c-cardList .priceTag .price_sub {
   display: block;
   color: #999;
   font-size: 16px;
@@ -2407,51 +2409,10 @@ ul.c-search-tabs .nav-link.active {
   -webkit-box-shadow: 0 1px 4px #e6e6e6;
 }
 
-/* -- Activity -- */
-.c-cardList.activity .cardList-info .cardTitle,
-.c-cardList.type2 .cardList-info .cardTitle {
-  margin-bottom: 5px;
-}
-.c-cardList.activity .infoSection,
-.c-cardList.type2 .infoSection {
-  margin-bottom: 10px;
-}
-.c-cardList.activity .infoSection .cardInfoLine,
-.c-cardList.type2 .infoSection .cardInfoLine {
-  margin-right: 20px;
-  display: inline-block;
-  margin-bottom: 0;
-}
-.c-cardList.activity > .c-cardListTable .cardList-image,
-.c-cardList.activity > .c-cardListTable .cardList-image img {
-  width: 230px;
-}
-.c-cardList.activity .c-cardListTable .cardList-info {
-  vertical-align: top;
-}
-.c-cardList.activity .cardList-info .dividerSection,
-.c-cardList.type2 .cardList-info .dividerSection {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  vertical-align: top;
-}
-.c-cardList.activity .cardList-info .dividerSection .divider.s1 {
-  width: calc(100% - 150px);
-}
-.c-cardList.activity .cardList-info .dividerSection .divider.s2 {
-  width: 150px;
-}
-.c-cardList.activity .cardList-info .c-starRating {
-  margin-bottom: 10px;
-}
-
 /* -- Car -- */
 @media (max-width: 990px) {
   .c-cardListTable .cardList-image,
-  .c-cardListTable .cardList-image img,
-  .c-cardList.activity > .c-cardListTable .cardList-image,
-  .c-cardList.activity > .c-cardListTable .cardList-image img {
+  .c-cardListTable .cardList-image img{
     width: 170px;
   }
   .hotelInfo.cust {
@@ -2807,6 +2768,93 @@ ul.c-search-tabs .nav-link.active {
     width: 100%;
     float: none;
     padding: 0;
+  }
+}
+
+/* ----------------------------------------------
+    Component :: Car List Section
+------------------------------------------------- */
+.for-transfer .sortSection{
+  border: 0;
+  margin:   0 0 10px 0;
+  padding: 0;
+}
+.for-transfer .sortIcon{
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  top: 2px;
+}
+.for-transfer .sortIcon::before{
+  color: #fdb714;
+  font-family: "itours";
+  content: "\75";
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+}
+.for-transfer .sortIcon.round::before{ content: "\e014";}
+.c-cardList.type-transfer{
+  box-shadow: none;
+  transition: all ease 0.3s;
+}
+.c-cardList.type-transfer:hover{
+  box-shadow: 0 0 4px #999;
+}
+.c-cardList.type-transfer .cardTitle{
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+.c-cardList.type-transfer .cardTitle .tag{
+  color: #333;
+  display: inline-block;
+  margin-left: 4px;
+  height: 17px;
+  font-size: 11px;
+  line-height: 18px;
+  background-color: rgb(204, 234, 231);
+  padding: 0 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border-radius: 20px;
+  position: relative;
+  top: -2px;
+}
+.c-cardList.type-transfer .infoSection .cardInfoLine{margin-bottom: 0;}
+.c-cardList.type-transfer .c-cardListTable .cardList-image{
+  text-align: center;
+  height: 120px;
+  width: 250px;
+}
+.c-cardList.type-transfer .c-cardListTable .cardList-image img{
+  display: inline-block;
+  max-height: 120px;
+  max-width: 250px;
+  vertical-align: middle;
+}
+.c-cardList.type-transfer .typeOverlay{
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+@media(max-width: 768px){
+  .c-cardList.type-transfer .c-cardListTable .cardList-image,
+  .c-cardList.type-transfer .c-cardListTable .cardList-image img{
+    display: block;
+    height: auto;
+    width: 100%;
+    max-height: 300px;
+  }
+  .c-cardList.type-transfer .cardList-info .priceTag {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -3857,6 +3905,23 @@ ul.c-search-tabs .nav-link.active {
   margin-bottom: 6px;
 }
 .cartItem .cardInfoLine{display: inline-block; margin-right: 10px;}
+.cartItem .infoSection .sortIcon{
+  display: inline-block;
+  margin: 0 12px 0 0;
+  position: relative;
+  top: 2px;
+}
+.cartItem .infoSection .sortIcon::before {
+  color: #fdb714;
+  font-family: "itours";
+  content: "\75";
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+}
+.cartItem .infoSection .sortIcon.round::before {
+  content: "\e014";
+}
 
 .cartItem .roomType{
   background-color: #f5f5f5;
@@ -5079,82 +5144,97 @@ Component :: User Profile
 }
 .c-table.st-dataTable .dataTables_length{display: none;}
 
-/* ----- Time Picker ------- */
 
-.ui-timepicker-container {
-  position: absolute;
-  overflow: hidden;
-  box-sizing: border-box;
-  z-index: 10 !important;
-}
-.ui-timepicker {
-  box-sizing: content-box;
+/* ---- Radio button set ----- */
+.radioCheck{
   display: block;
-  height: 205px;
-  list-style: none outside none;
-  margin: 0;
-  padding: 0 1px;
-  text-align: center;
+  margin-bottom: 20px;
 }
-
-.ui-timepicker-viewport {
-  box-sizing: content-box;
-  display: block;
-  height: 205px;
-  margin: 0;
-  padding: 0;
-  overflow: auto;
-  overflow-x: hidden; /* IE */
-}
-.ui-timepicker-standard {
-  background-color: #FFF;
-  border: 1px solid #eee;
-  margin: 0;
-  padding: 0;
-}
-.ui-timepicker-standard .ui-menu-item {
-  margin: 0;
-  padding: 0;
-}
-.ui-timepicker-standard .ui-menu-item a {
-  font-size: 14px;
-  cursor: pointer;
-  text-align: left;
-  color: #222;
-  display: block;
-  padding: 5px;
-  text-decoration: none;
-}
-.ui-timepicker-standard .ui-state-hover {
-  background-color: #DADADA;
-  font-weight: normal;
-  color: #212121;
-}
-.timepicker-wrap{
-  display: block;
+.radioCheck,
+.radioCheck .sect{
+  font-family: "Saira Condensed", sans-serif;
+  display: inline-block;
   position: relative;
-  padding-right: 33px;
-  background-color: #f5f5f5;
-  height: 34px;
+  float: left;
 }
-.timepicker-wrap .input-text{
-  position: relative;
-  z-index: 9;
-}
-.timepicker-wrap::after{
-  background: #fdb714;
-  font-family: "itours";
-  content: "\41";
+.radioCheck .sect .radio_txt{
+  display: inline-block;
   position: absolute;
   top: 0;
-  right: 0;
-  height: 34px;
-  font-size: 16px;
-  width: 33px;
-  text-align: center;
-  line-height: 15px;
-  color: #fff;
-  display: inline-block;
-  vertical-align: middle;
-  padding: 10px 0;
+  left: 0;
+  opacity: 0;
 }
+.radioCheck .sect.s1 .radio_lbl{border-radius: 3px 0 0 3px;}
+.radioCheck .sect.s2 .radio_lbl{border-radius: 0 3px 3px 0;}
+.radioCheck .sect .radio_lbl{
+  color: #999;
+  cursor: pointer;
+  background-color: #eee;
+  display: block;
+  padding: 12px 25px 9px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  transition: all ease 0.3s;
+}
+.radioCheck .sect .radio_txt:checked ~ .radio_lbl{
+  color: #fff;
+  background-color: #fdb714;
+}
+
+/* Checkbox */
+.checFilterOpt{
+  display: block;
+  position: relative;
+  margin-bottom: 5px;
+  min-height: 26px;
+}
+.checFilterOpt .filterChk{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+}
+
+.checFilterOpt .lblfilterChk{
+  background-color: #f9f9f9;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  padding: 7px 10px 7px 30px;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #999999;
+}
+.checFilterOpt .lblfilterChk::before{
+  background-color: #ccc;
+  font-family: "itours";
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  height: 16px;
+  width: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  padding: 0 0 0 1px;
+  display: inline-block;
+}
+
+.checFilterOpt .filterChk:checked ~ .lblfilterChk{
+  color: #fff;
+  background-color: #6dace6;
+}
+.checFilterOpt .filterChk:checked ~ .lblfilterChk::before{ 
+  background-color: #fff;
+  color: #6dace6;
+  content: "\4a";}

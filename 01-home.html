@@ -478,11 +478,21 @@
                <!-- ***** Tab Transport ****** -->
               <div class="tab-pane fade" role="tabpanel" id="activities-tab">
                 <form action="javascript:void(0);" method="post">
-                  <div class="row">
 
-                    <div class="col-md-8 col-sm-6 col-12">
                       <div class="row">
-                        <div class="col-md-5 col-sm-6 col-12">
+                        <div class="col-12">
+                          <div class="radioCheck">
+                            <div class="sect s1">
+                              <input type="radio" id="oneway" name="transport" class="radio_txt" checked />
+                              <label for="oneway" role="button" class="radio_lbl">One Way</label>
+                            </div>
+                            <div class="sect s2">
+                              <input type="radio" id="roundtrip" name="transport" class="radio_txt" />
+                              <label for="roundtrip" role="button" class="radio_lbl">Round Trip</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
                           <div class="form-group">
                             <label>Pickup Location</label>
                             <input
@@ -505,23 +515,21 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-12">
+                        <div class="col-md-4 col-sm-6 col-12">
                           <div class="form-group">
-                            <label>Pickup Time</label>
-                            <div class="timepicker-wrap">
-                              <input
-                                type="text"
-                                name="date_from"
-                                class="input-text full-width"
-                                placeholder="Time"
-                              />
+                            <label>Number of passengers</label>
+                            <div class="selector">
+                              <select class="full-width">
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                              </select>
+                            </div>
                           </div>
                         </div>
-                        </div>
-                      </div>
 
-                      <div class="row">
-                        <div class="col-md-5 col-sm-6 col-12">
+                        <div class="col-md-4 col-sm-6 col-12">
                           <div class="form-group">
                             <label>Drop Off Location</label>
                             <input
@@ -544,73 +552,13 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                          <div class="form-group">
-                            <label>Drop Off Time</label>
-                              <div class="timepicker-wrap">
-                                <input
-                                  type="text"
-                                  name="date_from"
-                                  class="input-text full-width"
-                                  placeholder="Time"
-                                />
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 col-12">
-                      <div class="row">
-                        <div class="col-md-6 col-12">
-                          <div class="form-group">
-                            <label>Adults</label>
-                            <div class="selector">
-                              <select class="full-width">
-                                <option value="1">01</option>
-                                <option value="2">02</option>
-                                <option value="3">03</option>
-                                <option value="4">04</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                          <div class="form-group">
-                            <label>Childs</label>
-                            <div class="selector">
-                              <select class="full-width">
-                                <option value="1">01</option>
-                                <option value="2">02</option>
-                                <option value="3">03</option>
-                                <option value="4">04</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                          <div class="form-group">
-                            <label>Infants</label>
-                            <div class="selector">
-                              <select class="full-width">
-                                <option value="1">01</option>
-                                <option value="2">02</option>
-                                <option value="3">03</option>
-                                <option value="4">04</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6 col-12">
+                        <div class="col-md-4 col-12">
                           <button class="c-button lg colGrn m20-top">
                             <i class="icon itours-search"></i> SERACH NOW
                           </button>
                         </div>
                       </div>
-                    </div>
 
-                  </div>
                 </form>
               </div>
               <!-- ***** Tab Transport End ****** -->

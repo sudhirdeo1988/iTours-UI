@@ -10,21 +10,6 @@ $(document).ready(function () {
 			$(this).parents('.dropdown.selectable').children('.btn-dd')[0].textContent = thisOption;
 		})
 	}
-
-	// timepicker
-	if ($('.timepicker-wrap').length > 0) {
-		$('.timepicker-wrap .input-text').timepicker({
-			timeFormat: 'h:mm p',
-			interval: 15,
-			minTime: '12:00am',
-			maxTime: '11:45pm',
-			defaultTime: '11',
-			startTime: '06:00',
-			dynamic: true,
-			dropdown: true,
-			scrollbar: true
-		});
-	}
 	
 	$('body').delegate('.c-userBlock .card .st-editProfile', 'click', function(){
 		var thidParent = $(this).parents('.card');
