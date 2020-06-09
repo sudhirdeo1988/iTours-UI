@@ -2213,6 +2213,15 @@ ul.c-search-tabs .nav-link.active {
   margin-right: 0;
   padding-right: 0;
 }
+.c-cardList .cardDescription{
+  display: block;
+  text-transform: none;
+  line-height: 18px;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  position: relative;
+  top: -2px;
+}
 .c-cardList.activity .cardList-info {
   vertical-align: top;
 }
@@ -2498,6 +2507,10 @@ ul.c-search-tabs .nav-link.active {
   margin-bottom: 6px;
   border-bottom: 1px solid #eee;
 }
+.c-cardListHolder:last-child {
+  padding-bottom: 0; 
+  border: 0;
+}
 .c-cardListTable.type-2 {
   cursor: pointer;
   background-color: #f9f9f9;
@@ -2630,15 +2643,22 @@ ul.c-search-tabs .nav-link.active {
 .infoCard .infoCard_data.color-2 {
   color: #fdb714;
 }
-.infoCard .infoCard_price {
+.infoCard .infoCard_price,
+.infoCard .infoCard_price .p_currency,
+.infoCard .infoCard_price .p_cost {
   display: block;
   padding: 0;
   font-size: 18px;
   line-height: 22px;
   color: #6dace6;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 0;
 }
+.infoCard .infoCard_price .p_currency,
+.infoCard .infoCard_price .p_cost{display: inline-block;}
+.infoCard .infoCard_price.strike .p_currency,
+.infoCard .infoCard_price.strike .p_cost{color: red;}
+.infoCard .infoCard_price.strike .p_cost{text-decoration: line-through;}
 .infoCard .infoCard_priceTax {
   display: block;
   font-size: 12px;
